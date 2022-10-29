@@ -1,0 +1,22 @@
+:root {
+    --blue: #0032bd;
+}
+
+.heading .heading_button {
+    background-color: transparent;
+    color: black;
+    border: none;
+    text-align: left;
+    font-size: 1.8vw;
+    font-weight: 600;
+    margin-top: none;
+    margin-bottom: none;
+    margin-left: -.4%;
+    margin-right: auto;
+    padding: none;
+    cursor: pointer;
+}
+
+.heading_button:hover {
+    color: var(--blue);
+}

@@ -1,0 +1,47 @@
+:root {
+    --blue: #0032bd;
+}
+
+.heading .heading_button {
+    background-color: transparent;
+    color: black;
+    border: none;
+    text-align: left;
+    font-size: 1.8vw;
+    font-weight: 600;
+    margin-top: none;
+    margin-bottom: none;
+    margin-left: -.4%;
+    margin-right: auto;
+    padding: none;
+    cursor: pointer;
+}
+
+.heading_button:hover {
+    color: var(--blue);
+}
+
+.lesson_links {
+    text-decoration: none;
+    color: black;
+}
+
+.lesson_links:link {
+    text-decoration: none;
+    color: black;
+}
+
+.lesson_links:visited {
+    text-decoration: none;
+    color: black;
+}
+
+.lesson_links:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+.lesson_links:active {
+    text-decoration: underline;
+    color: black;
+}

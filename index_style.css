@@ -1,0 +1,58 @@
+:root {
+    --blue: #0032bd;
+}
+
+.Intro {
+    background-color: transparent;
+    color: black;
+    width: 48%;
+    text-align: left;
+    float: left;
+    font-size: 20px;
+    margin-right: 2%;
+    margin-top: none;
+    padding-top: none;
+}
+
+.Subject_Field {
+    background-color: transparent;
+    color: black;
+    font-size: 19px;
+    width: 48%;
+    text-align: left;
+    float: left;
+    margin-left: 2%;
+    margin-top: none
+    font-weight: 600;
+}
+
+a.Subject_Links {
+    text-decoration: none;
+    color: black;
+}
+
+a.Subject_Links:link {
+    text-decoration: none;
+    color: black;
+}
+
+a.Subject_Links:visited {
+    text-decoration: none;
+    color: black;
+}
+
+a.Subject_Links:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+a.Subject_Links:active {
+    text-decoration: underline;
+    color: black;
+}
+
+.Resources {
+    font-size: 20px;
+    margin-top: 10px;
+    float: left;
+}
