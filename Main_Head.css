@@ -1,20 +1,118 @@
-.Heading {
-    text-align: center;
+:root {
+    --blue: #0010b0;
+    --lightblue: #4e65c8;
 }
 
-.Heading_Border {
+.Whole {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Title_image {
+    top: 0;
+    left: 0;
+    background-image: url('WebsiteLogo_Visible.png');
+    background-size: 100px auto;
+    background-color: transparent;
+    height: 45px;
+    width: 100px;
+    border: none;
+    margin-top: none;
+    margin-bottom: none;
+    margin-left: 1.25%;
+    margin-right: 50%;
+    padding: none;
+    cursor: pointer;
+}
+
+.Title_image:hover {
+    background-image: url('WebsiteLogo_Hover.png');
+    background-size: 100px auto;
+    cursor: pointer;
+}
+
+.Top_Nav_Button {
+    top: 0;
+    right: 0;
+    font-weight: 500;
+    width: 7.5%;
+    background-color:transparent;
+    border: none;
+    color: black;
+    margin: .65% .25% .25% .25%;
+    padding: none;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.75vw;
+    cursor: pointer;
+    float: right;
+}
+
+.Top_Nav_Button:hover {
+    text-decoration: underline var(--blue);
+}
+
+.Title_Border {
     display: block;
     margin-top: 2px;
-    margin-bottom: 2px;
+    margin-bottom: 1px;
     margin-left: 1.25%;
     margin-right: 1.25%;
-    border-width: 0px;
-    color: black;
-    background-color: black;
-    height: 3px;
+    border-width: .5px;  
+    background-color: white;
+    height: .5px;
 }
 
 .Body {
     margin-left: 1.25%;
     margin-right: 1.25%;
 }
+
+.previous_button {
+    font-weight: 600;
+    width: auto;
+    background-color:transparent;
+    border: 2px solid var(--blue);
+    border-radius: 4px;
+    color: black;
+    margin: none;
+    padding: none;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.25vw;
+    cursor: pointer;
+}
+
+.next_button {
+    font-weight: 600;
+    width: auto;
+    background-color:transparent;
+    border: 2px solid var(--blue);
+    border-radius: 4px;
+    color: black;
+    margin: none;
+    padding: none;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.25vw;
+    cursor: pointer;
+    float: right;
+}
+
+.previous_button:hover {
+    background-color: var(--blue);
+    color: whitesmoke;
+}
+
+.next_button:hover {
+    background-color: var(--blue);
+    color: whitesmoke;
+}
+
+.Footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    margin-left: 1.8%;
+    margin-bottom: 1.8%;
+}
+
