@@ -9,9 +9,7 @@
         <link rel="stylesheet" href="LimitOfAFunction_Style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-        <script id="MathJax-script" async
-          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-        </script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     </head>
     <body class="Whole">
         <div>
@@ -37,6 +35,37 @@
             <b>Limit of a Function</b>
             <div>
                 <p>
+                    The study of calculus revolves around the concept of a <b>limit</b> of a function.
+                    The limit of a function is the value the function approaches as the input value, \(x\),
+                    approaches a designated value. The notation of a limit generally looks like the following:
+                    <br>
+                    <center>\[\lim_{x\to\alpha} f(x)=\beta\]</center>
+                    and is said "the limit of \(f(x)\), as \(x\) approaches \(\alpha\), is equal to \(\beta\)."
+                    In other words, the values of \(f(x)\) tend to get closer to \(\beta\) as \(x\) gets closer to the
+                    value \(\alpha\) (from either side of \(\alpha\)), however, \(x\neq\alpha\).
+                    <br><br>
+                    To get a better understanding of a limit, let's investigate the behavior of the function \(p\)
+                    defined by \(p(x)=(x-3)^3+2\) for values of \(x\) near \(3\):
+                    <br><br>
+                    <center><img src="Limits_Table1.png" alt="A table of x and y values used to recognize a pattern for limits" style="width: 35vw; height: auto;"></center>
+                    <br>
+                    The table shows the values of \(x\) approaching \(3\) from the left and values approaching from the right.
+                    We see that when \(x\) is close to \(3\), on either side of \(3\), \(p(x)\) approaches 2. Thus,
+                    the limit of \(p(x)\) as \(x\) approaches \(3\) is equal to \(2\). On a graph, this is what we're generally
+                    looking at:
+                    <br><br>
+                    <center><img src="Limits_Figure1.png" alt="Graph of the function p(x), showing the limit as x approaches 3." style="width: 20vw; height: auto;"></center>
+                    <br>
+                    In many cases, the limit of the function as \(x\) approaches \(\alpha\) will simply be the value \(f(\alpha)\), but
+                    this is not always true. Take, for example, the following function,
+                    <br>
+                    <center>\[f(x) = \frac{x}{\sin(x)},\]</center>
+                    the function takes the value of \(\frac{0}{0}\) when \(x=0\), an undefined result. Yet, if we look at the graph of the function
+                    \(f(x)\) below,
+                    <br>
+                    <center><img src="Limits_Figure2.png" alt="Graph of the function f(x), showing the limit as x approaches 0." style="width: 20vw; height: auto;"></center>
+                    we see that the limit of \(f(x)\) as \(x\) approaches \(0\) is equal to \(1\).
+                    <br>
                     
                 </p>
             </div>
