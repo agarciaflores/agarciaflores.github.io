@@ -41,20 +41,23 @@
                     <br>
                     <center>\[\lim_{x\to\alpha} f(x)=\beta\]</center>
                     and is said "the limit of \(f(x)\), as \(x\) approaches \(\alpha\), is equal to \(\beta\)."
+                    The strict and precise definition of a limit is that <i>if \(\lim_{x\to\alpha} f(x) = \beta\)
+                    then for any number \(\epsilon\) however small, it must be possible to find a number \(\omega\)
+                    such that \(\lvert f(x)-\beta\rvert&lt;\epsilon\) whenever \(\lvert x-\alpha\rvert&lt;\omega\)</i>.
                     In other words, the values of \(f(x)\) tend to get closer to \(\beta\) as \(x\) gets closer to the
-                    value \(\alpha\) (from either side of \(\alpha\)), however, \(x\neq\alpha\).
+                    value \(\alpha\) (from either side of \(\alpha\)), however, \(x\neq\alpha\) and by extension \(\omega\neq 0\).
                     <br><br>
                     To get a better understanding of a limit, let's investigate the behavior of the function \(p\)
                     defined by \(p(x)=(x-3)^3+2\) for values of \(x\) near \(3\):
                     <br><br>
-                    <center><img src="Limits_Table1.png" alt="A table of x and y values used to recognize a pattern for limits" style="width: 35vw; height: auto;"></center>
+                    <center><img class="table" src="Limits_Table1.png" alt="A table of x and y values used to recognize a pattern for limits"></center>
                     <br>
                     The table shows the values of \(x\) approaching \(3\) from the left and values approaching from the right.
                     We see that when \(x\) is close to \(3\), on either side of \(3\), \(p(x)\) approaches 2. Thus,
                     the limit of \(p(x)\) as \(x\) approaches \(3\) is equal to \(2\). On a graph, this is what we're generally
                     looking at:
                     <br><br>
-                    <center><img src="Limits_Figure1.png" alt="Graph of the function p(x), showing the limit as x approaches 3." style="width: 20vw; height: auto;"></center>
+                    <center><img class="figure" src="Limits_Figure1.png" alt="Graph of the function p(x), showing the limit as x approaches 3."></center>
                     <br>
                     In many cases, the limit of the function as \(x\) approaches \(\alpha\) will simply be the value \(f(\alpha)\), but
                     this is not always true. Take, for example, the following function,
@@ -63,10 +66,88 @@
                     the function takes the value of \(\frac{0}{0}\) when \(x=0\), an undefined result. Yet, if we look at the graph of the function
                     \(f(x)\) below,
                     <br>
-                    <center><img src="Limits_Figure2.png" alt="Graph of the function f(x), showing the limit as x approaches 0." style="width: 20vw; height: auto;"></center>
+                    <center><img class="figure" src="Limits_Figure2.png" alt="Graph of the function f(x), showing the limit as x approaches 0."></center>
                     we see that the limit of \(f(x)\) as \(x\) approaches \(0\) is equal to \(1\).
+                    <br><br>
+                    Ultimately, we find that if the function is undefined at \(x=\alpha\), the limit of the
+                    function as \(x\) approaches \(\alpha\) will not be equal to the value of \(f(x)\).
+                    Additionally, even if the function is define at \(x=\alpha\), a discontinuous function will
+                    also lead to inconsistencies at a point of discontinuity.
                     <br>
-                    
+                    Before we look at an example of a discontinuous function, let's go over a bit of new notation:
+                    \[
+                        \begin{gather*}
+                            \lim_{x\to\alpha^+} f(x)=\beta_1, & \lim_{x\to\alpha^-} f(x)=\beta_2,
+                        \end{gather*}
+                    \]
+                    where \(\beta_1\) may or may not be equal to \(\beta_2\). The difference between these expressions
+                    and the notation from the beginning of the section is that the value \(x\) is approaching, \(\alpha\),
+                    now has a \(+\) or \(-\) as an exponent. All this is telling us is which direction we are approaching
+                    the value \(\alpha\) from. When the limit has a \(+\) that indicates that we are only looking for the
+                    value as we approach from the right hand side, and when the limit has a \(-\) it means we are only looking
+                    as we approach only from the left hand side. So, whereas before we would be looking from both sides of the
+                    \(x\) value, we are now only considering one.
+                    <br><br>
+                    <b><u>Example 1:</u></b> Let's evaluate the graph of the piecewise function \(m\), defined by
+                    \[
+                        \begin{gather*}
+                            m(x) = \left\{
+                                \begin{array}{11}
+                                    4\sin(x-3) & x&lt;3 \\
+                                    4 & x=3 \\
+                                    (x-3)^2-4 & x&gt;3 
+                                \end{array}
+                                \right.
+                        \end{gather*}
+                    \]
+                    <center><img class="figure" src="Limits_Figure3.png" alt="A graph of the function m(x)."></center>
+                    <br>
+                    [\(m\) being a <b>piecewise function</b> simply means that it is defined by more than one sub-function, where each
+                    sub-function only applies to a particular, unique interval of the domain. The first sub-function of \(m\) is graphed
+                    in red, the second in green, and the third in blue. In this case, the second sub-function is simply the point \((3,4)\).]
+                    <br><br>
+                    Find the following information using the graph and definition of \(m(x)\):
+                    <br>
+                    \(
+                        \begin{align*}
+                                & \text{a. } m(3) \\
+                                & \text{b. } \lim_{x\to 3^-} m(x) \\
+                                & \text{c. } \lim_{x\to 3^+} m(x) \\
+                                & \text{d. } \lim_{x\to 3} m(x)
+                        \end{align*}
+                    \)
+                    <br><br>
+                    <button id="button1" class="solutionButton">\(\rightarrow\) Solution</button>
+                    <div id="text1" class="slideout">
+                        \(\text{a. }\) To evaluate \(m(3)\), we must look at the \(x\) value of \(3\) on the graph and look for the resulting output value,
+                        in this case \(4\) (as seen from the green point on the graph). Thus, \(m(3)=4\).
+                        <br>
+                        \(\text{b. }\) Since the limit has a negative exponent on the \(3\), that means we are looking for the limit as \(x\) approaches
+                        \(3\) from the left. Looking at the graph, this would be the red curve. Thus, the limit of \(m(x)\) as \(x\) approaches \(3\) from the
+                        left is equal to \(0\).
+                        <br>
+                        \(\text{c. }\) This part now asks us to look for the limit as \(x\) approaches \(3\) from the right. This would be visually represented
+                        from the blue curve on the graph above. We see that the limit of \(m(x)\) as \(x\) approaches \(3\) from the right is equal to \(-4\).
+                        <br>
+                        \(\text{d. }\) Since this function is discontinuous, \(\lim_{x\to 3} m(x)\neq m(3)\). In fact, because the limit approaches different values
+                        from each side, \(0\) from the left and \(-4\) from the right, the limit as \(x\) approaches \(3\) from both sides is <b>undefined</b>. 
+                        This is because a limit must approach the same value from the left and the right, as stated before. We will go deeper into undefined limits
+                        in the next section so don't worry about this one too much for now.
+                    </div>
+                    <br>
+                    Provided that a limit exists, it may ease the evaluation if the function under cosideration is split into a sum, product, or quotient. The rules
+                    for evaluating the original limit are as follows:
+                    \[
+                        \begin{align*}
+                            & (a) \lim_{x\to\alpha} (f(x)+g(x)) = \lim_{x\to\alpha} f(x)+\lim_{x\to\alpha} g(x) \\
+                            & (b) \lim_{x\to\alpha} (f(x)g(x)) = \lim_{x\to\alpha} f(x)\lim_{x\to\alpha} g(x) \\
+                            & (c) \lim_{x\to\alpha} \frac{f(x)}{g(x)} = \frac{\lim_{x\to\alpha} f(x)}{\lim_{x\to\alpha} g(x)}.
+                        \end{align*}
+                    \]
+                    A more extensive list of useful limit properties and formulas(including the ones
+                    already mentioned) can be found <a href="Limit_Formulas.pdf">here</a>. These formulas can be very useful when solving more complicated limit problems.
+                    <br><br>
+
                 </p>
             </div>
             <div>
@@ -83,4 +164,5 @@
             </div>
         </div>
     </body>
+    <script src="solutionToggle.js"></script>
 </html>

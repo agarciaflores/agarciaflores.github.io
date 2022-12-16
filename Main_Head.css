@@ -19,7 +19,7 @@
     margin-top: none;
     margin-bottom: none;
     margin-left: 1.25%;
-    margin-right: 50%;
+    margin-right: none;
     padding: none;
     cursor: pointer;
 }
@@ -34,15 +34,15 @@
     top: 0;
     right: 0;
     font-weight: 500;
-    width: 7.5%;
+    width: calc(90px + 0.75%);
     background-color:transparent;
     border: none;
     color: black;
-    margin: .65% .25% .25% .25%;
+    margin: calc(8px + 0.1%) 0% 0% 0%;
     padding: none;
     text-align: center;
     text-decoration: none;
-    font-size: 1.75vw;
+    font-size: calc(14px + 0.75vw);
     cursor: pointer;
     float: right;
 }
@@ -78,7 +78,7 @@
     padding: none;
     text-align: center;
     text-decoration: none;
-    font-size: 1.25vw;
+    font-size: calc(12px + 0.75vw);
     cursor: pointer;
 }
 
@@ -93,7 +93,7 @@
     padding: none;
     text-align: center;
     text-decoration: none;
-    font-size: 1.25vw;
+    font-size: calc(12px + 0.75vw);
     cursor: pointer;
     float: right;
 }

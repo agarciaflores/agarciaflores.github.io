@@ -8,7 +8,7 @@
     color: black;
     border: none;
     text-align: left;
-    font-size: 1.8vw;
+    font-size: calc(16px + 0.75vw);
     font-weight: 600;
     margin-top: none;
     margin-bottom: none;
@@ -20,4 +20,46 @@
 
 .heading_button:hover {
     color: var(--blue);
+}
+
+.table {
+    width: 40%;
+    height: auto;
+    min-width: 400px;
+}
+
+.figure {
+    width: 22.5%;
+    height: auto;
+    min-width: 250px;
+}
+
+.solutionButton {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: black;
+    font-weight: 600;
+    font-size: 16px;
+    text-decoration: underline;
+    margin-left: none;
+    padding-left: none;
+}
+
+.solutionButton:hover {
+    color: var(--blue);
+}
+
+.slideout {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s;
+    background-color: whitesmoke;
+}
+
+.slidein {
+    max-height: 1000px;
+    overflow: hidden;
+    transition: max-height 1.25s;
+    background-color: whitesmoke;
 }
