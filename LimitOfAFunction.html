@@ -3,7 +3,7 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>
-            Limit of a Function | Calculus I | MWi - MathWise Institute
+            Limit of a Function | Single Variable Calculus | MWi - MathWise Institute
         </title>
         <link rel="stylesheet" href="Main_Head.css">
         <link rel="stylesheet" href="LimitOfAFunction_Style.css">
@@ -28,7 +28,7 @@
         <div class="Body">
             <h2 class="heading">
                 <button onclick="window.location.href='calculus1.html'" class="heading_button">
-                    Calculus I
+                    Single Variable Calculus
                 </button>
             </h2>
             <h3>Lesson 1: Functions and Limits</h3>
@@ -39,7 +39,7 @@
                     The limit of a function is the value the function approaches as the input value, \(x\),
                     approaches a designated value. The notation of a limit generally looks like the following:
                     <br>
-                    <center>\[\lim_{x\to\alpha} f(x)=\beta\]</center>
+                    \[\lim_{x\to\alpha} f(x)=\beta\]
                     and is said "the limit of \(f(x)\), as \(x\) approaches \(\alpha\), is equal to \(\beta\)."
                     The strict and precise definition of a limit is that <i>if \(\lim_{x\to\alpha} f(x) = \beta\)
                     then for any number \(\epsilon\) however small, it must be possible to find a number \(\omega\)
@@ -50,29 +50,29 @@
                     To get a better understanding of a limit, let's investigate the behavior of the function \(p\)
                     defined by \(p(x)=(x-3)^3+2\) for values of \(x\) near \(3\):
                     <br><br>
-                    <center><img class="table" src="Limits_Table1.png" alt="A table of x and y values used to recognize a pattern for limits"></center>
+                    <img class="table" src="Limits_Table1.png" alt="A table of x and y values used to recognize a pattern for limits">
                     <br>
                     The table shows the values of \(x\) approaching \(3\) from the left and values approaching from the right.
                     We see that when \(x\) is close to \(3\), on either side of \(3\), \(p(x)\) approaches 2. Thus,
                     the limit of \(p(x)\) as \(x\) approaches \(3\) is equal to \(2\). On a graph, this is what we're generally
                     looking at:
                     <br><br>
-                    <center><img class="figure" src="Limits_Figure1.png" alt="Graph of the function p(x), showing the limit as x approaches 3."></center>
+                    <img class="figure" src="Limits_Figure1.png" alt="Graph of the function p(x), showing the limit as x approaches 3.">
                     <br>
                     In many cases, the limit of the function as \(x\) approaches \(\alpha\) will simply be the value \(f(\alpha)\), but
                     this is not always true. Take, for example, the following function,
                     <br>
-                    <center>\[f(x) = \frac{x}{\sin(x)},\]</center>
+                    \[f(x) = \frac{x}{\sin(x)},\]
                     the function takes the value of \(\frac{0}{0}\) when \(x=0\), an undefined result. Yet, if we look at the graph of the function
                     \(f(x)\) below,
                     <br>
-                    <center><img class="figure" src="Limits_Figure2.png" alt="Graph of the function f(x), showing the limit as x approaches 0."></center>
+                    <img class="figure" src="Limits_Figure2.png" alt="Graph of the function f(x), showing the limit as x approaches 0.">
                     we see that the limit of \(f(x)\) as \(x\) approaches \(0\) is equal to \(1\).
                     <br><br>
                     Ultimately, we find that if the function is undefined at \(x=\alpha\), the limit of the
                     function as \(x\) approaches \(\alpha\) will not be equal to the value of \(f(x)\).
-                    Additionally, even if the function is define at \(x=\alpha\), a discontinuous function will
-                    also lead to inconsistencies at a point of discontinuity.
+                    Additionally, even if the function is defined at \(x=\alpha\), a discontinuous function will
+                    also lead to inconsistencies at a point of discontinuity. [This is dicussed further in the next section].
                     <br><br>
                     Before we look at an example of a discontinuous function, let's go over a bit of new notation:
                     \[
@@ -101,7 +101,7 @@
                                 \right.
                         \end{gather*}
                     \]
-                    <center><img class="figure" src="Limits_Figure3.png" alt="A graph of the function m(x)."></center>
+                    <img class="figure" src="Limits_Figure3.png" alt="A graph of the function m(x).">
                     <br>
                     [\(m\) being a <b>piecewise function</b> simply means that it is defined by more than one sub-function, where each
                     sub-function only applies to a particular, unique interval of the domain. The first sub-function of \(m\) is graphed
@@ -146,8 +146,8 @@
                         from each side, \(0\) from the left and \(-4\) from the right, the limit as \(x\) approaches \(3\) from both sides is <b>undefined</b>. 
                         This is because a limit must approach the same value from the left and the right, as stated before. We will go deeper into undefined limits
                         in the next section so don't worry about this one too much for now.
+                        <br><br>
                     </div>
-                    <br>
                     Provided that a limit exists, it may ease the evaluation if the function under cosideration is split into a sum, product, or quotient. The rules
                     for evaluating the original limit are as follows:
                     \[
@@ -170,7 +170,7 @@
                     Previous: Functions: The Basics
                 </button>
                 <button onclick="window.location.href='UndefinedLimits.html'" class="next_button">
-                    Next: Inifinity as a Limit (Undefined Limits)
+                    Next: Inifinity as a Limit, Undefined Limits, Continuity
                 </button>
             </div>
             <br><br>

@@ -3,7 +3,7 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>
-            Inifinity as a Limit (Undefined Limits) | Calculus I | MWi - MathWise Institute
+            Inifinity as a Limit, Undefined Limits, Continuity | Single Variable Calculus | MWi - MathWise Institute
         </title>
         <link rel="stylesheet" href="Main_Head.css">
         <link rel="stylesheet" href="UndefinedLimits_Style.css">
@@ -28,14 +28,94 @@
         <div class="Body">
             <h2 class="heading">
                 <button onclick="window.location.href='calculus1.html'" class="heading_button">
-                    Calculus I
+                    Single Variable Calculus
                 </button>
             </h2>
             <h3>Lesson 1: Functions and Limits</h3>
-            <b>Infinity as a Limit (Undefined Limits)</b>
+            <b>Inifinity as a Limit, Undefined Limits, Continuity</b>
             <div>
                 <p>
-                    
+                    <h4>Section: Continuity</h4>
+                    A function is <b>continuous</b> bewteen a domain if the function is defined for all values of \(x\) within said domain
+                    and if a small change in \(x\) does not produce a sudden jump in the value of the output, \(y\). For example, if the function
+                    \(k(x)\) is defined for all \(x\) values between the interval \((-10,10)\) then the function is continuous over that same interval
+                    (assuming there is no jump). If a function is not continuous at any \(x\), then we say the function has a <b>discontinuity</b> at
+                    that value of \(x\). In essence, we say \(f(x)\) is continuous at \(x_0\) when
+                    \[
+                        \lim_{x\to x_0} f(x) = f(x_0).
+                    \]
+                    <u><b>Theorem:</b></u> <i>If a function \(f\) is differentiable at \(x_0\), then \(f\) is continuous at \(x_0\).</i> [What is does it
+                    mean to be differentiable? Come back to this after completing Lesson 3.]
+                    <br><br>
+                    <button id="button1" class="solutionButton">\(\rightarrow\) Proof</button>
+                    <div id="text1" class="slideout">
+                        [This proof assumes that you know and are comfortable with differentiation and its definition. If that is not the case, skip this for now.]
+                        <br><br>
+                        We start again with the statement from above:
+                        \[
+                            \lim_{x\to x_0} f(x) = f(x_0).
+                        \]
+                        If we move everything to the left then we see
+                        \[
+                            \lim_{x\to x_0} f(x)-f(x_0) = 0.
+                        \]
+                        Thus, we are proving that the left hand side is equal to \(0\). We can start by multiplying the left hand side by \(\frac{x-x_0}{x-x_0}\) (Why? We are
+                        essentially multiplying it by \(1\), since \(\frac{x-x_0}{x-x_0}\) has the same numerator and denominator, and therefore not changing its value).
+                        Then, using some limit properties discussed previously, we can split the terms into two limits:
+                        \[
+                            \begin{align*}
+                                \lim_{x\to x_0} f(x)-f(x_0) &= \lim_{x\to x_0} \frac{f(x)-f(x_0)}{x-x_0}(x-x_0) \\
+                                &= \lim_{x\to x_0}\frac{f(x)-f(x_0)}{x-x_0}\lim_{x\to x_0}(x-x_0).
+                            \end{align*}
+                        \]
+                        Finally, we recognize the first limit as the derivative definition at \(f(x_0)\), \(f^{\prime}(x_0)\), and we evaluate the second limit to be \(0\). 
+                        Therefore, regardless of what the first limit turns out to be, it will always be multiplied by \(0\) and thus make the whole thing equal to \(0\):
+                        \[
+                            \begin{align*}
+                                &= \lim_{x\to x_0}\frac{f(x)-f(x_0)}{x-x_0}\lim_{x\to x_0}(x-x_0) \\
+                                &= f^{\prime}(x_0)\cdot 0 \\
+                                &= 0.
+                            \end{align*}
+                        \]
+                        To summarize, the function \(f\) being differentiable at \(x_0\) was our hypothesis of the theorem and \(f\) being continuous at \(x_0\) (the statement we started from)
+                        was our conclusion of the theorem. Additionally, when we multiply by \(\frac{x-x_0}{x-x_0}\) it looks like we are multiplying and dividing by \(0\), exactly the thing that
+                        makes all proofs wrong (multiplying and dividing by \(0\) is commonly used to "prove" statements which are not true, so multiplying and dividing by \(0\) in a proof is wrong).
+                        However, limits are able to get around this since the second limit, \(\lim_{x\to x_0}(x-x_0)\), is always approaching \(0\) but is never actually 0. In other words, \(x\neq x_0\).
+                        In fact, \(x=x_0\) is exactly the one value of \(x\) that we don't consider in this limit. Thus, technically, the limit is always very small but never actually \(0\).
+                        <br>
+                    </div>
+                    <br>
+                    To conclude the continuity section, there are four types of discontinuities that one should be aware of:
+                    <ol>
+                        <li>
+                            <b>Removable Discontinuity</b>
+                            <br>
+                            A removable discontinuity is when a function is continuous everywhere but one value of \(x\). Take, for example, the function \(\frac{\sin(x)}{x}\), which is defined for \(x\neq 0\):
+                            <br><br>
+                            <img class="figure" src="UndefinedLimits_Figure1.png" alt="A graph of the function sin(x)/x">
+                            <br>
+                            In essence, if \(\lim_{x\to x_0^+} f(x) = \lim_{x\to x_0^-} f(x)\) but is not equal to \(f(x_0)\), or if \(f(x_0)\) is undefined, we call the discontinuity <b>removable</b>.
+                        </li>
+                        <li>
+                            <b>Jump Discontinuity</b>
+                            <br>
+                            Jump disoncontinuities occur when the limits from both sides of a particular \(x\) value approach two different values, i.e. \(\lim_{x\to x_0^+}f(x)\neq\lim_{x\to x_0^-} f(x)\).
+                            For example, let's look at the graph of the piecewise function \(p\), defined by:
+                            \[
+                                \begin{gather*}
+                                    p(x) = \left\{
+                                        \begin{array}{11}
+                                            (x+1)(x-1) & x&lt;0 \\
+                                            4x+1 & x&gt;0 
+                                        \end{array}
+                                        \right.
+                                \end{gather*}
+                            \]
+                            <img class="figure" src="UndefinedLimits_Figure2.png" alt="A graph of the piecewise function p(x).">
+                            <br>
+                            From the graph, we can see that \(p(x)\) approaches different values from the left and right of \(x=0\). Thus, \(p(x)\) has a <b>jump discontinuity</b> at \(x=0\).
+                        </li>
+                    </ol>
                 </p>
             </div>
             <div>

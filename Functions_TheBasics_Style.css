@@ -22,8 +22,15 @@
     color: var(--blue);
 }
 
+.center_text {
+    text-align: center;
+}
+
 .bigFigure {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     width: 70%;
     height: auto;
-    min-width: 450px;
+    min-width: 320px;
 }

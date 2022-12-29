@@ -22,6 +22,15 @@
     color: var(--blue);
 }
 
+#Lesson_plan {
+    list-style-type: upper-roman;
+}
+
+.Lesson {
+    font-weight: 600;
+    margin-bottom: 7.5px;
+}
+
 .lesson_links {
     text-decoration: none;
     color: black;
