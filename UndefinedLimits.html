@@ -3,7 +3,7 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>
-            Inifinity as a Limit, Undefined Limits, Continuity | Single Variable Calculus | MWi - MathWise Institute
+            Inifinity as a Limit, Undefined Limits, Continuity, and Trigonometric Limits | Single Variable Calculus | MWi - MathWise Institute
         </title>
         <link rel="stylesheet" href="Main_Head.css">
         <link rel="stylesheet" href="UndefinedLimits_Style.css">
@@ -32,10 +32,10 @@
                 </button>
             </h2>
             <h3>Lesson 1: Functions and Limits</h3>
-            <b>Inifinity as a Limit, Undefined Limits, Continuity</b>
+            <b>Inifinity as a Limit, Undefined Limits, Continuity, and Trigonometric Limits</b>
             <div>
                 <p>
-                    <h4>Section: Continuity</h4>
+                    <h4>Section: Inifinity as a Limit, Undefined Limits, Continuity</h4>
                     A function is <b>continuous</b> bewteen a domain if the function is defined for all values of \(x\) within said domain
                     and if a small change in \(x\) does not produce a sudden jump in the value of the output, \(y\). For example, if the function
                     \(k(x)\) is defined for all \(x\) values between the interval \((-10,10)\) then the function is continuous over that same interval
@@ -44,7 +44,9 @@
                     \[
                         \lim_{x\to x_0} f(x) = f(x_0).
                     \]
-                    <u><b>Theorem:</b></u> <i>If a function \(f\) is differentiable at \(x_0\), then \(f\) is continuous at \(x_0\).</i> [What is does it
+                    <u><b>Theorem:</u> Differentiable Implies Continuous</b>
+                    <br>
+                    <i>If a function \(f\) is differentiable at \(x_0\), then \(f\) is continuous at \(x_0\).</i> [What is does it
                     mean to be differentiable? Come back to this after completing Lesson 3.]
                     <br><br>
                     <button id="button1" class="solutionButton">\(\rightarrow\) Proof</button>
@@ -115,7 +117,46 @@
                             <br>
                             From the graph, we can see that \(p(x)\) approaches different values from the left and right of \(x=0\). Thus, \(p(x)\) has a <b>jump discontinuity</b> at \(x=0\).
                         </li>
+                        <li>
+                            <b>Infinite Discontinuity</b>
+                            <br>
+                            An infinite discontinuity is when a function approaches infinity in the y-direction, this is the behavior that is seen in vertical asymptotes. An example of an
+                            infinite discontinuity is the fuction \(\frac{1}{x}\) at \(x=0\):
+                            <img class="figure" src="UndefinedLimits_Figure3.png" alt="A graph of the function 1/x showing the verical asymptote at x=0.">
+                            <br>
+                            The right-hand limit as \(x\) approaches \(0\) is equal to positive infinity, \(\lim_{x\to 0^+}\frac{1}{x}=\infty\), and the left-hand limit as \(x\) approaches
+                            \(0\) is equal to negative infinity, \(\lim_{x\to 0^-}\frac{1}{x}=-\infty\).
+                        </li>
+                        <li>
+                            <b>Other Discontinuities</b>
+                            <br>
+                            The last type of discontinuity that we will cover is the ugliest. There are several examples out there but the one mentioned here is the limit of \(\sin(\frac{1}{x})\)
+                            as \(x\) approaches \(0\), \(\lim_{x\to 0}\sin(\frac{1}{x})\). The graph of \(\sin(\frac{1}{x})\) is the following:
+                            <img class="figure" src="UndefinedLimits_Figure4.png" alt="A graph of the function sin(1/x), showing how ugly it becomes at the origin, x=0.">
+                            <br>
+                            This function oscillates a lot as it approaches the origin, as is the case with other functions as well. For cases like this, it doesn't make sense to say the function
+                            goes to anything; not even \(\pm\infty\). Thus, we say the limit does not exist.
+                        </li>
                     </ol>
+                </p>
+                <p>
+                    <h4>Section: Trigonometric Limits</h4>
+                    Briefly, we felt it would be useful to go over the proof for two popular trigonometric limits. Particularly,
+                    \[
+                        \begin{gather*}
+                            \lim_{\theta\to 0}\frac{\sin(\theta)}{\theta} = 1; & \lim_{\theta\to 0}\frac{1-\cos(\theta)}{\theta} = 0.
+                        \end{gather*}
+                    \]
+                    We will be using a geomtric proof for both. We start off with a circle with a radius of \(1\). Note that the angle \(\theta\) in this case is in radians and not degrees.
+                    The formula for the arc length of a circle is \(s=r\theta\), since \(r=1\), \(s=\theta\). Additionally, recall that the \(\sin\) of the angle \(\theta\) is equal to the quotient
+                    of the side opposite the angle and the radius. Since \(r=1\), the side opposite the angle \(\theta\) is equal to \(\sin(\theta)\):
+                    <img class="figure" width="30%" src="UndefinedLimits_Figure5.png" alt="A picture of a circle with radius 1." style="width: 30%;">
+                    <br>
+                    The first limit has \(\theta\) going to \(0\), thus we zoom into the circle and start decreasing the angle:
+                    <img class="figure" src="UndefinedLimits_Figure6.png" alt="A zoom in on the circle from the previous figure, showing the angle decreasing." style="width: 40%;">
+                    <br>
+                    The main idea here is that as \(\theta\) decreases, goes to \(0\), \(\sin(\theta)=s=\theta\). This is a small angle approximation. Thus, \(\frac{\sin(\theta)}{\theta}=1\) and
+                    \(\lim_{\theta\to 0}\frac{\sin(\theta)}{\theta} = 1\).
                 </p>
             </div>
             <div>
@@ -123,7 +164,7 @@
                     Previous: Limit of a Function
                 </button>
                 <button onclick="window.location.href='#'" class="next_button">
-                    Next: (Fill in)
+                    Next: Techniques of Evaluating Limits
                 </button>
             </div>
             <br><br>
