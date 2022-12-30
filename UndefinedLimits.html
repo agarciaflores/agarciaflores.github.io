@@ -150,13 +150,27 @@
                     We will be using a geomtric proof for both. We start off with a circle with a radius of \(1\). Note that the angle \(\theta\) in this case is in radians and not degrees.
                     The formula for the arc length of a circle is \(s=r\theta\), since \(r=1\), \(s=\theta\). Additionally, recall that the \(\sin\) of the angle \(\theta\) is equal to the quotient
                     of the side opposite the angle and the radius. Since \(r=1\), the side opposite the angle \(\theta\) is equal to \(\sin(\theta)\):
-                    <img class="figure" width="30%" src="UndefinedLimits_Figure5.png" alt="A picture of a circle with radius 1." style="width: 30%;">
+                    <img class="figure" src="UndefinedLimits_Figure5.png" alt="A picture of a circle with radius 1." style="width: 30%;">
                     <br>
                     The first limit has \(\theta\) going to \(0\), thus we zoom into the circle and start decreasing the angle:
                     <img class="figure" src="UndefinedLimits_Figure6.png" alt="A zoom in on the circle from the previous figure, showing the angle decreasing." style="width: 40%;">
                     <br>
                     The main idea here is that as \(\theta\) decreases, goes to \(0\), \(\sin(\theta)=s=\theta\). This is a small angle approximation. Thus, \(\frac{\sin(\theta)}{\theta}=1\) and
                     \(\lim_{\theta\to 0}\frac{\sin(\theta)}{\theta} = 1\).
+                    <br><br>
+                    Moving on to the second limit, the one involving the \(\cos\), we start off again with the same circle of radius \(1\) and labeling the arc length of the angle \(\theta\). However,
+                    because we are now involving a \(\cos\) we label the adjacent side to the angle \(\theta\) instead of the opposite. We label the side \(\cos(\theta)\). Note that because the length of
+                    the radius is \(1\), the remaining length of the radius along the adjacent side of the angle would be \(1-\cos(\theta)\):
+                    <img class="figure" src="UndefinedLimits_Figure7.png" alt="A figure of a circle with radius 1, labeling the arc length and the adjacent side." style="width: 30%;">
+                    <br>
+                    If we zoom in we can see that as the angle \(\theta\) decreases the remaining length of the radius, the length of \(1-\cos(\theta)\), decreases as well:
+                    <img class="figure" src="UndefinedLimits_Figure8.png" alt="A close up of the previous figure, showing the specified length decreases as the angle decreases." style="width: 40%;">
+                    <br>
+                    Thus, as \(\theta\) decreases, \(1-\cos(\theta)\) goes to \(0\) and, by extension, \(\lim_{\theta\to 0}\frac{1-\cos(\theta)}{\theta} = 0\), because the numerator goes to the \(0\),
+                    it makes the whole thing go to \(0\). You may be thinking that "plugging in \(0\)" would make the whole term equal to \(\frac{0}{0}\), an undeterminant form. However, \(\theta\neq 0\)
+                    in this proof, it only <i>approaches</i> it.
+                    <br><br>
+                    That brings us to the end of the theory behind limits and a few proofs. In the next section we will go over limit problems and how the different techniques used to evaluate them.
                 </p>
             </div>
             <div>
@@ -164,7 +178,7 @@
                     Previous: Limit of a Function
                 </button>
                 <button onclick="window.location.href='#'" class="next_button">
-                    Next: Techniques of Evaluating Limits
+                    Next: Evaluating Limits
                 </button>
             </div>
             <br><br>
