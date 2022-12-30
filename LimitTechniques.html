@@ -48,8 +48,48 @@
                             The easiest method of solving limits is direct substitution. The name acurately describes the process, all you do is take
                             the value that you are approaching in the limit and plug it into the function. For example,
                             \[
-                                \lim_{x\to 3}\frac{7x^3+14x^2+x}{2x^8+3x^4+2}
+                                \lim_{x\to 1}\frac{7x^3+14x^2+x}{2x^8+3x^4+2}.
                             \]
+                            Direct substitution tells us to plug in the value of \(1\) for every \(x\). Doing so yields:
+                            \[
+                                \begin{align*}
+                                    \lim_{x\to 1}\frac{7x^3+14x^2+x}{2x^8+3x^4+2} &= \frac{7(1)^3+14(1)^2+(1)}{2(1)^8+3(1)^4+2} \\
+                                    &= \frac{7+14+1}{2+3+2} \\
+                                    &= \frac{22}{7}.
+                                \end{align*}
+                            \]
+                            [Note that the limit notation is dropped after the direct substitution is done. Most students lose points on dropping the limit
+                            notation too early, it's a good idea to keep track of where we drop the notation in the examples.]
+                            <br><br>
+                            After gaining enough experience with algebra, it becomes second nature knowing when direct substitution would work. If it results in
+                            an indeterminant result, like \(\frac{0}{0}\), then moving on to the next technique is the best idea.
+                            <br><br>
+                            The limit shown in this example could have been solved systematically using limit properties. Feel free to give it a gander if you're
+                            curious.
+                            <br><br>
+                            <button id="button1" class="solutionButton">\(\rightarrow\) Alternative Solution</button>
+                            <div id="text1" class="slideout">
+                                This limit problem can be solved systematically by taking advantage of a few limit properties. Particularly the quotient rule, sum 
+                                rule, power rule, and constant function rule, listed below in this same order:
+                                \[
+                                    \begin{align*}
+                                        & 1. \lim_{x\to x_0}\frac{f(x)}{g(x)} = \frac{\lim_{x\to x_0} f(x)}{\lim_{x\to x_0} g(x)} \\
+                                        & \text{provided that the numerator and denominator are not both equal to zero or infinity} \\
+                                        & 2. \lim_{x\to x_0} \left[f_1(x)+f_2(x)+...+f_n(x)\right]  = \left[\lim_{x\to x_0} f_1(x)+ \lim_{x\to x_0}f_2(x)+...+ \lim_{x\to x_0} f_n(x) \right] \\
+                                        & 3. \lim_{x\to x_0} [f(x)]^n = \left[\lim_{x\to x_0} f(x)\right]^n \text{ where } n \in\mathbb{R} \\
+                                        & 4. \lim_{x\to x_0} C = C \text{ where C is a constant.}
+                                    \end{align*}
+                                \]
+                                Using the quotient rule, we let \(f(x) = 7x^3+14x^2+x\) and \(g(x) = 2x^8+3x^4+2\). Then, using the sum rule, we can split the \(f(x)\)
+                                terms into their own limits, leaving us with \(\lim_{x\to 1}\left[7x^3\right]\), \(\lim_{x\to 1}\left[14x^2\right]\), and \(\lim_{x\to 1}\left[x\right]\). Solving these limits
+                                would result in \(7\), \(14\), and \(1\) respectively, using additional limit properties. Thus, \(f(x) = 7+14+1\). Repeating this process for
+                                \(g(x)\) would yield \(g(x) = \lim_{x\to 1}\left[2x^8\right]+\lim_{x\to 1}\left[3x^4\right]+\lim_{x\to 1}\left[2\right] = 2+3+2 = 7\). Plugging these results back into the quotient
+                                rule gives us our final answer:
+                                \[
+                                 \lim_{x\to 1}\frac{f(x)}{g(x)} = \frac{\lim_{x\to 1} f(x)}{\lim_{x\to 1} g(x)} = \frac{22}{7}.
+                                \]
+                            </div>
+                            <br>
                         </li>
                         <li>
                             <b>Factorization</b>
