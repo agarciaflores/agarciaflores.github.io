@@ -3,7 +3,7 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>
-            Evaluating Limits, Undefined Limits, Continuity, and Trigonometric Limits | Single Variable Calculus | MWi - MathWise Institute
+            Evaluating Limits | Single Variable Calculus | MWi - MathWise Institute
         </title>
         <link rel="stylesheet" href="Main_Head.css">
         <link rel="stylesheet" href="UndefinedLimits_Style.css">
@@ -59,13 +59,29 @@
                                 \end{align*}
                             \]
                             [Note that the limit notation is dropped after the direct substitution is done. Most students lose points on dropping the limit
-                            notation too early, it's a good idea to keep track of where we drop the notation in the examples.]
+                            notation too early, it's a good idea to keep track of where we drop the notation in the examples. Remember to keep the notation there
+                            until the actual limit is evaluated.]
                             <br><br>
-                            After gaining enough experience with algebra, it becomes second nature knowing when direct substitution would work. If it results in
-                            an indeterminant result, like \(\frac{0}{0}\), then moving on to the next technique is the best idea.
+                            Direct substitution should always be the go-to method for evaluating limits. There are three main outcomes of direct substitution:
                             <br><br>
-                            The limit shown in this example could have been solved systematically using limit properties. Feel free to give it a gander if you're
-                            curious.
+                            <ol>
+                                <li>
+                                    Getting a number value likely means you've got your answer.
+                                </li>
+                                <li>
+                                    Getting a fraction of \(\frac{\alpha}{0}\) where \(\alpha\) is not zero indicates the possibility of a discontinuity in the function
+                                    at the \(x\) value the limit is approaching (probably a vertical asymptote). When this is the outcome, refer to the graph or table
+                                    of the function. 
+                                </li>
+                                <li>
+                                    Getting a fraction of \(\frac{0}{0}\) is an indeterminate form, meaning that nothing can be concluded from this result.
+                                    When encountering this, try factorization, conjugates, rationalization, or trigonometric identities if they can be applied.
+                                    [Other indeterminate forms involve inifinity, such as \(\infty-\infty\), \(\frac{\infty}{\infty}\), and more.]
+                                </li>
+                            </ol>
+                            <br>
+                            [The limit shown in this example could have been solved systematically using limit properties. Feel free to give it a gander if you're
+                            curious.]
                             <br><br>
                             <button id="button1" class="solutionButton">\(\rightarrow\) Alternative Solution</button>
                             <div id="text1" class="slideout">
@@ -82,8 +98,8 @@
                                 \]
                                 Using the quotient rule, we let \(f(x) = 7x^3+14x^2+x\) and \(g(x) = 2x^8+3x^4+2\). Then, using the sum rule, we can split the \(f(x)\)
                                 terms into their own limits, leaving us with \(\lim_{x\to 1}\left[7x^3\right]\), \(\lim_{x\to 1}\left[14x^2\right]\), and \(\lim_{x\to 1}\left[x\right]\). Solving these limits
-                                would result in \(7\), \(14\), and \(1\) respectively, using additional limit properties. Thus, \(f(x) = 7+14+1\). Repeating this process for
-                                \(g(x)\) would yield \(g(x) = \lim_{x\to 1}\left[2x^8\right]+\lim_{x\to 1}\left[3x^4\right]+\lim_{x\to 1}\left[2\right] = 2+3+2 = 7\). Plugging these results back into the quotient
+                                would result in \(7\), \(14\), and \(1\) respectively, using additional limit properties. Thus, \(\lim_{x\to 1}f(x) = 7+14+1 = 22\). Repeating this process for
+                                \(g(x)\) would yield \(\lim_{x\to 1}g(x) = \lim_{x\to 1}\left[2x^8\right]+\lim_{x\to 1}\left[3x^4\right]+\lim_{x\to 1}\left[2\right] = 2+3+2 = 7\). Plugging these results back into the quotient
                                 rule gives us our final answer:
                                 \[
                                  \lim_{x\to 1}\frac{f(x)}{g(x)} = \frac{\lim_{x\to 1} f(x)}{\lim_{x\to 1} g(x)} = \frac{22}{7}.
@@ -94,20 +110,116 @@
                         <li>
                             <b>Factorization</b>
                             <br>
+                            Given the following limit problem, the first attempt is done using direct substitution. However, we see that our result is indeterminate:
+                            \[
+                                \begin{align*}
+                                    \lim_{x\to 1} \frac{x-1}{x^2+x-2} &= \frac{1-1}{1^2+1-2} \\
+                                    &= \frac{0}{0}.
+                                \end{align*}
+                            \]
+                            Notice that the denominator can be factored into linear terms: \(x^2+x-2\Rightarrow (x-1)(x+2)\). Making this substitution, and canceling out the common
+                            factors, leaves us with
+                            \[
+                            \begin{align*}
+                                \lim_{x\to 1} \frac{x-1}{x^2+x-2} &= \lim_{x\to 1} \frac{x-1}{(x-1)(x+2)} \\
+                                &= \lim_{x\to 1} \frac{1}{x+2}.
+                            \end{align*}
+                            \]
+                            Using direct substitution at this point yields the result:
+                            \[
+                            \begin{align*}
+                                \lim_{x\to 1} \frac{1}{x+2} &= \frac{1}{1+2} \\
+                                &= \frac{1}{3}.
+                            \end{align*}
+                            \]
                         </li>
                         <li>
-                            <b>Rationalization</b>
+                            <b>Infinite Limits</b>
                             <br>
+                            The following problem is given to us:
+                            \[
+                                \lim_{x\to\infty} \frac{2x^4}{x+1}-2x
+                            \]
+                            This particular problem puts us in several difficult situations. For instance, this is the first problem we see where \(x\) approaches \(\infty\).
+                            Infinity is more of a concept than it is a number, so direct substitution seems questionable here. When dealing with inifinity as a limit one should
+                            look for the fastest growing term. At the basic level, the higher the exponent, the faster a term grows. So \(x^2\) "grows faster" than \(x\), yet "slower"
+                            than \(x^3\). For polynomial terms, the exponent dictates how "fast" the term "grows." Logarithmic terms grow the slowest, and exponential terms grow the
+                            fastest, faster than \(x^n\) no matter what real number \(n\) is.  [\(x^x\) is the fastest growing function but that typically isn't seen at this level.]
+                            So the basic order is the following:
+                            \[
+                                \ln(x)\Rightarrow x,x^2,...,x^n \Rightarrow e^x
+                            \]
+                            [The words "grow," "faster," and "slower" are used to simplify the behavior of different types of functions.]
+                            <br><br>
+                            Trigonometric functions can be a bit trickier to predict. \(\sin\) and \(\cos\) only go as high as their amplitude, while all others go to \(\infty\) and
+                            \(-\infty\) periodically.
+                            <br><br>
+                            Note that we <i>only</i> look at the fastest growing term in most cases. For example, in the problem \(\lim_{x\to\infty}\frac{2x^2+8x+3}{x^5-8x^4+3x^3+9x^2-x+12}\)
+                            we focus only on the terms that grow the fastest from both the numerator and denominator, therefore the problem we're really looking at is \(\lim_{x\to\infty}\frac{2x^2}{x^5}\).
+                            Since \(x^5\) grows faster than \(2x^2\), the denominator grows faster than the numerator and the whole term goes to \(0\). If the denominator grows faster,
+                            the limit goes to \(0\), if the numerator grows faster, the limit goes to either \(+\infty\) or \(-\infty\), depending on the sign of the entire term. If
+                            both the numerator and the denominator grow at the same rate, such as in the problem \(\lim_{x\to\infty}\frac{8x^2+3x+9}{10x^2-5x+6}\), then we look only
+                            at the leading coefficients of the fastest growing terms, i.e.
+                            \[
+                                \begin{align*}
+                                    \lim_{x\to\infty}\frac{8x^2+3x+9}{10x^2-5x+6} &= \lim_{x\to\infty}\frac{8x^2}{10x^2} \\
+                                    & \text{(Ignoring everything but the fastest growing terms)} \\
+                                    &= \frac{8}{10} \\
+                                    &= \frac{4}{5}.
+                                \end{align*}
+                            \]
+                            The mathematical reasoning for this is we are essentially dividing every term by the term with the greatest exponent. We will walk through that process on
+                            the initial problem, \(\lim_{x\to\infty} \frac{2x^4}{x+1}-2x\). Before doing that, however, we must combine the entire problem into one fraction. We do that
+                            by giving each term a common denominator, in this case all we have to do is multiply the second term, \(-2x\), by the denominator of the first term over itself,
+                            \(\frac{x+1}{x+1}\), then simplify:
+                            \[
+                                \begin{align*}
+                                \lim_{x\to\infty}\frac{2x^4}{x+1}-2x &= \lim_{x\to\infty}\frac{2x^4}{x+1}-(2x)\left(\frac{x+1}{x+1}\right) \\
+                                &= \lim_{x\to\infty}\frac{2x^4}{x+1}-\frac{(2x)(x+1)}{x+1} \\
+                                &= \lim_{x\to\infty}\frac{2x^4}{x+1}-\frac{2x^2+2x}{x+1} \\
+                                &= \lim_{x\to\infty}\frac{(2x^4)-(2x^2+2x)}{x+1} \\
+                                &= \lim_{x\to\infty}\frac{2x^4-2x^2-2x}{x+1}.
+                                \end{align*}
+                            \]
+                            You may already be able to tell that the solution will be \(+\infty\) because the numerator grows faster than the denominator, since \(2x^4&gt;x\). However like
+                            we stated earlier we want to show the reasoning behind why that methodology works. To do so, we divide every term from the numerator and denominator by the fastest
+                            growing term, in this case \(x^4\) [note that we don't include the coefficient, just the independent variable and its exponent]:
+                            \[
+                                \begin{align*}
+                                \lim_{x\to\infty}\frac{2x^4-2x^2-2x}{x+1} &= \lim_{x\to\infty}\frac{\frac{2x^4-2x^2-2x}{x^4}}{\frac{x+1}{x^4}} \\
+                                    &= \lim_{x\to\infty}\frac{\frac{2x^4}{x^4}-\frac{2x^2}{x^4}-\frac{2x}{x^4}}{\frac{x}{x^4}+\frac{1}{x^4}} \\
+                                    &= \lim_{x\to\infty}\frac{2-\frac{2}{x^2}-\frac{2}{x^3}}{\frac{1}{x^3}+\frac{1}{x^4}}.
+                                \end{align*}
+                            \]
+                            As we can see here, all of the terms that have an \(x\) in the denominator will tend to go to \(0\) as \(x\) goes to infinity. The only remaining term is the \(2\)
+                            in the numerator. Thus, the numerator stays at the value \(2\) and the denominator goes to the value of \(0\) as \(x\to\infty\). When this happens, we say the limit
+                            goes to infinity, since the denominator is getting infinitely small and the numerator is essentially constant. Think of it like the function \(\frac{1}{x}\), as \(x\)
+                            approaches \(0\) from the right hand side the output values go to infinity. Thus, we conclude that
+                            \[
+                                \lim_{x\to\infty} \frac{2x^4}{x+1}-2x=\infty.
+                            \]
                         </li>
                         <li>
-                            <b>Reduction to Standard Forms</b>
+                            <b>L'Hôspital's Rule</b>
                             <br>
+                            If all else fails and the indeterminate form is inevitable, L'Hôspital's Rule is the last resort for solving limit problems. However, it requires knowledge of differentiation 
+                            and differentiation techniques so it's not covered here. It is covered towards the end of Lesson 5.
                         </li>
                     </ol>
+                    <h4>Lesson Conclusion</h4>
+                    That concludes the section on limits. More practice can be found in <a href="">Problem Set 1</a>, and the solutions to it found <a href="">here</a>. Most of the mathematical
+                    understanding comes from the problem sets, while the lessons are mainly the theory. Additional resources on limits can be found below as well.
+                    <br><br>
+                    <h4>Problem Set 1</h4>
+                    <button onclick="window.location.href=''" class="previous_button">Problem Set 1</button> <button onclick="window.location.href=''" class="previous_button">Problem Set 1 Solutions</button>
+                    <h4>Additional Resources</h4>
+                    <iframe width="230" height="auto" src="https://www.youtube-nocookie.com/embed/ryLdyDrBfvI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="230" height="auto" src="https://www.youtube-nocookie.com/embed/kAv5pahIevE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="230" height="auto" src="https://www.youtube-nocookie.com/embed/kfF40MiS7zA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </p>
             </div>
             <div>
-                <button onclick="window.location.href='LimitOfAFunction.html'" class="previous_button">
+                <button onclick="window.location.href='UndefinedLimits.html'" class="previous_button">
                     Previous: Inifinity as a Limit, Undefined Limits, Continuity, and Trigonometric Limits
                 </button>
                 <button onclick="window.location.href='#'" class="next_button">

@@ -70,7 +70,7 @@
                                 &= \lim_{x\to x_0}\frac{f(x)-f(x_0)}{x-x_0}\lim_{x\to x_0}(x-x_0).
                             \end{align*}
                         \]
-                        Finally, we recognize the first limit as the derivative definition at \(f(x_0)\), \(f^{\prime}(x_0)\), and we evaluate the second limit to be \(0\). 
+                        Finally, we recognize the first limit as the rate of change formula at \(f(x_0)\), \(f^{\prime}(x_0)\), and we evaluate the second limit to be \(0\). 
                         Therefore, regardless of what the first limit turns out to be, it will always be multiplied by \(0\) and thus make the whole thing equal to \(0\):
                         \[
                             \begin{align*}
@@ -84,6 +84,10 @@
                         makes all proofs wrong (multiplying and dividing by \(0\) is commonly used to "prove" statements which are not true, so multiplying and dividing by \(0\) in a proof is wrong).
                         However, limits are able to get around this since the second limit, \(\lim_{x\to x_0}(x-x_0)\), is always approaching \(0\) but is never actually 0. In other words, \(x\neq x_0\).
                         In fact, \(x=x_0\) is exactly the one value of \(x\) that we don't consider in this limit. Thus, technically, the limit is always very small but never actually \(0\).
+                        <br><br>
+                        [This proof shows that if a function is differentiable then it is also continuous. That does not necessarily imply that if the function is not differentiable then it is also not continuous.
+                        In essence, a function can be continuous and without being differentiable. Take the absolute value function for example, \(\lvert x\rvert\). It is not differentiable at \(x=0\) but it is still
+                        continuous. The function being differentiable is a <i>sufficient condition</i> for continuity, not a <i>necessary condition</i>.]
                         <br>
                     </div>
                     <br>
@@ -177,7 +181,7 @@
                 <button onclick="window.location.href='LimitOfAFunction.html'" class="previous_button">
                     Previous: Limit of a Function
                 </button>
-                <button onclick="window.location.href='#'" class="next_button">
+                <button onclick="window.location.href='LimitTechniques.html'" class="next_button">
                     Next: Evaluating Limits
                 </button>
             </div>
