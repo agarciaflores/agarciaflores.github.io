@@ -1,0 +1,180 @@
+:root {
+    --blue: #0010b0;
+    --lightblue: #4e65c8;
+}
+
+/*Index style*/
+.Intro {
+    background-color: transparent;
+    color: black;
+    width: 48%;
+    text-align: left;
+    float: left;
+    font-size: 20px;
+    margin-right: 2%;
+    margin-top: none;
+    padding-top: none;
+}
+
+.Subject_Field {
+    background-color: transparent;
+    color: black;
+    font-size: 19px;
+    width: 48%;
+    text-align: left;
+    float: left;
+    margin-left: 2%;
+    margin-top: none;
+}
+
+a.Subject_Links {
+    text-decoration: none;
+    color: black;
+}
+
+a.Subject_Links:link {
+    text-decoration: none;
+    color: black;
+}
+
+a.Subject_Links:visited {
+    text-decoration: none;
+    color: black;
+}
+
+a.Subject_Links:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+a.Subject_Links:active {
+    text-decoration: underline;
+    color: black;
+}
+
+.Resources {
+    font-size: 20px;
+    margin-top: 10px;
+    float: left;
+}
+/*End Index Style*/
+
+/*Nav bar style*/
+.heading .heading_button {
+    background-color: transparent;
+    color: black;
+    border: none;
+    text-align: left;
+    font-size: calc(16px + 0.75vw);
+    font-weight: 600;
+    margin-top: none;
+    margin-bottom: none;
+    margin-left: -.4%;
+    margin-right: auto;
+    padding: none;
+    cursor: pointer;
+}
+
+.heading_button:hover {
+    color: var(--blue);
+}
+/*End Nav bar style*/
+
+/*Single Variable Calculus style*/
+#Lesson_plan {
+    list-style-type: upper-roman;
+}
+
+.Lesson {
+    font-weight: 600;
+    margin-bottom: 7.5px;
+}
+
+.lesson_links {
+    text-decoration: none;
+    color: black;
+}
+
+.lesson_links:link {
+    text-decoration: none;
+    color: black;
+}
+
+.lesson_links:visited {
+    text-decoration: none;
+    color: black;
+}
+
+.lesson_links:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+.lesson_links:active {
+    text-decoration: underline;
+    color: black;
+}
+/*End Single Variable Calculus style*/
+
+/*Lessons style*/
+.center_text {
+    text-align: center;
+}
+
+.table {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    height: auto;
+    min-width: 320px;
+}
+
+.figure {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 22.5%;
+    height: auto;
+    min-width: 250px;
+}
+
+.bigFigure {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    height: auto;
+    min-width: 320px;
+}
+
+.solutionButton {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: black;
+    font-weight: 600;
+    font-size: 16px;
+    text-decoration: underline;
+    margin-left: none;
+    padding-left: none;
+}
+
+.solutionButton:hover {
+    color: var(--blue);
+}
+
+.slideout {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s;
+    background-color: whitesmoke;
+}
+
+.slidein {
+    max-height: 2000px;
+    overflow: hidden;
+    transition: max-height 0.75s;
+    background-color: whitesmoke;
+}
+/*End Lessons Style*/
