@@ -59,7 +59,7 @@
                     This is what the process typically looks like:
                     <ol>
                         <li>For all positive integers \(n\), let \(P(n)\) be the statement</li>
-                        \[\text{"Math statment here."}\]
+                        \[\text{"Math statement here."}\]
                         <li>Basis step: \(n=1\)</li>
                         \[\text{Math proof here}\]
                         <li>Inductive step: Assume that \(P(k)\) is true for some positive integer \(k\), i.e.,</li>
@@ -72,7 +72,7 @@
                     The statement \(P(n)\) is the statement that you seek to prove. Said statement may only be true
                     for integers greater than \(3\), or only even integers, or maybe only negative integers, it should
                     be mentioned what values the statement is true for. In the example above we wrote "all positive
-                    integers \(n\)". 
+                    integers \(n\)." 
                     <br><br>
                     The basis step proves the statement for the first \(n\) value. In the case of 
                     all positive integers, we start with \(n=1\) since \(1\) is the first positive integer. Why is the
@@ -106,11 +106,11 @@
                     <br><br>
                     <button id="button1" class="solutionButton">\(\rightarrow\) Solution</button>
                     <div id="text1" class="slideout">
-                        For \(n&ge;0\) (all positive integers \(n\)), let \(P(n)\) be the statement
+                        For \(n&ge;0\) (all nonnegative integers \(n\)), let \(P(n)\) be the statement
                         \[
                             \text{"}1^2+3^2+5^2+...+(2n+1)^2 = \frac{(n+1)(2n+1)(2n+3)}{3}\text{."}
                         \]
-                        Basis step: \((2(0)+1)^2=1=\frac{(0+1)(2(0)+1)(2(0)+3)}{3}=\frac{3}{3}=1\). Thus \(P(0)\) is true.
+                        Basis step: Left-hand side: \((2(0)+1)^2=1\); right-hand side: \(\frac{(0+1)(2(0)+1)(2(0)+3)}{3}=\frac{3}{3}=1\). Thus \(P(0)\) is true.
                         <br><br>
                         Inductive Step: Assume that \(P(k)\) is true for some nonnegative integer \(k\), i.e.,
                         \[
@@ -118,17 +118,28 @@
                         \]
                         We show that \(P(k+1)\) is true, i.e.,
                         \[
-                            1^2+3^2+5^2+...+(2k+1)^2+(2(k+1)+1)^2 = \frac{((k+1)+1)(2(k+1)+1)(2(k+1)+3)}{3}.
+                            1^2+3^2+5^2+...+(2k+1)^2+(2(k+1)+1)^2 = \frac{((k+1)+1)(2(k+1)+1)(2(k+1)+3)}{3},
+                        \]
+                        which simplifies to:
+                        \[
+                            1^2+3^2+5^2+...+(2k+1)^2+(2k+3)^2 = \frac{(k+2)(2k+3)(2k+5)}{3}.
                         \]
                         Left-hand side:
                         \[
                             \begin{align*}
-                            1^2+3^2+5^2+...+(2k+1)^2+(2(k+1)+1)^2 &= \left[1^2+3^2+5^2+...+(2k+1)^2\right]+(2(k+1)+1)^2 \\
-                            &= \frac{(k+1)(2k+1)(2k+3)}{3}+(2(k+1)+1)^2 \\
-                            & \text{(by inductive hypothesis)} \\
+                            1^2+3^2+5^2+...+(2k+1)^2+(2k+3)^2 &= \left[1^2+3^2+5^2+...+(2k+1)^2\right]+(2k+3)^2 \\
                             &= \frac{(k+1)(2k+1)(2k+3)}{3}+(2k+3)^2 \\
+                            & \text{(by inductive hypothesis)} \\
+                            &= (2k+3)\left(\frac{(k+1)(2k+1)}{3}+(2k+3)\right) \\
+                            &= (2k+3)\left(\frac{(k+1)(2k+1)}{3}+\frac{6k}{3}+\frac{9}{3})\right) \\
+                            &= (2k+3)\left(\frac{(k+1)(2k+1)+6k+9}{3}\right) \\
+                            &= (2k+3)\left(\frac{(2k^2+k+2k+1)+6k+9}{3}\right) \\
+                            &= (2k+3)\left(\frac{2k^2+9k+10}{3}\right) \\
+                            &= (2k+3)\left(\frac{(2k+5)(k+2))}{3}\right) \\
+                            &= \frac{(k+2)(2k+3)(2k+5)}{3} \text{ (right-hand side).} 
                             \end{align*}
                         \]
+                        By mathematical induction, \(P(n)\) is true for all nonnegative integers \(n\).
                     </div>
                     <br>
 

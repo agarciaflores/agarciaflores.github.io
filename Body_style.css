@@ -130,7 +130,7 @@ body {
         background-color: #152028;
     }
 
-    .table {
+    #invert {
         filter: invert(1);
     }
 }
@@ -141,7 +141,7 @@ body {
     }
 }
 
-@media (min-width: 800px) {
+@media (min-width: 801px) {
     .container {
         flex-direction: row;
     }
@@ -274,7 +274,7 @@ body {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 70%;
+    width: auto;
     height: auto;
     min-width: 320px;
 }
@@ -296,13 +296,13 @@ body {
 
 .slideout {
     max-height: 0;
-    overflow: hidden;
+    overflow: auto;
     transition: max-height 0.5s;
 }
 
 .slidein {
     max-height: 2000px;
-    overflow: hidden;
+    overflow: auto;
     transition: max-height 0.75s;
 }
 /*End Lessons Style*/
