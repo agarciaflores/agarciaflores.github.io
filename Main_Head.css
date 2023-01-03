@@ -7,10 +7,29 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+@media (prefers-color-scheme: light) {
+    .Title_image {
+        background-image: url('WebsiteLogo_Visible.png');
+    }
+    
+    .Title_image:hover {
+        background-image: url('WebsiteLogo_Hover.png');
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .Title_image {
+        background-image: url('WebsiteLogo_Visible_Dark.png');
+    }
+    
+    .Title_image:hover {
+        background-image: url('WebsiteLogo_Hover_Dark.png');
+    }
+}
+
 .Title_image {
     top: 0;
     left: 0;
-    background-image: url('WebsiteLogo_Visible.png');
     background-size: 100px auto;
     background-color: transparent;
     height: 45px;
@@ -25,7 +44,6 @@
 }
 
 .Title_image:hover {
-    background-image: url('WebsiteLogo_Hover.png');
     background-size: 100px auto;
     cursor: pointer;
 }
@@ -37,7 +55,6 @@
     width: calc(90px + 0.75%);
     background-color:transparent;
     border: none;
-    color: black;
     margin: calc(8px + 0.1%) 0% 0% 0%;
     padding: none;
     text-align: center;
@@ -73,7 +90,6 @@
     background-color:transparent;
     border: 2px solid var(--blue);
     border-radius: 4px;
-    color: black;
     margin: none;
     padding: none;
     text-align: center;
@@ -88,7 +104,6 @@
     background-color:transparent;
     border: 2px solid var(--blue);
     border-radius: 4px;
-    color: black;
     margin: none;
     padding: none;
     text-align: center;

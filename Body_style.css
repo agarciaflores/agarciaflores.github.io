@@ -3,11 +3,169 @@
     --lightblue: #4e65c8;
 }
 
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+img, picture, svg, video {
+    display: block;
+    max-width: 100%;
+}
+
+input, textarea, button, select {
+    font: inherit;
+}
+
+html {
+    font-size: 16px;
+    color-scheme: light dark;
+}
+
+body {
+    min-height: 100vh;
+}
+
+@media (prefers-color-scheme: light) {
+    a.Subject_Links {
+        text-decoration: none;
+        color: black;
+    }
+
+    a.Subject_Links:link {
+        text-decoration: none;
+        color: black;
+    }
+    
+    a.Subject_Links:visited {
+        text-decoration: none;
+        color: black;
+    }
+    
+    a.Subject_Links:hover {
+        text-decoration: underline;
+        color: black;
+    }
+    
+    a.Subject_Links:active {
+        text-decoration: none;
+        color: black;
+    }
+
+    .lesson_links {
+        color: black;
+    }
+    
+    .lesson_links:link {
+        color: black;
+    }
+    
+    .lesson_links:visited {
+        color: black;
+    }
+    
+    .lesson_links:hover {
+        color: black;
+    }
+    
+    .lesson_links:active {
+        color: black;
+    }
+
+    .slideout {
+        background-color: whitesmoke;
+    }
+    
+    .slidein {
+        background-color: whitesmoke;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    a.Subject_Links {
+        text-decoration: none;
+        color: white
+    }
+
+    a.Subject_Links:link {
+        text-decoration: none;
+        color: white;
+    }
+    
+    a.Subject_Links:visited {
+        text-decoration: none;
+        color: white;
+    }
+    
+    a.Subject_Links:hover {
+        text-decoration: underline;
+        color: white;
+    }
+    
+    a.Subject_Links:active {
+        text-decoration: none;
+        color: white;
+    }
+
+    .lesson_links {
+        color: white;
+    }
+    
+    .lesson_links:link {
+        color: white;
+    }
+    
+    .lesson_links:visited {
+        color: white;
+    }
+    
+    .lesson_links:hover {
+        color: white;
+    }
+
+    .slideout {
+        background-color: #152028;
+    }
+    
+    .slidein {
+        background-color: #152028;
+    }
+
+    .table {
+        filter: invert(1);
+    }
+}
+
+@media (max-width: 800px) {
+    .container {
+      flex-direction: column;
+    }
+}
+
+@media (min-width: 800px) {
+    .container {
+        flex-direction: row;
+    }
+
+    .left {
+        width: 50rem;
+    }
+      
+    .right {
+        width: 50rem;
+    }
+
+    .Intro {
+        width: 40rem;
+    }
+    
+    .Subject_Field {
+        width: 40rem;
+    }
+}
+
 /*Index style*/
 .Intro {
     background-color: transparent;
-    color: black;
-    width: 48%;
     text-align: left;
     float: left;
     font-size: 20px;
@@ -18,38 +176,11 @@
 
 .Subject_Field {
     background-color: transparent;
-    color: black;
     font-size: 19px;
-    width: 48%;
     text-align: left;
     float: left;
     margin-left: 2%;
     margin-top: none;
-}
-
-a.Subject_Links {
-    text-decoration: none;
-    color: black;
-}
-
-a.Subject_Links:link {
-    text-decoration: none;
-    color: black;
-}
-
-a.Subject_Links:visited {
-    text-decoration: none;
-    color: black;
-}
-
-a.Subject_Links:hover {
-    text-decoration: underline;
-    color: black;
-}
-
-a.Subject_Links:active {
-    text-decoration: underline;
-    color: black;
 }
 
 .Resources {
@@ -59,10 +190,9 @@ a.Subject_Links:active {
 }
 /*End Index Style*/
 
-/*Nav bar style*/
+/*Lesson Heading*/
 .heading .heading_button {
     background-color: transparent;
-    color: black;
     border: none;
     text-align: left;
     font-size: calc(16px + 0.75vw);
@@ -76,11 +206,17 @@ a.Subject_Links:active {
 }
 
 .heading_button:hover {
+    text-decoration: underline;
     color: var(--blue);
 }
-/*End Nav bar style*/
+/*End Lesson heading style*/
 
 /*Single Variable Calculus style*/
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
 #Lesson_plan {
     list-style-type: upper-roman;
 }
@@ -92,27 +228,22 @@ a.Subject_Links:active {
 
 .lesson_links {
     text-decoration: none;
-    color: black;
 }
 
 .lesson_links:link {
     text-decoration: none;
-    color: black;
 }
 
 .lesson_links:visited {
     text-decoration: none;
-    color: black;
 }
 
 .lesson_links:hover {
     text-decoration: underline;
-    color: black;
 }
 
 .lesson_links:active {
     text-decoration: underline;
-    color: black;
 }
 /*End Single Variable Calculus style*/
 
@@ -152,7 +283,6 @@ a.Subject_Links:active {
     background-color: transparent;
     border: none;
     cursor: pointer;
-    color: black;
     font-weight: 600;
     font-size: 16px;
     text-decoration: underline;
@@ -168,13 +298,11 @@ a.Subject_Links:active {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.5s;
-    background-color: whitesmoke;
 }
 
 .slidein {
     max-height: 2000px;
     overflow: hidden;
     transition: max-height 0.75s;
-    background-color: whitesmoke;
 }
 /*End Lessons Style*/
