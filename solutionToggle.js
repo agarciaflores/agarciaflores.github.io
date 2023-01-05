@@ -1,7 +1,5 @@
-// Get references to the elements
-const buttons = document.querySelectorAll('button');
+const buttons = document.querySelectorAll('.solutionButton');
 
-// Add an event listener to the button that listens for clicks
 buttons.forEach((button) => {
   const textId = button.id.replace('button', 'text');
   const text = document.getElementById(textId);

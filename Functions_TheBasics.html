@@ -20,17 +20,28 @@
     <body class="Whole">
         <div>
             <button onclick="window.location.href='index.html'" class="Title_image"></button>
-            <button onclick="window.location.href='about.html';" class="Top_Nav_Button">
-                About
+            <button id="menuButton" class="menuButton" aria-controls="primary-navigation" aria-expanded="false">
+                <svg class="hamburger" viewBox="0 0 100 100" width="40" height="40">
+                    <rect class="line top" width="80" height="10" x="10" y="25" rx="5"></rect>
+                    <rect class="line middle" width="80" height="10" x="10" y="45" rx="5"></rect>
+                    <rect class="line bottom" width="80" height="10" x="10" y="65" rx="5"></rect>
+                </svg>
             </button>
-            <button onclick="window.location.href='#';" class="Top_Nav_Button">
-                Courses
-            </button>
-            <button onclick="window.location.href='index.html';" class="Top_Nav_Button">
-                Home
-            </button>
+            <hr id="Title_Border1">
+            <div id="menu" class="menuClass">
+                <button onclick="window.location.href='index.html';" class="Top_Nav_Button">
+                    Home
+                </button>
+                <button onclick="window.location.href='#';" class="Top_Nav_Button">
+                    Courses
+                </button>
+                <button onclick="window.location.href='about.html';" class="Top_Nav_Button">
+                    About
+                </button>
+            </div>
+            <script src="menuButton.js"></script>
         </div>
-        <hr class="Title_Border">
+        <hr id="Title_Border2">
         <div class="Body">
             <h2 class="heading">
                 <button onclick="window.location.href='calculus1.html'" class="heading_button">
