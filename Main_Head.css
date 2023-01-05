@@ -3,6 +3,11 @@
     --lightblue: #4e65c8;
 }
 
+html {
+    font-size: 16px;
+    color-scheme: light dark;
+}
+
 .Whole {
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -36,6 +41,16 @@
         border: 2px solid var(--blue);
         text-decoration: underline 3px var(--blue);
     }
+
+    .previous_button, .next_button {
+        border: 2px solid var(--blue);
+        color: black;
+    }
+    
+    .previous_button:hover, .next_button:hover {
+        background-color: var(--blue);
+        color: white;
+    }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -64,8 +79,14 @@
         text-decoration: underline 3px var(--lightblue);
     }
 
-    .Title_Border {
-        background-color: black;
+    .previous_button, .next_button {
+        border: 2px solid var(--lightblue);
+        color: white;
+    }
+    
+    .previous_button:hover, .next_button:hover {
+        background-color: var(--lightblue);
+        color: white;
     }
 }
 
@@ -116,21 +137,11 @@
     }
     
     .Top_Nav_Button {
-        display: block;
-        font-weight: 500;
         border-radius: 1rem;
-        background-color:transparent;
-        margin: calc(8px + 0.1%) 1.25% 0 1.25%;
-        padding: none;
-        text-align: center;
-        text-decoration: none;
-        font-size: calc(1.2rem);
-        cursor: pointer;
+        font-size: 1.2rem;
     }
     
     .Top_Nav_Button:hover {
-        font-weight: 700;
-        letter-spacing: 0.02em;
         text-decoration: none;
     }
 
@@ -159,22 +170,12 @@
     }
 
     .Top_Nav_Button {
-        display: block;
-        font-weight: 500;
         border: none;
-        background-color:transparent;
-        margin: calc(8px + 0.1%) 1.25% 0 1.25%;
-        padding: none;
-        text-align: center;
-        text-decoration: none;
         font-size: 1.5rem;
-        cursor: pointer;
     }
     
     .Top_Nav_Button:hover {
         border: none;
-        font-weight: 700;
-        letter-spacing: 0.02em;
     }
 
     #Title_Border1 {
@@ -190,6 +191,10 @@
         border-width: .5px;  
         height: 1px;
     }
+
+    .previous_button, .next_button {
+        font-size: 1.2rem;
+    }
 }
 
 .Title_image {
@@ -204,8 +209,23 @@
 }
 
 .Title_image:hover {
-    background-size: 100px auto;
     cursor: pointer;
+}
+
+.Top_Nav_Button {
+    display: block;
+    font-weight: 500;
+    background-color:transparent;
+    margin: calc(8px + 0.1%) 1.25% 0 1.25%;
+    padding: none;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.Top_Nav_Button:hover {
+    font-weight: 700;
+    letter-spacing: 0.02em;
 }
 
 .Body {
@@ -213,43 +233,17 @@
     margin-right: 1.25%;
 }
 
-.previous_button {
+.previous_button, .next_button {
     font-weight: 600;
-    width: auto;
     background-color:transparent;
-    border: 2px solid var(--blue);
-    border-radius: 4px;
-    margin: none;
-    padding: none;
+    border-radius: .1rem;
     text-align: center;
     text-decoration: none;
-    font-size: calc(12px + 0.75vw);
     cursor: pointer;
 }
 
 .next_button {
-    font-weight: 600;
-    width: auto;
-    background-color:transparent;
-    border: 2px solid var(--blue);
-    border-radius: 4px;
-    margin: none;
-    padding: none;
-    text-align: center;
-    text-decoration: none;
-    font-size: calc(12px + 0.75vw);
-    cursor: pointer;
     float: right;
-}
-
-.previous_button:hover {
-    background-color: var(--blue);
-    color: whitesmoke;
-}
-
-.next_button:hover {
-    background-color: var(--blue);
-    color: whitesmoke;
 }
 
 .Footer {

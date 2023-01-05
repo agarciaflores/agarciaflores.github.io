@@ -26,188 +26,145 @@ body {
 }
 
 @media (prefers-color-scheme: light) {
-    a.Subject_Links {
-        text-decoration: none;
+    .Subject_Links,
+    .Subject_Links:link,
+    .Subject_Links:visited,
+    .Subject_Links:hover,
+    .Subject_Links:active,
+    .lesson_links,
+    .lesson_links:link,
+    .lesson_links:visited,
+    .lesson_links:hover,
+    .lesson_links:active,
+    .heading_button, 
+    .solutionButton {
         color: black;
     }
 
-    a.Subject_Links:link {
-        text-decoration: none;
-        color: black;
-    }
-    
-    a.Subject_Links:visited {
-        text-decoration: none;
-        color: black;
-    }
-    
-    a.Subject_Links:hover {
-        text-decoration: underline;
-        color: black;
-    }
-    
-    a.Subject_Links:active {
-        text-decoration: none;
-        color: black;
-    }
-
-    .lesson_links {
-        color: black;
-    }
-    
-    .lesson_links:link {
-        color: black;
-    }
-    
-    .lesson_links:visited {
-        color: black;
-    }
-    
-    .lesson_links:hover {
-        color: black;
-    }
-    
-    .lesson_links:active {
-        color: black;
-    }
-
-    .slideout {
+    .slideout, .slidein {
         background-color: whitesmoke;
     }
     
-    .slidein {
-        background-color: whitesmoke;
+    .heading_button:hover, .solutionButton:hover {
+        color: var(--blue);
+    }
+
+    .start_button {
+        border: 2px solid var(--blue);
+        color: black;
+    }
+    
+    .start_button:hover {
+        background-color: var(--blue);
+        color: white;
     }
 }
 
 @media (prefers-color-scheme: dark) {
-    a.Subject_Links {
-        text-decoration: none;
-        color: white
-    }
-
-    a.Subject_Links:link {
-        text-decoration: none;
-        color: white;
-    }
-    
-    a.Subject_Links:visited {
-        text-decoration: none;
-        color: white;
-    }
-    
-    a.Subject_Links:hover {
-        text-decoration: underline;
-        color: white;
-    }
-    
-    a.Subject_Links:active {
-        text-decoration: none;
+    .Subject_Links,
+    .Subject_Links:link,
+    .Subject_Links:visited,
+    .Subject_Links:hover,
+    .Subject_Links:active,
+    .lesson_links,
+    .lesson_links:link,
+    .lesson_links:visited,
+    .lesson_links:hover,
+    .lesson_links:active,
+    .heading_button, 
+    .solutionButton {
         color: white;
     }
 
-    .lesson_links {
-        color: white;
-    }
-    
-    .lesson_links:link {
-        color: white;
-    }
-    
-    .lesson_links:visited {
-        color: white;
-    }
-    
-    .lesson_links:hover {
-        color: white;
-    }
-
-    .slideout {
-        background-color: #152028;
-    }
-    
-    .slidein {
+    .slideout, .slidein {
         background-color: #152028;
     }
 
     #invert {
         filter: invert(1);
     }
+    
+    .heading_button:hover, .solutionButton:hover {
+        color: var(--lightblue);
+    }
+
+    .start_button {
+        border: 2px solid var(--lightblue);
+        color: white;
+    }
+    
+    .start_button:hover {
+        background-color: var(--lightblue);
+    }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 600px) {
     .container {
       flex-direction: column;
     }
 }
 
-@media (min-width: 801px) {
+@media (min-width: 601px) {
     .container {
         flex-direction: row;
     }
 
-    .left {
-        width: 50rem;
-    }
-      
-    .right {
+    .left, .right {
         width: 50rem;
     }
 
-    .Intro {
-        width: 40rem;
-    }
-    
-    .Subject_Field {
+    .Intro, .Subject_Field {
         width: 40rem;
     }
 }
 
 /*Index style*/
-.Intro {
+.Intro, .Subject_Field {
     background-color: transparent;
     text-align: left;
-    float: left;
-    font-size: 20px;
-    margin-right: 2%;
     margin-top: none;
     padding-top: none;
 }
 
+.Intro {
+    font-size: 1.2rem;
+    margin-right: 2%;
+}
+
 .Subject_Field {
-    background-color: transparent;
-    font-size: 19px;
-    text-align: left;
-    float: left;
+    font-size: 1.15rem;
     margin-left: 2%;
-    margin-top: none;
 }
 
 .Resources {
-    font-size: 20px;
+    font-size: 1rem;
     margin-top: 10px;
     float: left;
 }
 /*End Index Style*/
 
 /*Lesson Heading*/
-.heading .heading_button {
+.heading_button, .start_button {
     background-color: transparent;
-    border: none;
-    text-align: left;
-    font-size: calc(16px + 0.75vw);
+    width: max-content;
     font-weight: 600;
-    margin-top: none;
-    margin-bottom: none;
-    margin-left: -.4%;
-    margin-right: auto;
+    margin: none;
     padding: none;
     cursor: pointer;
 }
 
+.heading_button {
+    margin-left: -.4rem;
+    border: none;
+}
+
+.start_button {
+    border-radius: .1rem;
+    float: right;
+}
+
 .heading_button:hover {
     text-decoration: underline;
-    color: var(--blue);
 }
 /*End Lesson heading style*/
 
@@ -226,22 +183,18 @@ body {
     margin-bottom: 7.5px;
 }
 
-.lesson_links {
-    text-decoration: none;
-}
-
-.lesson_links:link {
-    text-decoration: none;
-}
-
+.Subject_Links,
+.Subject_Links:link,
+.Subject_Links:visited,
+.lesson_links,
+.lesson_links:link,
 .lesson_links:visited {
     text-decoration: none;
 }
 
-.lesson_links:hover {
-    text-decoration: underline;
-}
-
+.Subject_Links:hover,
+.Subject_Links:active,
+.lesson_links:hover,
 .lesson_links:active {
     text-decoration: underline;
 }
@@ -252,46 +205,37 @@ body {
     text-align: center;
 }
 
-.table {
+.table, .figure, .bigFigure {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 40%;
     height: auto;
+}
+
+.table {
+    width: 40%;
     min-width: 320px;
 }
 
 .figure {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
     width: 22.5%;
-    height: auto;
     min-width: 250px;
 }
 
 .bigFigure {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
     width: auto;
-    height: auto;
     min-width: 320px;
 }
 
 .solutionButton {
+    margin: auto auto auto -.3rem;
     background-color: transparent;
     border: none;
     cursor: pointer;
     font-weight: 600;
-    font-size: 16px;
     text-decoration: underline;
     margin-left: none;
     padding-left: none;
-}
-
-.solutionButton:hover {
-    color: var(--blue);
 }
 
 .slideout {
