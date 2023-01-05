@@ -35,9 +35,11 @@ html {
 
     .Title_Border {
         background-color: white;
+        color: black;
     }
 
     .Top_Nav_Button:hover {
+        color: black;
         border: 2px solid var(--blue);
         text-decoration: underline 3px var(--blue);
     }
@@ -72,9 +74,11 @@ html {
 
     .Top_Nav_Button {
         border: 2px solid white;
+        color: white;
     }
 
     .Top_Nav_Button:hover {
+        color: white;
         border: 2px solid var(--lightblue);
         text-decoration: underline 3px var(--lightblue);
     }
