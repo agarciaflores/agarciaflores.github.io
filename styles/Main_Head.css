@@ -14,11 +14,11 @@ html {
 
 @media (prefers-color-scheme: light) {
     .Title_image {
-        background-image: url('WebsiteLogo_Visible.png');
+        background-image: url('../images/WebsiteLogo_Visible.png');
     }
     
     .Title_image:hover {
-        background-image: url('WebsiteLogo_Hover.png');
+        background-image: url('../images/WebsiteLogo_Hover.png');
     }
 
     .menuButton {
@@ -58,11 +58,11 @@ html {
 
 @media (prefers-color-scheme: dark) {
     .Title_image {
-        background-image: url('WebsiteLogo_Visible_Dark.png');
+        background-image: url('../images/WebsiteLogo_Visible_Dark.png');
     }
     
     .Title_image:hover {
-        background-image: url('WebsiteLogo_Hover_Dark.png');
+        background-image: url('../images/WebsiteLogo_Hover_Dark.png');
     }
 
     .menuButton {
