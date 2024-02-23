@@ -2,22 +2,19 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="description" content="Free Single Variable Calculus University course">
-        <meta name="keywords" content="MathWise, Institute, MathWise Institute, Calculus, Derivatives, Rate of Change, Slope, and Velocity">
         <meta name="author" content="Agustin Garcia Flores">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>
-            Derivatives, Rate of Change, Slope, and Velocity | Single Variable Calculus | MWi - MathWise Institute
+            Derivatives, Rate of Change, Slope, and Velocity | Single Variable Calculus | MWi
         </title>
-        <link rel="stylesheet" href="Main_Head.css">
-        <link rel="stylesheet" href="Body_style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../../../styles/Main_Head.css">
+        <link rel="stylesheet" href="../../../styles/Body_style.css">
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
         <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     </head>
     <body class="Whole">
         <div>
-            <button onclick="window.location.href='index.html'" class="Title_image"></button>
+            <button onclick="window.location.href='../../../landing/index.html'" class="Title_image"></button>
             <button id="menuButton" class="menuButton" aria-controls="primary-navigation" aria-expanded="false">
                 <svg class="hamburger" viewBox="0 0 100 100" width="40" height="40">
                     <rect class="line top" width="80" height="10" x="10" y="25" rx="5"></rect>
@@ -27,17 +24,11 @@
             </button>
             <hr id="Title_Border1">
             <div id="menu" class="menuClass">
-                <button onclick="window.location.href='index.html';" class="Top_Nav_Button">
-                    Home
-                </button>
                 <button onclick="window.location.href='#';" class="Top_Nav_Button">
                     Courses
                 </button>
-                <button onclick="window.location.href='about.html';" class="Top_Nav_Button">
-                    About
-                </button>
             </div>
-            <script src="menuButton.js"></script>
+            <script src="../../../javascript/menuButton.js"></script>
         </div>
         <hr id="Title_Border2">
         <div class="Body">
@@ -60,7 +51,7 @@
                     <br><br>
                     Below, we see a function being graphed along with a secant and tangent line:
                     <br><br>
-                    <img id="invert" class="figure" src="derivatives_figure1.png" alt="Graphing some function f(x) along with a secant and a tangent line of thet function.">
+                    <img id="invert" class="figure" src="../figures/derivatives_figure1.png" alt="Graphing some function f(x) along with a secant and a tangent line of thet function.">
                     <br>
                     As seen in the figure, a <b>secant line</b> is a line which crosses the curve at two unique points; in the figure above,
                     these points are represented by \(P\) and \(Q\). It is a common misconception that a <b>tangent line</b> is one which crosses
@@ -72,7 +63,7 @@
                     by a distance of \(\Delta x\), since \((x+\Delta x)-(x)=\Delta x\). Similarly, the distance in the \(y\)-direction can be labeled \(\Delta f\).
                     The tangent line therefore represents the limit of the secant line as the point \(Q\) approaches the point \(P\) (\(P\) is fixed):
                     <br><br>
-                    <img id="invert" class="figure" src="derivatives_figure2.png" alt="A close-up of the limit of the secant line, representing the tangent line.">
+                    <img id="invert" class="figure" src="../figures/derivatives_figure2.png" alt="A close-up of the limit of the secant line, representing the tangent line.">
                     <br>
                     [Before going on further, we feel it is important to discuss the meaning of the Greek letter <b>delta</b>, \(\Delta\) in upper case and \(\delta\)
                     in lower case. In practice, it most often represents the "<i>change</i>" in something; a "<i>change in \(x\)</i>" is represented by \(\Delta x\), a
@@ -111,5 +102,5 @@
             </div>
         </div>
     </body>
-    <script src="solutionToggle.js"></script>
+    <script src="../../../javascript/solutionToggle.js"></script>
 </html>

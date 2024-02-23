@@ -2,22 +2,19 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="description" content="Free Single Variable Calculus University course">
-        <meta name="keywords" content="MathWise, Institute, MathWise Institute, Calculus, Limits, Function">
         <meta name="author" content="Agustin Garcia Flores">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>
-            Limit of a Function | Single Variable Calculus | MWi - MathWise Institute
+            Limit of a Function | Single Variable Calculus | MWi
         </title>
-        <link rel="stylesheet" href="Main_Head.css">
-        <link rel="stylesheet" href="Body_style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../../../styles/Main_Head.css">
+        <link rel="stylesheet" href="../../../styles/Body_style.css">
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
         <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     </head>
     <body class="Whole">
         <div>
-            <button onclick="window.location.href='index.html'" class="Title_image"></button>
+            <button onclick="window.location.href='../../../landing/index.html'" class="Title_image"></button>
             <button id="menuButton" class="menuButton" aria-controls="primary-navigation" aria-expanded="false">
                 <svg class="hamburger" viewBox="0 0 100 100" width="40" height="40">
                     <rect class="line top" width="80" height="10" x="10" y="25" rx="5"></rect>
@@ -27,17 +24,11 @@
             </button>
             <hr id="Title_Border1">
             <div id="menu" class="menuClass">
-                <button onclick="window.location.href='index.html';" class="Top_Nav_Button">
-                    Home
-                </button>
                 <button onclick="window.location.href='#';" class="Top_Nav_Button">
                     Courses
                 </button>
-                <button onclick="window.location.href='about.html';" class="Top_Nav_Button">
-                    About
-                </button>
             </div>
-            <script src="menuButton.js"></script>
+            <script src="../../../javascript/menuButton.js"></script>
         </div>
         <hr id="Title_Border2">
         <div class="Body">
@@ -65,14 +56,14 @@
                     To get a better understanding of a limit, let's investigate the behavior of the function \(p\)
                     defined by \(p(x)=(x-3)^3+2\) for values of \(x\) near \(3\):
                     <br><br>
-                    <img id="invert" class="table" src="Limits_Table1.png" alt="A table of x and y values used to recognize a pattern for limits">
+                    <img id="invert" class="table" src="../figures/Limits_Table1.png" alt="A table of x and y values used to recognize a pattern for limits">
                     <br>
                     The table shows the values of \(x\) approaching \(3\) from the left and values approaching from the right.
                     We see that when \(x\) is close to \(3\), on either side of \(3\), \(p(x)\) approaches 2. Thus,
                     the limit of \(p(x)\) as \(x\) approaches \(3\) is equal to \(2\). On a graph, this is what we're generally
                     looking at:
                     <br><br>
-                    <img class="figure" src="Limits_Figure1.png" alt="Graph of the function p(x), showing the limit as x approaches 3.">
+                    <img class="figure" src="../figures/Limits_Figure1.png" alt="Graph of the function p(x), showing the limit as x approaches 3.">
                     <br>
                     In many cases, the limit of the function as \(x\) approaches \(\alpha\) will simply be the value \(f(\alpha)\), but
                     this is not always true. Take, for example, the following function,
@@ -81,7 +72,7 @@
                     the function takes the value of \(\frac{0}{0}\) when \(x=0\), an undefined result. Yet, if we look at the graph of the function
                     \(f(x)\) below,
                     <br>
-                    <img class="figure" src="Limits_Figure2.png" alt="Graph of the function f(x), showing the limit as x approaches 0.">
+                    <img class="figure" src="../figures/Limits_Figure2.png" alt="Graph of the function f(x), showing the limit as x approaches 0.">
                     we see that the limit of \(f(x)\) as \(x\) approaches \(0\) is equal to \(1\).
                     <br><br>
                     Ultimately, we find that if the function is undefined at \(x=\alpha\), the limit of the
@@ -130,7 +121,7 @@
                                 \right.
                         \end{gather*}
                     \]
-                    <img class="figure" src="Limits_Figure3.png" alt="A graph of the function m(x).">
+                    <img class="figure" src="../figures/Limits_Figure3.png" alt="A graph of the function m(x).">
                     <br>
                     [\(m\) being a <b>piecewise function</b> simply means that it is defined by more than one sub-function, where each
                     sub-function only applies to a particular, unique interval of the domain. The first sub-function of \(m\) is graphed
@@ -187,7 +178,7 @@
                         \end{align*}
                     \]
                     A more extensive list of useful limit properties and formulae (including the ones
-                    already mentioned) can be found <b><a class="lesson_links" href="Limit_Formulas.pdf">here</a></b>. These formulae can be very useful when solving more complicated limit problems.
+                    already mentioned) can be found <b><a class="lesson_links" href="../misc/Limit_Formulas.pdf">here</a></b>. These formulae can be very useful when solving more complicated limit problems.
                     <br><br>
                     In conclusion, when taking a limit of a function you are looking for the value the function approaches as the independent variable, in many cases \(x\),
                     approaches some value \(\alpha\), either from the left, right, or both sides simultaneously. In the following section we will go over discontinuities around
@@ -208,5 +199,5 @@
             </div>
         </div>
     </body>
-    <script src="solutionToggle.js"></script>
+    <script src="../../../javascript/solutionToggle.js"></script>
 </html>

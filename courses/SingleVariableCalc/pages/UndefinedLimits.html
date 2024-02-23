@@ -2,22 +2,19 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="description" content="Free Single Variable Calculus University course">
-        <meta name="keywords" content="MathWise, Institute, MathWise Institute, Calculus, Limits, Undefined">
         <meta name="author" content="Agustin Garcia Flores">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>
-            Inifinity as a Limit, Undefined Limits, Continuity, and Trigonometric Limits | Single Variable Calculus | MWi - MathWise Institute
+            Inifinity as a Limit, Undefined Limits, Continuity, and Trigonometric Limits | Single Variable Calculus | MWi
         </title>
-        <link rel="stylesheet" href="Main_Head.css">
-        <link rel="stylesheet" href="Body_style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../../../styles/Main_Head.css">
+        <link rel="stylesheet" href="../../../styles/Body_style.css">
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
         <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     </head>
     <body class="Whole">
         <div>
-            <button onclick="window.location.href='index.html'" class="Title_image"></button>
+            <button onclick="window.location.href='../../../landing/index.html'" class="Title_image"></button>
             <button id="menuButton" class="menuButton" aria-controls="primary-navigation" aria-expanded="false">
                 <svg class="hamburger" viewBox="0 0 100 100" width="40" height="40">
                     <rect class="line top" width="80" height="10" x="10" y="25" rx="5"></rect>
@@ -27,17 +24,11 @@
             </button>
             <hr id="Title_Border1">
             <div id="menu" class="menuClass">
-                <button onclick="window.location.href='index.html';" class="Top_Nav_Button">
-                    Home
-                </button>
                 <button onclick="window.location.href='#';" class="Top_Nav_Button">
                     Courses
                 </button>
-                <button onclick="window.location.href='about.html';" class="Top_Nav_Button">
-                    About
-                </button>
             </div>
-            <script src="menuButton.js"></script>
+            <script src="../../../javascript/menuButton.js"></script>
         </div>
         <hr id="Title_Border2">
         <div class="Body">
@@ -114,7 +105,7 @@
                             <br>
                             A removable discontinuity is when a function is continuous everywhere but one value of \(x\). Take, for example, the function \(\frac{\sin(x)}{x}\), which is defined for \(x\neq 0\):
                             <br><br>
-                            <img class="figure" src="UndefinedLimits_Figure1.png" alt="A graph of the function sin(x)/x">
+                            <img class="figure" src="../figures/UndefinedLimits_Figure1.png" alt="A graph of the function sin(x)/x">
                             <br>
                             In essence, if \(\lim_{x\to x_0^+} f(x) = \lim_{x\to x_0^-} f(x)\) but is not equal to \(f(x_0)\), or if \(f(x_0)\) is undefined, we call the discontinuity <b>removable</b>.
                         </li>
@@ -133,7 +124,7 @@
                                         \right.
                                 \end{gather*}
                             \]
-                            <img class="figure" src="UndefinedLimits_Figure2.png" alt="A graph of the piecewise function p(x).">
+                            <img class="figure" src="../figures/UndefinedLimits_Figure2.png" alt="A graph of the piecewise function p(x).">
                             <br>
                             From the graph, we can see that \(p(x)\) approaches different values from the left and right of \(x=0\). Thus, \(p(x)\) has a <b>jump discontinuity</b> at \(x=0\).
                         </li>
@@ -142,7 +133,7 @@
                             <br>
                             An infinite discontinuity is when a function approaches infinity in the y-direction, this is the behavior that is seen in vertical asymptotes. An example of an
                             infinite discontinuity is the fuction \(\frac{1}{x}\) at \(x=0\):
-                            <img class="figure" src="UndefinedLimits_Figure3.png" alt="A graph of the function 1/x showing the verical asymptote at x=0.">
+                            <img class="figure" src="../figures/UndefinedLimits_Figure3.png" alt="A graph of the function 1/x showing the verical asymptote at x=0.">
                             <br>
                             The right-hand limit as \(x\) approaches \(0\) is equal to positive infinity, \(\lim_{x\to 0^+}\frac{1}{x}=\infty\), and the left-hand limit as \(x\) approaches
                             \(0\) is equal to negative infinity, \(\lim_{x\to 0^-}\frac{1}{x}=-\infty\).
@@ -152,7 +143,7 @@
                             <br>
                             An essential disoncontinuity is one which doesn't fit any of the previous three types. There are several examples out there but the one mentioned here is the limit of \(\sin(\frac{1}{x})\)
                             as \(x\) approaches \(0\), \(\lim_{x\to 0}\sin(\frac{1}{x})\). The graph of \(\sin(\frac{1}{x})\) is the following:
-                            <img class="figure" src="UndefinedLimits_Figure4.png" alt="A graph of the function sin(1/x), showing how ugly it becomes at the origin, x=0.">
+                            <img class="figure" src="../figures/UndefinedLimits_Figure4.png" alt="A graph of the function sin(1/x), showing how ugly it becomes at the origin, x=0.">
                             <br>
                             This function oscillates a lot as it approaches the origin, as is the case with other functions as well. For cases like this, it doesn't make sense to say the function
                             goes to anything; not even \(\pm\infty\). Thus, we say the limit does not exist.
@@ -170,10 +161,10 @@
                     We will be using a geomtric proof for both. We start off with a circle with a radius of \(1\). Note that the angle \(\theta\) in this case is in radians and not degrees.
                     The formula for the arc length of a circle is \(s=r\theta\), since \(r=1\), \(s=\theta\). Additionally, recall that the \(\sin\) of the angle \(\theta\) is equal to the quotient
                     of the side opposite the angle and the radius. Since \(r=1\), the side opposite the angle \(\theta\) is equal to \(\sin(\theta)\):
-                    <img id="invert" class="figure" src="UndefinedLimits_Figure5.png" alt="A picture of a circle with radius 1." style="width: 30%;">
+                    <img id="invert" class="figure" src="../figures/UndefinedLimits_Figure5.png" alt="A picture of a circle with radius 1." style="width: 30%;">
                     <br>
                     The first limit has \(\theta\) going to \(0\), thus we zoom into the circle and start decreasing the angle:
-                    <img id="invert" class="figure" src="UndefinedLimits_Figure6.png" alt="A zoom in on the circle from the previous figure, showing the angle decreasing." style="width: 40%;">
+                    <img id="invert" class="figure" src="../figures/UndefinedLimits_Figure6.png" alt="A zoom in on the circle from the previous figure, showing the angle decreasing." style="width: 40%;">
                     <br>
                     The main idea here is that as \(\theta\) decreases, goes to \(0\), \(\sin(\theta)=s=\theta\). This is a small angle approximation. Thus, \(\frac{\sin(\theta)}{\theta}=\frac{\theta}{\theta}=1\) and
                     \(\lim_{\theta\to 0}\frac{\sin(\theta)}{\theta} = 1\).
@@ -181,10 +172,10 @@
                     Moving on to the second limit, the one involving \(\cos\), we start off again with the same circle of radius \(1\) and labeling the arc length of the angle \(\theta\). However,
                     because we are now involving a \(\cos\) we label the adjacent side to the angle \(\theta\) instead of the opposite. We label the side \(\cos(\theta)\). Note that because the length of
                     the radius is \(1\), the remaining length of the radius along the adjacent side of the angle would be \(1-\cos(\theta)\):
-                    <img id="invert" class="figure" src="UndefinedLimits_Figure7.png" alt="A figure of a circle with radius 1, labeling the arc length and the adjacent side." style="width: 30%;">
+                    <img id="invert" class="figure" src="../figures/UndefinedLimits_Figure7.png" alt="A figure of a circle with radius 1, labeling the arc length and the adjacent side." style="width: 30%;">
                     <br>
                     If we zoom in we can see that as the angle \(\theta\) decreases the remaining length of the radius, the length of \(1-\cos(\theta)\), decreases as well:
-                    <img id="invert" class="figure" src="UndefinedLimits_Figure8.png" alt="A close up of the previous figure, showing the specified length decreases as the angle decreases." style="width: 40%;">
+                    <img id="invert" class="figure" src="../figures/UndefinedLimits_Figure8.png" alt="A close up of the previous figure, showing the specified length decreases as the angle decreases." style="width: 40%;">
                     <br>
                     Thus, as \(\theta\) decreases, \(1-\cos(\theta)\) goes to \(0\) and, by extension, \(\lim_{\theta\to 0}\frac{1-\cos(\theta)}{\theta} = 0\), because the numerator goes to the \(0\),
                     it makes the whole thing go to \(0\). You may be thinking that "plugging in \(0\)" would make the whole term equal to \(\frac{0}{0}\), an undeterminant form. However, \(\theta\neq 0\)
@@ -207,5 +198,6 @@
             </div>
         </div>
     </body>
-    <script src="solutionToggle.js"></script>
+    <script src="../../../javascript/solutionToggle.js"></script>
+
 </html>
