@@ -35,41 +35,38 @@
         </div>
         <hr id="Title_Border2">
         <div class="Body">
-            <h2>
-                <button onclick="window.location.href='MathMethods.html'" class="heading_button">
-                    Mathematical Methods in Physics
-                </button>
-                <button onclick="window.location.href='#'" class="start_button">
-                    Get Started
-                </button>
-            </h2>
+            <div class="container">
+                <div class="left"><a class="lesson_links" href="MathMethods.html"><h2>Mathematical Methods in Physics</h2></a></div>
+                <div class="right">
+                    <h2>
+                        <button onclick="window.location.href='MathematicalStructures/1_terminology.html'" class="start_button">
+                            Get Started
+                        </button>
+                    </h2>
+                </div>
+            </div>
             <div>
                 <p>
-                    Throughout university, there a several different Calculus courses that one can take.
-                    For example, there are different versions of calculus courses taught to students in the
-                    life sciences, business, engineering, etc. Our Calculus courses are equivalent to the
-                    Calculus with Analytic Geometry courses offered at university. Nonetheless, we do our best
-                    to include a variety of problems that can be applied to different versions of the course.
+                    At Arizona State University, the Mathematical Methods in Physics course was split over two semesters.
+                    I found this series of courses incredibly insightful, and I very much enjoyed learning from <a href="https://cecilialunardini.wordpress.com/">Professor Cecilia Lunardini</a>.
+                    The lesson plan below encompasses the majority of the content covered in these classes, as well as incorporating material from other mathematics courses I completed during my undergraduate studies.
                 </p>
                 <p>
-                    Our Single Variable Calculus course will walk you through all of the material typically covered in a
-                    semester-long university course. Thus, it is reasonable to expect to finish the course in
-                    about 3 to 4 months. Each lesson could, theoretically, be covered in one (long) sitting.
-                    Additionally, at the end of every lesson there is problem set on the lesson's material which 
-                    should be completed before continuing. Each problem set will be split into three different sections: easy, moderate, and challenging. An answer key to
-                    the problem sets will also be provided, with a step-by-step solution to all of the problems.
-                </p>
-                <p>
-                    Below, you will find the lesson plan for the course. We hope it is manageable, efficient, and rewarding.
+                    Each topic in the lesson plan corresponds to a specific course in a university's catalog, however I will only address the content relevant to those studying physics.
+                    This material is not meant to be a comprehensive guide to studying physics, nor does it cover every topic that may be encountered in the field. These are the subjects that <i>I</i> consider essential for excelling as a physicist.
+                    Is a thorough understanding of graph theory essential for someone investigating quantum materials?  Well, I'm honestly not quite sure. Is it fun? Without a doubt: yes!
                 </p>
             </div>
             <div class="container">
                 <div class="left">
                     <h2>Lesson Plan:</h2>
-                    <ol id="Lesson_plan">
-                        <li class="Lesson"><a class="lesson_links" href="#">Mathematical Structures</a></li>
-                            <ol start="1">
-                                <li><a class="lesson_links" href="#">An Introduction to Terminology</a></li>
+                    <ol id="Lesson_plan" start="0">
+                        <li class="Lesson"><a class="lesson_links" href="MathematicalStructures/1_terminology.html">Mathematical Structures</a></li>
+                            <ol>
+                                <li><a class="lesson_links" href="MathematicalStructures/1_terminology.html">An Introduction to Terminology</a></li>
+                                <ol type="i">
+                                    <li><a class="lesson_links" href="MathematicalStructures/1_terminology.html#math_symbols">Mathematical Symbols</a></li>
+                                </ol>
                                 <li><a class="lesson_links" href="#">Mathematical Proof Techniques</a></li>
                                 <ol type="i">
                                     <li><a class="lesson_links" href="#">Direct</a></li>
@@ -88,7 +85,7 @@
                                 <br>
                             </ol>
                         <li class="Lesson"><a class="lesson_links" href="#">Algebra</a></li>
-                            <ol start="5">
+                            <ol>
                                 <li><a class="lesson_links" href="#">Arithmetic in \(\mathbb{Z}\)</a></li>
                                 <ol type="i">
                                     <li><a class="lesson_links" href="#">The Division Algorithm</a></li>
@@ -107,7 +104,7 @@
                                 <br>
                             </ol>
                         <li class="Lesson"><a class="lesson_links" href="#">Elementary Linear Algebra</a></li>
-                            <ol start="7">
+                            <ol>
                                 <li><a class="lesson_links" href="#">Vector Algebra</a></li>
                                 <ol type="i">
                                     <li><a class="lesson_links" href="#"></a></li>
@@ -138,7 +135,7 @@
                                 <br>
                             </ol>
                         <li class="Lesson"><a class="lesson_links" href="#">Vector Calculus</a></li>
-                            <ol start="15">
+                            <ol>
                                 <li><a class="lesson_links" href="#">Differentiation and Integration</a></li>
                                 <ol type="i">
                                     <li><a class="lesson_links" href="#"></a></li>
@@ -165,7 +162,7 @@
                                 <br>
                             </ol>
                         <li class="Lesson"><a class="lesson_links" href="#">Approximation Theory</a></li>
-                            <ol start="20">
+                            <ol>
                                 <li><a class="lesson_links" href="#">Taylor Series</a></li>
                                 <ol type="i">
                                     <li><a class="lesson_links" href="#"></a></li>
@@ -190,7 +187,7 @@
                                 <br>
                             </ol>
                         <li class="Lesson"><a class="lesson_links" href="#">Integral Transforms</a></li>
-                            <ol start="25">
+                            <ol>
                                 <li><a class="lesson_links" href="#">Fourier Transforms</a></li>
                                 <ol type="i">
                                     <li><a class="lesson_links" href="#"></a></li>
@@ -210,7 +207,7 @@
                                 <br>
                             </ol>
                         <li class="Lesson"><a class="lesson_links" href="#">Ordinary Differential Equations (ODE)</a></li>
-                            <ol start="29">
+                            <ol>
                                 <li><a class="lesson_links" href="#">First Order ODE</a></li>
                                 <ol type="i">
                                     <li><a class="lesson_links" href="#">Separable Equations</a></li>
@@ -230,7 +227,7 @@
                                 <br>
                             </ol>
                         <li class="Lesson"><a class="lesson_links" href="#">Introdcution to Nonlinear Dynamics & Chaos</a></li>
-                            <ol start="31">
+                            <ol>
                                 <li><a class="lesson_links" href="#"></a></li>
                                 <ol type="i">
                                     <li><a class="lesson_links" href="#"></a></li>
@@ -242,7 +239,7 @@
                                 <br>
                             </ol>
                         <li class="Lesson"><a class="lesson_links" href="#">Special Functions</a></li>
-                            <ol start="33">
+                            <ol>
                                 <li><a class="lesson_links" href="#">The Gamma Function</a></li>
                                 <ol type="i">
                                     <li><a class="lesson_links" href="#"></a></li>
@@ -266,7 +263,7 @@
                                 <br>
                             </ol>
                         <li class="Lesson"><a class="lesson_links" href="#">Applied Complex Analysis</a></li>
-                            <ol start="38">
+                            <ol>
                                 <li><a class="lesson_links" href="#">Complex Numbers</a></li>
                                 <ol type="i">
                                     <li><a class="lesson_links" href="#">Polar Form</a></li>
@@ -287,15 +284,15 @@
                 </div>
                 <div class="right">
                     <h2>Problem Sets:</h2>
-                    <ol>
+                    <ol start="0">
                         <li><a class="lesson_links" href="#">#</a> (<a class="lesson_links" href="#">#</a>)</li>
                     </ol>
+                    <a class="lesson_links" href="sources.html"><h2>Sources</h2></a>
                 </div>
             </div>
-            <br/>
-            <p>
+            <div>
             Last edited <script>document.write(document.lastModified);</script>
-            </p>
+            </div>
         </div>
     </body>
 </html>
