@@ -43,7 +43,7 @@ body {
 
     .slideout, .slidein {
         background-color: none;
-        border-left: 0.15rem dashed whitesmoke;
+        border-left: 0.15rem dashed black;
     }
     
     .heading_button:hover, .solutionButton:hover {
