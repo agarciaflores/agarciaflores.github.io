@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Mathematics courses">
+        <meta name="author" content="Agustin Garcia Flores">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            MWi - MathWise
+        </title>
+        <link rel="stylesheet" href="styles/Main_Head.css">
+        <link rel="stylesheet" href="styles/Body_style.css">
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    </head>
+    <body class="Whole">
+        <div>
+            <button onclick="window.location.href='index.html'" class="Title_image"></button>
+            <button id="menuButton" class="menuButton" aria-controls="primary-navigation" aria-expanded="false">
+                <svg class="hamburger" viewBox="0 0 100 100" width="40" height="40">
+                    <rect class="line top" width="80" height="10" x="10" y="25" rx="5"></rect>
+                    <rect class="line middle" width="80" height="10" x="10" y="45" rx="5"></rect>
+                    <rect class="line bottom" width="80" height="10" x="10" y="65" rx="5"></rect>
+                </svg>
+            </button>
+            <hr id="Title_Border1">
+            <div id="menu" class="menuClass">
+                <button onclick="window.location.href='courses/courses.html';" class="Top_Nav_Button">
+                    Courses
+                </button>
+            </div>
+            <script src="javascript/menuButton.js"></script>
+        </div>
+        <hr id="Title_Border2">
+        <div class="Body">
+            <div class="container">
+                <div class="Intro">
+                    <h2>The Price of this Site</h2>
+                    <p>
+                        Studying advanced mathematics implies you are likely not experiencing hunger, cold, or sickness.
+                        This site is available to you at no cost for your use.
+                        If you find this site valuable, please consider making a contribution to help alleviate suffering in the world.
+                    </p>
+                    <p>   
+                        You might donate money to organizations like
+                        <a href="https://www.unicef.org/">Unicef</a>,
+                        <a href="https://www.doctorswithoutborders.org/">Doctors without Borders</a>,
+                        <a href="https://www.pih.org/">Partners in Health</a>,
+                        <a href="https://www.oxfamamerica.org/">Oxfam</a>, or a similar group in your country.
+                        You might also consider volunteering your time and expertise instead.
+                    </p>
+                    <p>
+                        MathWise is a compilation of my academic notes during my time as an undergraduate student at Arizona State University.
+                        I learned from
+                        <a href="https://directory.estrellamountain.edu/person/dwain.desbien">one of my favorite physics professors</a>
+                        that writing a textbook on a subject is the greatest way to learn it.
+                        Here's my attempt at it.
+                    </p>
+                    <p>
+                        I aim to utilize these notes in my own courses someday.
+                        Until then, I hope that someone, somewhere, finds them beneficial.
+                        I wish you success and hope you will one day explore uncharted waters.
+                    </p>
+                </div>
+                <div class="Subject_Field">
+                    <h2>Available courses:</h2>
+                        <ul>
+                            <li><a class="Subject_Links" href="courses/SingleVariableCalc/pages/calculus1.html">Single Variable Calculus (work in progress)</a></li>
+                        </ul>
+                </div>
+            </div>
+            <p class="Footer">
+            Last edited <script>document.write(document.lastModified);</script>
+            </p>
+        </div>
+    </body>
+</html>
