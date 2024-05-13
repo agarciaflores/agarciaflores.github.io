@@ -383,13 +383,44 @@ html {
     font-size: 15px
 }
 
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: #fff;
+        color: #2A2F36;
+    }
+
+    .link--active {
+        color: #fff;
+        background-color: #2A2F36;
+    }
+
+    .link:hover {
+        color: #fff;
+        background-color: #2A2F36;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #1f1f1f;
+        color: #cccccc;
+    }
+
+    .link--active {
+        color: #1f1f1f;
+        background-color: #cccccc;
+    }
+
+    .link:hover {
+        color: #1f1f1f;
+        background-color: #cccccc;
+    }
+}
+
 body {
     font-size: 20px;
-    font-size: 2rem;
-    background-color: #fff;
-    color: #2A2F36;
     font-family: "AdobeGaramond",Georgia,Times,serif;
-    font-weight: 300
+    font-weight: 300;
 }
 
 [aria-hidden="true"] {
@@ -600,15 +631,11 @@ body {
 }
 
 .link:hover {
-    color: white;
     text-decoration: none;
-    background-color: black
 }
 
 .link--active {
-    color: white;
     text-decoration: none;
-    background-color: black
 }
 
 .body-text {

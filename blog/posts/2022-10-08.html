@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LHX1KL0DKP"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-LHX1KL0DKP');
+    </script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>2022-10-08 | ppp</title>
+    <link rel="stylesheet" href="../../style/blog.css">
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [ [ '$', '$' ], [ '\\(', '\\)' ]  ], // Defines delimiters for inline equations
+                displayMath: [['$$', '$$'], ['\\[', '\\]']] // Defines delimiters for displayed equations
+            },
+            // Additional configurations can be added here
+        };
+    </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="whole">
+    <header>
+        <h1><a class="title" href="../blog.html">ppp</a></h1>
+        <p class="sub-title">by Agustin Garcia Flores</p>
+        <nav>
+            <ul>
+                <li><a class="tabs" href="#">Putnam</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="blog-post">
+        <h1 class="blog-post-title">
+            Gaussian Integral
+        </h1>
+        <hr class="title-separator">
+        <div class="text">
+            <p>
+                Let $f:\mathbb{R}\to\mathbb{R}^+$ be defined by $f(x) = \text{exp}\left(-ax^2\right)$.
+                $f$ is called the <u>Gaussian function</u> and the integral of $f$ is then called the <u>Gaussian integral</u> (or the <u>Euler-Poisson integral</u>):
+                $$\Large I = \int_{\mathbb{R}}dx\, e^{-ax^2}.$$
+                There are several techniques to solve this integral.
+                I intend to show a few here.
+            </p>
+            <p>
+                First, we must go over an important theorem in mathematical analysis:
+                <p class="theorem">
+                    <b class="theorem-title">Fubini's theorem</b>
+                    Let $A$ and $B$ be $\sigma$-finite measure spaces, not necessarily complete, and either
+                    $$\int_Adx\, \left(\int_Bdy\,\left|f(x,y)\right|\right)<\infty$$
+                    or
+                    $$\int_Bdy\, \left(\int_Adx\,\left|f(x,y)\right|\right)<\infty.$$
+                    Then
+                    $$\int_{A\times B}d(x,y)\,\left|f(x,y)\right|<\infty$$
+                    and
+                    $$\int_Adx\, \left(\int_Bdy\,\left|f(x,y)\right|\right) = \int_Bdy\, \left(\int_Adx\,\left|f(x,y)\right|\right) = \int_{A\times B}d(x,y)\,\left|f(x,y)\right|.$$
+                </p>
+                We can now get started with a simple demonstration.
+            </p>
+            <p>
+                <i>Proof.</i> By spherical polar coordinates.<br>
+                We integrate over both $x$ and $y$ so that
+                $$I = \int_{\mathbb{R}}dx\, e^{-ax^2} \Rightarrow I^2 = \int_{\mathbb{R}}dx\, e^{-ax^2}\int_{\mathbb{R}}dy\, e^{-ay^2} = \iint_{\mathbb{R}^2}dx\,dy\, e^{-a\left(x^2+y^2\right)},$$
+                which can be trandformed into spherical polar coordinates since $x = r\cos\theta$ and $y = r\sin\theta$.
+                We see that
+                \[
+                \begin{align*}
+                    \partial_rx &= \cos\theta, & \partial_\theta x &= -r\sin\theta; \\
+                    \partial_ry &= \sin\theta, & \partial_\theta y &= r\cos\theta,
+                \end{align*}
+                \]
+                so the Jacobian determinant $J$ for the transformation from $(x,y)$ to $(r,\theta)$ is
+                $$J = \text{det}\begin{pmatrix}\cos\theta & -r\sin\theta \\ \sin\theta & r\cos\theta\end{pmatrix} = r\cos^2\theta+r\sin^2\theta = r.$$
+                Thus, $dx\,dy \to rdr\,d\theta$ and 
+                $$\iint_{\mathbb{R}^2}dx\,dy\, e^{-a\left(x^2+y^2\right)} = \int_0^{2\pi}\int_{\mathbb{R}^+\cup\{0\}}rdr\,d\theta\, e^{-ar^2} = 2\pi\int_{\mathbb{R}^+\cup\{0\}}rdr\, e^{-ar^2} = I^2.$$
+                Let $\mu = -ar^2$ so that $d\mu = -2ardr$. Then,
+                \[
+                \begin{align*}
+                    I^2 &= -\frac{\pi}{a}\int_{\mathbb{R}^+\cup\{0\}}d\mu\, e^\mu \\
+                    &= \frac{\pi}{a}\int_{-\infty}^0d\mu\, e^\mu \\
+                    &= \frac{\pi}{a} \\
+                    \therefore &\boxed{I = \sqrt{\frac{\pi}{a}}.}
+                \end{align*}
+                \]
+                [qed]
+            </p>
+        </div>
+        <hr class="title-separator">
+    </div>
+</body>
+</html>
