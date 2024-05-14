@@ -14,7 +14,7 @@ body {
     }
 
     header {
-        padding: 10px 20px; /* HERE */
+        padding: 10px 20px;
     }
 
     .container {
@@ -39,7 +39,7 @@ body {
     }
 
     header {
-        padding: 10px 180px;
+        padding: 0 180px;
     }
 
     .container {
@@ -118,7 +118,11 @@ nav ul li {
 .container {
     display: flex;
     flex-wrap: wrap;
-    margin: 20px;
+    margin: 0 20px;
+}
+
+.blog-post .container {
+    margin-left: 0;
 }
 
 .date {
@@ -131,14 +135,18 @@ article.post {
     margin-bottom: 20px;
 }
 
-a.categorie {
+a.category, a.footnote {
     color: #dfd2e7;
     text-decoration: none;
 }
 
-a.categorie:hover {
+a.category:hover {
     text-decoration: underline;
     text-decoration-thickness: 1.2px;
+}
+
+a.footnote {
+    font-size: smaller;
 }
 
 .blog-post {
@@ -172,3 +180,4 @@ a.categorie:hover {
     text-align: left;
     margin-bottom: 0.75rem;
 }
+

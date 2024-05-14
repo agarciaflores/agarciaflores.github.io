@@ -79,11 +79,11 @@
                 \]
                 [qed]
             </p>
-            <p>
+            <div>
                 We now tackle a more rigorous approach.
                 First, we must go over a couple of important theorems in mathematical analysis:
                 <p class="theorem">
-                    <b class="theorem-title">Fubini's theorem</b>
+                    <b class="theorem-title">Fubini's theorem<sup><a class="footnote" href="#fn1">1</a></sup></b>
                     Let $A$ and $B$ be $\sigma$-finite measure spaces, not necessarily complete, and either
                     $$\int_Adx\, \left(\int_Bdy\,\left|f(x,y)\right|\right)<\infty$$
                     or
@@ -94,11 +94,11 @@
                     $$\int_Adx\, \left(\int_Bdy\,\left|f(x,y)\right|\right) = \int_Bdy\, \left(\int_Adx\,\left|f(x,y)\right|\right) = \int_{A\times B}d(x,y)\,\left|f(x,y)\right|.$$
                 </p>
                 <p class="theorem">
-                    <b class="theorem-title">Squeeze theorem</b>
+                    <b class="theorem-title">Squeeze theorem<sup><a class="footnote" href="#fn2">2</a></sup></b>
                     Let $f$, $g$, and $h$ be functions which satisfy $\text{dom}\, f = \text{dom}\, g = \text{dom}\, h = A$ and $f(x)\leq g(x)\leq h(x)$ $\forall\, x\in A$.
                     If $\lim_{x\to x_0}f(x) = \lim_{x\to x_0}g(x) = L$ for some $x_0\in A$ then $\lim_{x\to x_0}h(x) = L$.
                 </p>
-            </p>
+            </div>
             <p>
                 <i>Proof.</i> Let 
                 $$I(a) = \int_a^a dx\, e^{-bx^2}$$
@@ -146,9 +146,20 @@
                 $$\frac{\pi}{b}\lim_{a\to\infty}\left(1-e^{-2ba^2}\right) = \frac{\pi}{b},$$
                 so
                 $$\lim_{a\to\infty}\left(I(a)\right)^2 = \frac{\pi}{b} \Rightarrow \lim_{a\to\infty}I(a) = \sqrt{\frac{\pi}{b}} \Rightarrow \boxed{I_0 = \sqrt{\frac{\pi}{b}}.}$$
+                [qed]
             </p>
+            <div>
+                Sources:
+                <ol>
+                    <li id="fn1"><a class="category" href="https://sites.math.washington.edu/~morrow/335_12/fubini.pdf">sites.math.washington.edu</a></li>
+                    <li id="fn2">Abbott, Stephen. “Functional Limits and Continuity.” <i>Understanding Analysis</i>, 2nd ed., Springer, New York, 2015, p. 109. </li>
+                </ol>
+            </div>
         </div>
         <hr class="title-separator">
+        <p>
+            Categorized as: <a class="category" href="../categories/mathematics.html">Mathematics</a>
+        </p>
     </div>
 </body>
 </html>
