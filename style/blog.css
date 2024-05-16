@@ -181,3 +181,22 @@ a.footnote {
     margin-bottom: 0.75rem;
 }
 
+.jupyter-frame {
+    height: 5320px;
+    background: transparent;
+    position: relative;
+}
+
+@media (max-width: 699px) {
+    .jupyter-frame {
+        width: calc(100% + 44px);
+        left: -44px;
+    }
+}
+
+@media (min-width: 700px) {
+    .jupyter-frame {
+        width: calc(100% + 123px);
+        left: -99px;
+    }
+}

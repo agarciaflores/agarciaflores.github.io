@@ -15,6 +15,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>2023-11-18 | ppp</title>
     <link rel="stylesheet" href="../../style/blog.css">
+    
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>
         window.MathJax = {
             tex: {
@@ -22,10 +25,14 @@
                 displayMath: [['$$', '$$'], ['\\[', '\\]']] // Defines delimiters for displayed equations
             },
             // Additional configurations can be added here
+            // tex: {
+            //         packages: ['base', 'ams', 'boldsymbol']
+            //     },
+            // loader: {
+            //         load: ['ui/menu', '[tex]/ams', '[tex]/boldsymbol']
+            //     }
         };
     </script>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body class="whole">
     <header>
@@ -40,20 +47,13 @@
     
     <div class="blog-post">
         <h1 class="blog-post-title">
-            Chaos & Python
+            Lorenz Equations
         </h1>
         <hr class="title-separator">
-        <div class="text">
-            <p>
-                
-            </p>
-            <div>
-                Sources:
-                <ol>
-                    <li id="fn1"></li>
-                    <li id="fn2"></li>
-                </ol>
-            </div>
+        <div>
+
+            <iframe class="jupyter-frame" src="../jupyter/html/2023-11-18.html" frameborder="0"></iframe>
+
         </div>
         <hr class="title-separator">
         <p>
