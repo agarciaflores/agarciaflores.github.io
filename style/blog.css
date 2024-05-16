@@ -182,13 +182,13 @@ a.footnote {
 }
 
 .jupyter-frame {
-    height: 5320px;
     background: transparent;
     position: relative;
 }
 
 @media (max-width: 699px) {
     .jupyter-frame {
+        height: 7300px;
         width: calc(100% + 44px);
         left: -44px;
     }
@@ -196,6 +196,7 @@ a.footnote {
 
 @media (min-width: 700px) {
     .jupyter-frame {
+        height: 5578px;
         width: calc(100% + 123px);
         left: -99px;
     }
