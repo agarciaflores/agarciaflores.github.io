@@ -25,6 +25,9 @@ body {
         width: auto;
     }
 
+    img.image {
+        width: 100%;
+    }
     .post-separator {
         height: 1px;
         width: 98%;
@@ -46,7 +49,7 @@ body {
         flex-direction: row;
     }
 
-    article.post {
+    article.post, img.image {
         width: 340px;
     }
 
@@ -165,6 +168,10 @@ a.footnote {
     width: calc(100% - 20px);
 }
 
+.image {
+    margin: 10px 0;
+}
+
 .theorem {
     display: block;
     margin-left: auto;
@@ -182,22 +189,18 @@ a.footnote {
 }
 
 .jupyter-frame {
-    background: transparent;
-    position: relative;
+    width: calc(100% + 26px);
+    margin: 0px -25px;
 }
 
 @media (max-width: 699px) {
-    .jupyter-frame {
-        height: 7300px;
-        width: calc(100% + 44px);
-        left: -44px;
+    #file-2023-11-18 {
+        height: 7000px;
     }
 }
 
 @media (min-width: 700px) {
-    .jupyter-frame {
-        height: 5578px;
-        width: calc(100% + 123px);
-        left: -99px;
+    #file-2023-11-18 {
+        height: 6226px;
     }
 }

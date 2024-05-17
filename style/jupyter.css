@@ -6,16 +6,18 @@ bring a jupyter notebook into my blog environment */
 /* Only controls the BACKGROUND COLOR of the whole document */
 .jp-Notebook, .jp-Notebook-cell, .jp-MarkdownCell {
     background: #072184;
+    font-weight: 600 !important;
 }
 
 /* Code Cells -----------------------------------------------------*/
 
 /* Controls code cells */
-.CodeMirror.cm-s-jupyter, .jp-InputArea-editor, .CodeMirror pre {
-    background: #181818;
-    color: #dfd2e7;
+.CodeMirror.cm-s-jupyter, .jp-InputArea-editor, .CodeMirror, pre {
+    background: #181818 !important;
+    color: #dfd2e7 !important;
+    font-weight: 600 !important;
     font-family: 'Courier New', Courier, monospace;
-    border-color: #37373d;
+    border-color: #37373d !important;
     overflow: auto;
 }
 
@@ -35,10 +37,13 @@ bring a jupyter notebook into my blog environment */
 }
 
 /* Controls markdown cells */
-.jp-RenderedHTMLCommon, .jp-RenderedMarkdown, .jp-MarkdownOutput {
+.jp-RenderedHTMLCommon, .jp-RenderedMarkdown, .jp-MarkdownOutput,
+h1, h2, h3, h4 {
     background: #072184;
     color: #dfd2e7;
     font-family: 'Courier New', Courier, monospace;
+    font-weight: 600 !important;
+
 }
 
 /* Controls code in markdown */
