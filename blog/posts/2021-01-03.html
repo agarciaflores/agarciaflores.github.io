@@ -58,13 +58,32 @@
                 Plotting $f(x)$ over some small interval gives a visual of the function:
                 <figure>
                     <img class="figure" src="../figures/2021-01-03/0.png" alt="A plot of the function f(x) = 1/x over the interval x=(0,4]. The curve starts very high on the y-axis and quickly decreases, approaching the x-axis as x increases.">
-                    <figcaption>Figure 1<sup><a class="footnote" href="#fn1">1</a></sup>. A plot of $f(x)$ over the interval $x = (0, 4]$.</figcaption>
+                    <figcaption>Figure 1. A plot of $f(x)$ over the interval $x = (0, 4]$.<sup><a class="footnote" href="#fn1">1</a></sup></figcaption>
                 </figure>
                 Let's zoom in to the values emphasized in the problem, $e$ and $\pi$,
                 <figure>
                     <img class="figure" src="../figures/2021-01-03/1.png" alt="Plot of f(x) zoomed in over the interval x=[2.47,3.39]. The curve decreases steadily across the range. Vertical dashed lines are drawn at x=e (red) and x=pi (green). The legend identifies the function and the positions of e and pi.">
-                    <figcaption>Figure 2<sup><a class="footnote" href="#fn1">1</a></sup>. Plot of $f(x)$ over the interval $x=[2.47,3.39]$ with vertical lines at $e$ and $\pi$.</figcaption>
+                    <figcaption>Figure 2. Plot of $f(x)$ over the interval $x=[2.47,3.39]$ with vertical lines at $e$ and $\pi$.<sup><a class="footnote" href="#fn1">1</a></sup></figcaption>
                 </figure>
+                Consider the integral $$I = \int_e^\pi dx\, f(x)$$ and the rectangle with vertices $\left\{\left(e, 0\right), \left(e, f(e)\right), \left(\pi, f(e)\right), \left(\pi, 0\right)\right\}$, as seen in the figure below.
+                <figure>
+                    <img class="figure" src="../figures/2021-01-03/2.png" alt="Top Subplot: Shows the plot of f(x) with the region between x=e and x=pi shaded in gray. Vertical dashed lines mark e (red) and pi (green). Bottom Subplot: Displays the same plot of f(x) with a rectangle shaded in blue, bounded by (e, 0), (pi,0), (e, f(e)), and (pi,f(e)). Vertical dashed lines mark e (red) and pi (green). Both subplots share the same x and y labels and have their own legends.">
+                    <figcaption>Figure 3. Two subplots of $f(x)$ showing the different shaded regions.<sup><a class="footnote" href="#fn1">1</a></sup></figcaption>
+                </figure>
+                Let $A$ be the area bounded by the rectangle.
+                Clearly, $I < A$.
+                That is,
+                \[
+                \begin{gather*}
+                    I < A \\
+                    \Rightarrow\int_e^\pi dx\, f(x) < f(e)\cdot\left(\pi - e\right) \\
+                    \Rightarrow\left.\ln{x}\right|_e^\pi < \frac{1}{e}\cdot\left(\pi - e\right) \\
+                    \Rightarrow\ln{\pi} < \frac{\pi}{e} \\
+                    \Rightarrow\pi < e^{\pi/e} \\
+                    \Rightarrow\boxed{\pi^e < e^\pi}.
+                \end{gather*}
+                \]
+                [qed]
             </p>
             <div>
                 Sources:
