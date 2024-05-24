@@ -139,7 +139,7 @@ article.post {
 }
 
 a.category, a.footnote {
-    color: #dfd2e7;
+    color: #dfd2e7 !important;
     text-decoration: none;
 }
 
@@ -195,7 +195,11 @@ a.footnote {
 
 @media (max-width: 699px) {
     #file-2023-11-18 {
-        height: 7000px;
+        height: 7701px;
+    }
+
+    #file-2024-04-20 {
+        height: 13983px;
     }
 }
 
@@ -203,6 +207,10 @@ a.footnote {
     #file-2023-11-18 {
         height: 6226px;
     }
+
+    /* #file-2024-04-20 {
+        height: 9000px;
+    } */
 }
 
 figure {
