@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LHX1KL0DKP"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-LHX1KL0DKP');
+    </script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>putnam | problems | ppp</title>
+    <link rel="stylesheet" href="../../../style/blog.css">
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [ [ '$', '$' ], [ '\\(', '\\)' ]  ], // Defines delimiters for inline equations
+                displayMath: [['$$', '$$'], ['\\[', '\\]']] // Defines delimiters for displayed equations
+            },
+            // Additional configurations can be added here
+        };
+    </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="whole">
+    <header>
+        <h1><a class="title" href="../../blog.html">ppp</a></h1>
+        <p class="sub-title">by Agustin Garcia Flores</p>
+        <nav>
+            <ul>
+                <li><a class="tabs" href="../../pictures/pictures.html">pictures</a></li>
+                <li><a class="tabs" href="../problems.html">problems</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="problems">
+        <h1 class="blog-post-title">
+            Putnam Problem Solutions
+        </h1>
+        <details>
+            <summary>2023</summary>
+            <details>
+                <summary>Problem A1</summary>
+                <div class="solution">
+                    <p>Problem statement for A1</p>
+                    <p>Solution for A1</p>
+                </div>
+            </details>
+            <details>
+                <summary>Problem A2</summary>
+                <div class="solution">
+                    <p>Problem statement for A2</p>
+                    <p>Solution for A2</p>
+                </div>
+            </details>
+            <!-- Add more problems for 2023 -->
+        </details>
+
+        <hr class="title-separator">
+
+        <details>
+            <summary>2022</summary>
+            <details>
+                <summary>Problem A1</summary>
+                <div class="solution">
+                    <p>Problem statement for A1</p>
+                    <p>Solution for A1</p>
+                </div>
+            </details>
+            <!-- Add more problems for 2022 -->
+        </details>
+
+        <hr class="title-separator">
+
+        <details>
+            <summary>2021</summary>
+            <details>
+                <summary>Problem A1</summary>
+                <div class="solution">
+                    <p>Problem statement for A1</p>
+                    <p>Solution for A1</p>
+                </div>
+            </details>
+            <!-- Add more problems for 2021 -->
+        </details>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const summaries = document.querySelectorAll('details summary');
+
+            summaries.forEach(summary => {
+                summary.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const details = summary.parentNode;
+                    const isOpen = details.hasAttribute('open');
+
+                    if (isOpen) {
+                        details.removeAttribute('open');
+                    } else {
+                        details.setAttribute('open', '');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
