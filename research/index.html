@@ -33,35 +33,49 @@
             </script>
         </nav>
         <main>
-            <section id=about>
-                <img src=# alt="Group picture">
-                <div class=text-content>
+            <section id="research">
+                <h2>Research Areas</h2>
+
+                <p>
+                    The <strong>Quantum Internet</strong> is rapidly becoming a reality, creating the need for robust protocols that maximize its benefits.
+                    A significant challenge in this field is <strong>long-distance entanglement distribution</strong>, especially with near-term quantum devices.
+                    High-quality entanglement is essential for users to fully utilize quantum networks.
+                    Our group’s research tackles this challenge across three main areas: <strong>Quantum Repeaters</strong>, <strong>Entanglement Distillation</strong>, and <strong>Quantum Key Distribution (QKD)</strong>.
+                </p>
+
+                <div class="research-topic">
+                    <h3>Quantum Repeaters and Quantum Networks</h3>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Integer nec iaculis ipsum. Nulla placerat id nisi gravida sagittis.
-                        Donec volutpat gravida est ac fermentum.Nam eget tristique elit.
-                        Morbi vel elit ac velit malesuada pretium.
-                        Donec risus dui, tincidunt in auctor ac, efficitur ac felis.
-                        Nam laoreet magna enim, eget ultricies eros fringilla in.
-                        Duis quam urna, porttitor vitae lorem id, efficitur blandit dui.
-                        Morbi condimentum nisl vitae sapien malesuada luctus.
-                        Pellentesque vestibulum enim luctus lobortis aliquet.
-                        Duis feugiat vehicula purus ut elementum.
+                        Quantum networks open up functions far beyond those of the classical internet, but transmitting quantum information over long distances is notably more complex.
+                        While classical networks rely on fiber optics, the <strong>no-cloning theorem</strong> prevents direct signal amplification in quantum communication, complicating data relay.
+                        To overcome these issues, our group explores various types of <strong>quantum repeaters</strong> designed to enhance signal strength without violating quantum principles.
+                    </p>
+
+                    <h4>Quantum Repeaters Using Bosonic Error Correcting Codes</h4>
+                    <p>
+                        One promising approach leverages <strong>quantum error correction codes</strong> specifically tailored for optical channels.
+                        <strong>Bosonic codes</strong>, like the <strong>Gottesman-Kitaev-Preskill (GKP) code</strong>, encode information in the quadratures of the light field.
+                        The GKP code is especially effective at mitigating losses by structuring information in the optical phase space.
+                        Our research aims to integrate this with <strong>discrete variable codes</strong> for robust, multi-level encoding that improves communication fidelity.
+                    </p>
+
+                    <h4>Entanglement Distillation</h4>
+                    <p>
+                        Efficient <strong>entanglement distribution</strong> is crucial for quantum networking, and our group focuses on optimizing this through <strong>entanglement distillation</strong>.
+                        Distillation involves refining high-quality entanglement from a noisier source by using local operations and classical communication to isolate the best entangled states.
+                        By developing and testing new distillation schemes, we work to push the limits of practical entanglement, enhancing the reliability of quantum communication networks.
                     </p>
                 </div>
-            </section>
-            <section id="news-section">
-                <div class="tile">
-                    <h3 class="tile-header">News</h3>
-                    <h2 class="tile-title"><a href="#" class="tile-link">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</a></h2>
-                    <p class="tile-date">07/19/2023</p>
+
+                <div class="research-topic">
+                    <h3>Quantum Key Distribution (QKD)</h3>
+                    <p>
+                        <strong>QKD</strong> is one of the most mature applications of quantum networks, enabling the secure distribution of cryptographic keys.
+                        This security is grounded in <strong>quantum mechanics</strong> through the <strong>uncertainty principle</strong> and the <strong>monogamy of entanglement</strong>.
+                        In our lab, we focus on creating <strong>practical QKD protocols</strong> and refining post-processing techniques to ensure robust, secure communication—even with realistic noise factors in experimental settings.
+                    </p>
                 </div>
-                <div class="tile">
-                    <h3 class="tile-header">News</h3>
-                    <h2 class="tile-title"><a href="#" class="tile-link">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</a></h2>
-                    <p class="tile-date">06/22/2023</p>
-                </div>
-                <!-- More tiles go here -->
+                 
             </section>
         </main>
     </body>

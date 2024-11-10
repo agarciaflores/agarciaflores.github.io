@@ -8,6 +8,8 @@
 
     --color-night: #0C0809;
     --color-lavender: #EBEFFF;
+    --color-dark-gray: #333333;
+    --color-light-gray: #f5f5f5;
 }
 
 body {
@@ -30,7 +32,6 @@ h1,h2,h3 {
 nav {
     background: var(--color-white);
     font-family: 'Spinnaker', sans-serif;
-    /* border-top: 1px solid #93a1a1; */
     border-bottom: 1px solid var(--color-gray);
     position: fixed;
     top: 0;
@@ -178,13 +179,12 @@ nav li > a {
     text-decoration: underline var(--color-blue);
 }
 
-/* Memebers page styling */
+/* Members page styling */
 
 #team-section {
-    padding: 10px;
     display: grid;
     gap: 20px;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    grid-template-columns: repeat(2, 1fr); /* 3 columns */
     /* grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); */
 }
 
@@ -195,37 +195,130 @@ nav li > a {
     margin-bottom: 20px;
 }
 
+#team-section h2 {
+    font-size: 26px;
+    color: var(--color-black); 
+    text-align: center;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-top: 1px solid var(--color-gray);
+    border-bottom: 1px solid var(--color-gray);
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
 .team-member {
     padding: 20px;
 }
 
-.team-member img {
-    width: 200px;
-    height: 200px;
-    border-radius: 20%;
-    margin-bottom: 10px;
+/* Team member card styling */
+.team-member, .pi-member {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-light-gray);
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center; 
 }
 
-.team-member h3 {
-    font-size: 20px;
+.team-member:hover, .pi-member:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); 
+}
+
+/* Image styling */
+.team-member img, .pi-member img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Name styling */
+.team-member h3, .pi-member h3 {
+    font-size: 22px;
     color: var(--color-black);
-    margin: 10px 0;
+    margin: 15px 0 5px;
+    font-weight: bold;
 }
 
-.team-member p {
+.team-member p, .pi-member p {
     font-size: 16px;
     color: var(--color-black);
+}
+
+/* Position styling */
+.pi-member p:first-of-type, .team-member p:first-of-type {
+    font-size: 16px;
+    color: var(--color-gray);
+    margin: 5px 0;
+    font-style: italic; /* Italicized for a subtle distinction */
+}
+
+/* Institution styling */
+.pi-member p:nth-of-type(2) {
+    font-size: 15px;
+    color: var(--color-dark-gray);
     margin-bottom: 15px;
 }
 
-.team-member .links a {
-    color: var(--color-blue);
+/* Links styling */
+.team-member .links a, .pi-member .links a {
+    color: var(--color-blue); /* Accent color for links */
     text-decoration: none;
+    margin: 0 8px;
     font-size: 14px;
 }
 
-.team-member .links a:hover {
-    text-decoration: underline;
+.team-member .links a:hover, .pi-member .links a:hover {
+    color: var(--color-red);
+}
+
+#bio {
+    text-align: justify; /* Justify text for aligned edges */
+}
+
+/* Research page styling */
+#research h2 {
+    font-size: 26px;
+    color: var(--color-black); 
+    text-align: center;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid var(--color-gray);
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+/* Research section headers */
+.research-topic h3 {
+    color: var(--color-red);
+    font-size: 22px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid var(--color-red);
+    padding-bottom: 5px;
+}
+
+.research-topic h4 {
+    color: var(--color-blue);
+    font-size: 20px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.research-topic p {
+    text-align: justify;
+    line-height: 1.6;
+    color: var(--color-black);
+    margin-bottom: 10px;
+}
+
+.research-topic b {
+    color: var(--color-dark-gray);
 }
 
 /* Higlight text color */
@@ -271,23 +364,48 @@ nav li > a {
     .tile-link {
         color: var(--color-white);
     }
+    .team-member, .pi-member {
+        background-color: var(--color-black);
+        border: 1px solid var(--color-dark-gray);
+        box-shadow: 0 2px 6px rgba(255, 255, 255, 0.1); 
+    }
+    .team-member:hover, .pi-member:hover {
+        transform: scale(1.025);
+        box-shadow: 0 6px 16px rgba(255, 255, 255, 0.15); 
+    }
     #team-section h2 {
         color: var(--color-white); 
     }
-    .team-member h3 {
+    .team-member h3, .pi-member h3 {
         color: var(--color-white);
     }
-    .team-member p {
+    .team-member p, .pi-member p {
         color: var(--color-white);
     }
-    .team-member .links a {
+    .pi-member p:first-of-type, .team-member p:first-of-type {
+        color: var(--color-gray);
+    }
+    .pi-member p:nth-of-type(2) {
+        color: var(--color-light-gray);
+    }
+    .team-member .links a, .pi-member .links a {
         color: var(--color-blue);
+    }
+    #research h2 {
+        color: var(--color-white);
+        border-bottom: 1px solid var(--color-gray);
+    }
+    .research-topic p {
+        color: var(--color-white);
+    }
+    .research-topic b {
+        color: var(--color-dark-gray);
     }
 }
 
 /* Media query for screen sizes 720px and smaller */
 @media (max-width: 1199px) and (min-width: 800px) {
-    #team-section {
+    #team-section, #pi-section {
         grid-template-columns: 1fr 1fr; /* Switch to 2 columns */
     }
     /* Center images in the single-column layout */
@@ -360,7 +478,7 @@ nav li > a {
     #news-section {
         grid-template-columns: 1fr; /* One column  */
     }
-    #team-section {
+    #team-section, #pi-section {
         grid-template-columns: 1fr; /* Single column layout */
     }
     /* Center images in the single-column layout */
