@@ -34,7 +34,20 @@
         </nav>
         <main>
             <section id=about>
-                <img src="images/group.jpg" alt="Group picture">
+                <div class="slideshow-container">
+                    <div class="slide fade">
+                        <img src="images/group1.jpg" alt="Group picture 1">
+                        <div class="caption">January 2023</div>
+                    </div>
+                    <div class="slide fade">
+                        <img src="images/group2.jpg" alt="Group picture 2">
+                        <div class="caption">May 2023</div>
+                    </div>
+                    <div class="slide fade">
+                        <img src="images/group3.jpg" alt="Group picture 3">
+                        <div class="caption">September 2023</div>
+                    </div>
+                </div>
                 <div class=text-content>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -61,8 +74,22 @@
                     <h2 class="tile-title"><a href="#" class="tile-link">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</a></h2>
                     <p class="tile-date">06/22/2023</p>
                 </div>
-                <!-- More tiles go here -->
             </section>
         </main>
+        <script>
+            let slideIndex = 0;
+            showSlides();
+            
+            function showSlides() {
+                let slides = document.querySelectorAll(".slide");
+                slides.forEach((slide, index) => {
+                    slide.style.display = "none"; 
+                });
+                slideIndex++;
+                if (slideIndex > slides.length) { slideIndex = 1 }
+                slides[slideIndex - 1].style.display = "block";  
+                setTimeout(showSlides, 5000); // Change slide every 5 seconds
+            }
+            </script>
     </body>
 </html>

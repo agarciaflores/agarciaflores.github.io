@@ -14,8 +14,8 @@
 
 body {
     margin: 100px auto 0;
-    max-width: 1200px;  /* Max width for large screens */
-    width: clamp(300px, 100%, 90vw);  /* Width adjusts dynamically but stays within limits */
+    max-width: 1200px;
+    width: clamp(300px, 100%, 90vw);
     line-height: 1.6;
     font-size: 18px;
     color: var(--color-black);
@@ -36,8 +36,8 @@ nav {
     position: fixed;
     top: 0;
     padding-top: 40px;
-    max-width: 1200px;  /* Max width for large screens */
-    width: clamp(300px, 100%, 90vw);  /* Width adjusts dynamically but stays within limits */
+    max-width: 1200px;
+    width: clamp(300px, 100%, 90vw);
     z-index: 1000;
 }
 nav a {
@@ -128,6 +128,49 @@ nav li > a {
     flex: 1;
 }
 
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* 75% for 4:3 ratio */
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+/* Slide images */
+.slide img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 6px;
+}
+
+/* Caption text */
+.caption {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+/* Fade animation */
+.fade {
+    animation: fadeEffect 2s ease;
+}
+
+@keyframes fadeEffect {
+    from { opacity: 0.4; }
+    to { opacity: 1; }
+}
+
 /* Container for the tiles */
 #news-section {
     display: grid;
@@ -208,10 +251,6 @@ nav li > a {
     padding-bottom: 5px;
 }
 
-.team-member {
-    padding: 20px;
-}
-
 /* Team member card styling */
 .team-member, .pi-member {
     background-color: var(--color-white);
@@ -255,7 +294,7 @@ nav li > a {
     font-size: 16px;
     color: var(--color-gray);
     margin: 5px 0;
-    font-style: italic; /* Italicized for a subtle distinction */
+    font-style: italic;
 }
 
 /* Institution styling */
@@ -403,31 +442,13 @@ nav li > a {
     }
 }
 
-/* Media query for screen sizes 720px and smaller */
-@media (max-width: 1199px) and (min-width: 800px) {
-    #team-section, #pi-section {
-        grid-template-columns: 1fr 1fr; /* Switch to 2 columns */
-    }
-    /* Center images in the single-column layout */
-    .team-member img {
-        margin-left: auto;
-        margin-right: auto;
-    }
-    /* Center the images */
-    .team-member img {
-        display: block;
-        margin: 0 auto;
-    }
-}
-
-/* Media query for screen sizes 720px and smaller */
 @media (max-width: 799px) {
     body {
         margin: 0;
         max-width: 100%;
         width: 100%;
         padding: 10px 20px;
-        box-sizing: border-box; /* Ensure padding is included in the width */
+        box-sizing: border-box; 
     }
     nav {
         position: relative;
@@ -466,29 +487,29 @@ nav li > a {
     #about img {
         margin-bottom: -10px;
     }
-    .writing p.publication {
-        padding-right: 70px;
-    }
-    .talk .occasion {
-        padding-right: 90px;
-    }
-    .course p {
-        padding-right: 56px;
-    }
     #news-section {
         grid-template-columns: 1fr; /* One column  */
     }
     #team-section, #pi-section {
         grid-template-columns: 1fr; /* Single column layout */
     }
-    /* Center images in the single-column layout */
-    .team-member img {
-        margin-left: auto;
-        margin-right: auto;
+    /* Team member card styling */
+    .team-member, .pi-member {
+        border: none;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
-    /* Center the images */
-    .team-member img {
-        display: block;
-        margin: 0 auto;
+    .team-member:hover, .pi-member:hover {
+        transform: scale(1.025); 
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); 
+    }
+    /* Image styling for smaller screens */
+    .team-member img, .pi-member img {
+        width: clamp(150px, 80%, 400px);
+        height: auto;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        border-radius: 10%;
+        margin-bottom: 15px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     }
 }
