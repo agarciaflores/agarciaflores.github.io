@@ -127,6 +127,9 @@ nav li > a {
 #about .text-content {
     flex: 1;
 }
+#about p {
+    text-align: justify;
+}
 
 /* Slideshow container */
 .slideshow-container {
@@ -333,6 +336,10 @@ nav li > a {
     padding-bottom: 5px;
 }
 
+#research p {
+    text-align: justify;
+}
+
 /* Research section headers */
 .research-topic h3 {
     color: var(--color-red);
@@ -496,11 +503,11 @@ nav li > a {
     /* Team member card styling */
     .team-member, .pi-member {
         border: none;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        box-shadow: none;
     }
     .team-member:hover, .pi-member:hover {
         transform: scale(1.025); 
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); 
+        box-shadow: none;
     }
     /* Image styling for smaller screens */
     .team-member img, .pi-member img {
