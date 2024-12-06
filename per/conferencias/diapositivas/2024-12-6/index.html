@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>presentation template</title>
+        <meta name="author" content="Agustin Garcia Flores">
+        <link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/simple.css" id="theme">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+        <link rel="stylesheet" href="custom.css">
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section class="title-slide">
+                    <h3>Poincaré-Bendixson theorem</h3>
+                    <p>
+                        <small class="red">Agustin Garcia Flores</small>
+                        <br>
+                        <small>P601: Classical Mechanics</small>
+                        <br>
+                        <small>University of Massachusetts Amherst</small>
+                        <br>
+                        <small>12/6/2024</small>
+                        <br>
+                    </p>
+                </section>
+
+                <section>
+                    <section>
+                        <figure style="margin-top: -100px;">
+							<img src="figures/double-pendulum-system.svg" alt="Double Pendulum System">
+						</figure>
+                    </section>
+                    <section>
+                        <p>$$\begin{pmatrix} \dot{\theta}_1 \\ \dot{\theta_2} \\ \dot{\omega}_1 \\ \dot{\omega}_2 \end{pmatrix} = \begin{pmatrix} \omega_1 \\ \omega_2 \\ k_1\left(\theta_1, \theta_2, \omega_1, \omega_2\right) \\ k_2\left(\theta_1, \theta_2, \omega_1, \omega_2\right) \end{pmatrix}$$</p>
+                    </section>
+                    <section>
+                        <figure style="margin-top: -80px;">
+                            <iframe 
+                                src="figures/Double_Pendulum_Live_Trajectories.html" 
+                                width="800" 
+                                height="700" 
+                                style="border:none; padding-left: 100px;">
+                            </iframe>
+                        </figure>
+                    </section>
+                    <section>
+                        <figure style="margin-top: -120px;">
+                            <img src="figures/Double_Pendulum_Trajectories_matplotlib.svg" alt="Trajectories of two double pendulums">
+                        </figure>
+                    </section>
+                    <section>
+                        <p>
+                            $\theta_1$ and $\theta_2$? <span class="fragment red">No!</span> <br>
+                            <span class="fragment">$\theta_1$, $\theta_2$, $p_1$, and $p_2$</span>
+                        </p>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <figure style="margin-top: -100px;">
+                            <img src="figures/limit-cylces.svg" alt="A figure comparing the three different types of limit cycles.">
+                        </figure>
+                    </section>
+                    <section>
+                        $$\dot{r} = r\left(1 - r^2\right), ~ \dot{\theta} = 1$$
+                        <figure class="fragment" style="margin-top: -200px;">
+                            <img src="figures/simple-example.png" alt="Phase diagram of the system in question">
+                        </figure>
+                    </section>
+                </section>
+
+                <section>
+					<section>
+						<div class="conjecture">
+                            <p>Poincaré-Bendixson theorem</p>
+                            <p>
+                                Suppose that: <br>
+                                <ol>
+                                    <li>$R$ is a closed, bounded subset of the plane;</li>
+                                    <li>$\dot{\boldsymbol{x}} = \boldsymbol{f}\left(\boldsymbol{x}\right)$ is a continuosuly differentiable vector field on a open set containing $R$;</li>
+                                    <li>$R$ does not contain any fixed points; and</li>
+                                    <li>there exists a trajectory $C$ that is "confined" in $R$.</li> 
+                                </ol>
+                                <p></p>
+                                Then either $C$ is a closed orbit, or it spirals towards a closed orbit as $t\to\infty$. In either case, $R$ contains a closed orbit. [1]
+                            </p>
+                        </div>
+					</section>
+                    <section>
+                        <p>$$\dot{r} = r\left(1 - r^2\right) + \mu r \cos\theta, ~ \dot{\theta} = 1$$</p>
+                    </section>
+                    <section>
+                        <figure style="margin-top: -120px;">
+                            <img src="figures/annulus.svg" alt="Showing the region R we are considering">
+                        </figure>
+                    </section>
+                    <section>
+                        <p>
+                            $$r_{\text{min}} < \sqrt{1 - \mu}, ~ r_{\text{max}} > \sqrt{1 - \mu}$$
+                            $$\mu < 1$$
+                            <span class="fragment">$$0.999\sqrt{1 - \mu} \leq r \leq 1.001\sqrt{1 - \mu}$$</span>
+                        </p>
+                    </section>
+					<section>
+						<figure style="margin-top: -120px;">
+							<img src="figures/phase-portrait.svg" alt="Phase portrait of the system">
+						</figure>
+					</section>
+                </section>
+
+                <section>
+                    <section>
+                        <p>
+                            Transverse curves, omega limit set, Jordan curve theorem <br>
+                            [2] <a href="https://legacy-www.math.harvard.edu/archive/118r_spring_05/handouts/poincare.pdf">math.harvard.edu/archive/poincare.pdf</a>
+                        </p>
+                    </section>
+                </section>
+
+                <section>
+                    <small class="red">Agustin Garcia Flores</small>
+                    <br>
+                    <small>University of Massachusetts Amherst</small>
+                    <br>
+                    <small>agarciaflore@umass.edu</small>
+                </section>
+				<section class="references">
+					<h3>References</h3>
+					<small id="ref-1">[1] Strogatz, Steven. "Limit Cycles."
+                        Nonlinear Dynamics and Chaos: With Applications to Physics, Biology, Chemistry, and Engineering.
+                        CRC Press, 2018. pp. 198 - 212.</small>
+					<small id="ref-2">[2] <a href="https://legacy-www.math.harvard.edu/archive/118r_spring_05/handouts/poincare.pdf">https://legacy-www.math.harvard.edu/archive/118r_spring_05/handouts/poincare.pdf</a></small>
+				</section>
+            </div>
+        </div>
+        <script src="dist/reveal.js"></script>
+        <script src="plugin/math/math.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+        <script>
+            Reveal.initialize({
+                controls: false,
+                progress: true,
+				slideNumber: "c",
+                history: true,
+                keyboard: {
+                    39: 'next',
+                    37: 'prev'
+                },
+                mathjax3: {
+                    mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js',
+                    tex: {
+                        inlineMath: [['$', '$'], ['\\(', '\\)']]
+                    },
+                    options: {
+                        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+                    },
+                },
+                plugins: [RevealMath.MathJax3]
+            });
+
+			// Initialize syntax highlighting
+			hljs.highlightAll();
+        </script>
+
+    </body>
+</html>
