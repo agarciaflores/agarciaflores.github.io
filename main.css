@@ -1,25 +1,28 @@
 :root {
     --color-red: #85221b;
-    --color-black: #070707;
-    --color-white: #FEFFFE;
+    --color-black: #0d1117;
+    --black-highlight: #161E27;
+    --color-white: #f5f5f7;
     --color-blue: #4D7EA8;
     --color-gray: #828489;
     /* https://coolors.co/85221b-070707-fefffe-828489-4d7ea8 */
 
-    --color-night: #0C0809;
+    --color-night: red;
     --color-lavender: #EBEFFF;
     --color-dark-gray: #333333;
     --color-light-gray: #f5f5f5;
 }
 
 body {
-    margin: 100px auto 0;
-    max-width: 1100px;
-    width: clamp(300px, 100%, 90vw);
     line-height: 1.6;
     font-size: 18px;
     color: var(--color-black);
     background-color: var(--color-white);
+}
+main {
+    margin: 100px auto;
+    max-width: 1100px;
+    width: clamp(300px, 100%, 90vw);
 }
 section {
     margin-bottom: 32px;
@@ -29,7 +32,7 @@ h1,h2,h3 {
 }
 
 /* navbar */
-nav {
+/* nav {
     background: var(--color-white);
     font-family: 'Spinnaker', sans-serif;
     border-bottom: 1px solid var(--color-gray);
@@ -77,31 +80,112 @@ nav li > a {
     margin-left: 6px;
     padding: 0 10px;
     font-size: 14px;
+} */
+/* nav {
+    background: var(--color-white);
+    font-family: 'Spinnaker', sans-serif;
+    border-bottom: 1px solid var(--color-gray);
+    position: fixed;
+    top: 0;
+    padding-top: 40px;
+    max-width: 1100px;
+    width: clamp(300px, 100%, 90vw);
+    z-index: 1000;
+} */
+nav {
+    font-family: 'Spinnaker', sans-serif;
+    border-bottom:1px solid var(--color-white);
+    backdrop-filter: blur(25px);
+    background: hsla(0,0,100%,0.75);
+    position: fixed;
+    top: 0;
+    padding: 20px 0;
+    width: 98%;
+    z-index: 1000;
 }
 
-/* menu icon */
+nav.header.scrolled {
+    transition: all .4s linear;
+    border-bottom: 1px solid var(--color-dark-gray);
+}
+
+nav a {
+    text-decoration: none;
+    color: inherit;
+}
+
+nav .brand {
+    padding: 0;
+    padding-left: calc(0.5*100% - 550px);
+    margin: 0;
+    color: inherit;
+    font-size: 24px;
+    line-height: 40px;
+    text-transform: uppercase;
+}
+
+nav .menu-collapse {
+    float: right;
+    position: relative;
+    padding-right: calc(0.5*100% - 550px);
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+nav li {
+    line-height: 40px;
+}
+
+nav li>a {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding-inline:12px;
+    font-size: 14px;
+    display: inline-block;
+}
+
+.hover-pill {
+    position: absolute;
+    bottom: 0;
+    height: 40px;
+    background-color: white;
+    border-radius: 20px;
+    z-index: -1;
+    transition: opacity .4s linear,left .4s ease,width .4s ease;
+    opacity: 0;
+}
+
 .menu-icon {
     display: none;
     cursor: pointer;
     padding: 10px 4px;
 }
 
-.menu-icon .bar1, .menu-icon .bar2, .menu-icon .bar3 {
+.menu-icon .bar1,.menu-icon .bar2,.menu-icon .bar3 {
     width: 18px;
     height: 2px;
     background-color: var(--color-black);
-    margin: 3px 0;
-    transition: 0.4s;
+    margin-block:3px;
+    transition: .4s;
 }
 
 .menu-icon.menu-open .bar1 {
-    transform: translate(0, 5px) rotate(-45deg);
+    transform: translate(0,5px)rotate(-45deg);
 }
 
-.menu-icon.menu-open .bar2 {opacity: 0;}
+.menu-icon.menu-open .bar2 {
+    opacity: 0;
+}
 
 .menu-icon.menu-open .bar3 {
-    transform: translate(0, -5px) rotate(45deg);
+    transform: translate(0,-5px)rotate(45deg);
 }
 
 /* home */
@@ -301,8 +385,9 @@ nav li > a {
 }
 
 .team-member:hover, .pi-member:hover {
+    background-color: white;
     transform: scale(1.05); 
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); 
+    box-shadow: 0 8px 16px white; 
 }
 
 /* Image styling */
@@ -352,15 +437,16 @@ nav li > a {
 
 /* Links styling */
 .team-member .links a, .pi-member .links a {
-    color: var(--color-blue); /* Accent color for links */
-    font-weight: 600;
-    text-decoration: none;
-    margin: 0 8px;
+    color: var(--color-black);
+    font-weight: 500;
+    text-decoration: underline var(--color-blue);
+    text-decoration-thickness: 3px;
     font-size: 16px;
 }
 
 .team-member .links a:hover, .pi-member .links a:hover {
-    color: var(--color-red);
+    text-decoration: underline var(--color-red);
+    text-decoration-thickness: 3px;
 }
 
 #bio {
@@ -428,8 +514,14 @@ nav li > a {
         color: var(--color-white);
     }
     nav {
-        background: var(--color-black);
+        border-bottom: 1px solid var(--color-black);
+        background: hsla(0,0,100%,0.75);
+    }
+    nav.header.scrolled {
         border-bottom: 1px solid var(--color-gray);
+    }
+    .hover-pill {
+        background-color: var(--black-highlight);
     }
     nav a {
         color: var(--color-gray);
@@ -461,8 +553,9 @@ nav li > a {
         background-color: var(--color-black);
     }
     .team-member:hover, .pi-member:hover {
+        background-color: var(--black-highlight);
         transform: scale(1.025);
-        box-shadow: 0 6px 16px rgba(255, 255, 255, 0.15); 
+        box-shadow: 0 6px 16px var(--black-highlight); 
     }
     #pi-section h2, #team-section h2 {
         color: var(--color-white); 
@@ -480,7 +573,7 @@ nav li > a {
         color: var(--color-light-gray);
     }
     .team-member .links a, .pi-member .links a {
-        color: var(--color-blue);
+        color: var(--color-white);
     }
     #research h2 {
         color: var(--color-white);
@@ -501,6 +594,10 @@ nav li > a {
         width: 100%;
         padding: 10px 20px;
         box-sizing: border-box; 
+    }
+    main {
+        margin: 0;
+        padding: 0;
     }
     nav {
         position: relative;
@@ -531,6 +628,9 @@ nav li > a {
         display: block;
         float: right;
     }
+    .hover-pill {
+        bottom: 20px;
+    }    
     #about {
         margin-top: 24px;
         display: block;
@@ -555,6 +655,7 @@ nav li > a {
         box-shadow: none;
     }
     .team-member:hover, .pi-member:hover {
+        background-color: var(--color-white);
         transform: scale(1.025); 
         box-shadow: none;
     }
@@ -569,3 +670,11 @@ nav li > a {
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     }
 }
+
+/* Media query for dark themes */
+@media (prefers-color-scheme: dark){ 
+    @media (max-width: 799px) {
+    .team-member:hover, .pi-member:hover {
+        background-color: var(--color-black);
+    }
+}}

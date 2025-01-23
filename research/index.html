@@ -8,28 +8,61 @@
         <link rel=stylesheet href=../main.css>
     </head>
     <body>
-        <nav aria-label="main navigation">
+        <nav aria-label="main navigation" class="header">
             <a class="brand" href="/">Group Name</a>
-            <div class="menu-icon" onclick="menuIconFunction(this)">
+            <div class="menu-icon" onclick=menuIconFunction(this)>
                 <div class="bar1"></div>
                 <div class="bar2"></div>
                 <div class="bar3"></div>
             </div>
             <div class="menu-collapse">
                 <ul>
-                    <li>
+                    <li class="active">
                         <a href="/research/">Research</a>
                     </li>
                     <li>
-                        <a href="/members/">Members</a>
+                        <a href="/members/">Team</a>
                     </li>
                 </ul>
+                <div class="hover-pill"></div>
             </div>
             <script>
                 function menuIconFunction(e) {
                     e.classList.toggle("menu-open"),
                     e.nextElementSibling.classList.toggle("show-menu")
                 }
+            </script>
+            <script>
+                const header = document.querySelector(".header");
+                window.addEventListener("scroll", () => {
+                    window.scrollY > 0 ? header.classList.add("scrolled") : header.classList.remove("scrolled")
+                }
+                )
+            </script>
+            <script>
+                const navItems = document.querySelectorAll(".header ul>li")
+                  , hoverPill = document.querySelector(".hover-pill")
+                  , activeLink = document.querySelector(".header ul>li.active");
+                function movePillToLink(e) {
+                    const t = e.getBoundingClientRect()
+                      , n = e.parentElement.parentElement.getBoundingClientRect();
+                    hoverPill.style.width = `${t.width}px`,
+                    hoverPill.style.left = `${t.left - n.left}px`,
+                    hoverPill.style.opacity = "1"
+                }
+                activeLink ? movePillToLink(activeLink) : hoverPill.style.opacity = "0",
+                navItems.forEach(e => {
+                    const t = e.querySelector("a");
+                    e.addEventListener("mouseenter", () => {
+                        movePillToLink(t)
+                    }
+                    ),
+                    e.addEventListener("mouseleave", () => {
+                        activeLink ? movePillToLink(activeLink) : hoverPill.style.opacity = "0"
+                    }
+                    )
+                }
+                )
             </script>
         </nav>
         <main>
