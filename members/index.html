@@ -6,10 +6,11 @@
         <meta name=viewport content="width=device-width,initial-scale=1">
         <title>Team | Group Name</title>
         <link rel=stylesheet href=../main.css>
+        <base target="_blank">
     </head>
     <body>
         <nav aria-label="main navigation">
-            <a class="brand" href="/">Group Name</a>
+            <a class="brand" href="/" target="_self">Group Name</a>
             <div class="menu-icon" onclick="menuIconFunction(this)">
                 <div class="bar1"></div>
                 <div class="bar2"></div>
@@ -18,10 +19,10 @@
             <div class="menu-collapse">
                 <ul>
                     <li>
-                        <a href="/research/">Research</a>
+                        <a href="/research/" target="_self">Research</a>
                     </li>
                     <li>
-                        <a href="/members/">Members</a>
+                        <a href="/members/" target="_self">Members</a>
                     </li>
                 </ul>
             </div>
@@ -33,42 +34,80 @@
             </script>
         </nav>
         <main>
-            <section id="team-section">
+            <section id="pi-section">
                 <h2>Principal Investigators</h2>
 
                 <div class="pi-member">
-                    <img src="images/pfp.png" alt="Filip Rozpędek">
-                    <h3>Filip Rozpędek</h3>
-                    <p>Assistant Professor</p>
-                    <p>Manning College of Information and Computer Sciences</p>
-                    <p id="bio">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Nulla lacinia posuere consequat.
-                        Integer elementum vel nulla quis vestibulum.
-                        Nulla cursus felis ante, vitae hendrerit nibh vehicula id.
-                        Aenean at accumsan enim.
-                        Suspendisse eu faucibus tellus, sit amet elementum nunc.
-                    </p>
-                    <div class="links">
-                        <a href="https://sites.google.com/view/filiprozpedek">Homepage</a> | <a href="https://scholar.google.nl/citations?user=YOaDA-UAAAAJ&hl=en">Google Scholar</a>
+                    <div>
+                        <img src="images/filip-rozpedek.jpg" alt="Filip Rozpędek">
+                    </div>
+                    <div>
+                        <h3>Filip Rozpędek</h3>
+                        <p>
+                            University of Massachusetts Amherst <br>
+                            <em>Manning College of Information and Computer Sciences</em> <br>
+                            <em>College of Natural Sciences</em>
+                        </p>
+                        <p id="bio">
+                            Professor Rozpędek is an Assistant Professor in the
+                            <a class="inline" href="https://www.cics.umass.edu/">Manning College of Information and
+                            Computer Sciences</a> and an Adjunct Assistant Professor in the
+                            <a class="inline" href="https://www.umass.edu/natural-sciences/">College of Natural Sciences</a>
+                            at the University of Massachusetts Amherst. He obtained his PhD in 2019 from 
+                            <a class="inline" href="https://qutech.nl/">QuTech</a> at
+                            <a class="inline" href="https://www.tudelft.nl/en/">TU Delft</a> where he worked in
+                            <a class="inline" href="https://qutech.nl/lab/wehner-group/">Stephanie Wehner's group</a>
+                            on the building blocks of quantum networks. From 2019 to 2023, he was a postdoc in
+                            <a class="inline" href="https://pme.uchicago.edu/group/jiang-group">Liang Jiang's group</a> 
+                            at the <a class="inline" href="https://pme.uchicago.edu/">Pritzker School of Molecular Engineering</a>
+                            at the <a class="inline" href="https://www.uchicago.edu/">University of Chicago</a> working on
+                            quantum repeaters for quantum communication.
+                        </p>
+                        <div class="links">
+                            <a href="https://sites.google.com/view/filiprozpedek">Homepage</a> | <a href="https://scholar.google.nl/citations?user=YOaDA-UAAAAJ&hl=en">Google Scholar</a>
+                        </div>
                     </div>
                 </div>
 
                 <div class="pi-member">
-                    <img src="images/pfp.png" alt="Gayane Vardoyan">
-                    <h3>Gayane Vardoyan</h3>
-                    <p>Assistant Professor</p>
-                    <p>Manning College of Information and Computer Sciences</p>
-                    <p id="bio">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Nulla lacinia posuere consequat.
-                        Integer elementum vel nulla quis vestibulum.
-                        Nulla cursus felis ante, vitae hendrerit nibh vehicula id.
-                        Aenean at accumsan enim.
-                        Suspendisse eu faucibus tellus, sit amet elementum nunc.
-                    </p>
-                    <div class="links">
-                        <a href="https://people.cs.umass.edu/~gvardoyan/#home">Homepage</a> | <a href="https://scholar.google.com/citations?user=iSt_oLcAAAAJ&hl=en">Google Scholar</a>
+                    <div>
+                        <img src="images/gayane-vardoyan.jpg" alt="Gayane Vardoyan">
+                    </div>
+                    <div>
+                        <h3>Gayane Vardoyan</h3>
+                        <p>
+                            University of Massachusetts Amherst <br>
+                            <em>Manning College of Information and Computer Sciences</em>
+                        </p>
+                        <p id="bio">
+                            Professor Vardoyan is an Assistant Professor in the
+                            <a class="inline" href="https://www.cics.umass.edu/">Manning College of Information and
+                            Computer Sciences</a> at the University of Massachusetts Amherst. From 2022 to 2024, Professor Vardoyan
+                            was an Assistant Professor at <a class="inline" href="https://qutech.nl/">QuTech</a>'s
+                            <a class="inline" href="https://qutech.nl/research-engineering/quantum-internet/">Quantum Internet Division</a>,
+                            and <a class="inline" href="https://www.tudelft.nl/en/eemcs">EEMCS</a>,
+                            <a class="inline" href="https://www.tudelft.nl/en/">TU Delft</a>, receiving a
+                            permanent contract in 2023. The same year, she became part-time faculty at UMass Amherst, ultimately switching
+                            to full-time in 2024.<br>
+                            
+                            Previously, she was a postdoc researcher at TU Delft, where she worked with 
+                            <a class="inline" href="https://qutech.nl/person/stephanie-wehner/">Stephanie Wehner</a>.
+                            She received her PhD from the University of Massachusetts Amherst, where she worked on systems
+                            and networking in <a class="inline" href="https://www-net.cs.umass.edu/personnel/towsley.html">Don Towsley</a>'s
+                            group. She received her Master of Science in 2017 from UMass
+                            Amherst. She interned at
+                            <a class="inline" href="https://www.inria.fr/fr/centre-inria-universite-cote-azur">Inria</a>
+                            in Sophia Antipolis, France in Summer 2017. She received her Bachelor of Science in
+                            <a class="inline" href="https://eecs.berkeley.edu/">Electrical Engineering and Computer Sciences</a> from the
+                            <a class="inline" href="https://www.berkeley.edu/">University of California, Berkeley</a>.
+                            Between her undergraduate and graduate education, she worked at
+                            <a class="inline" href="https://www.anl.gov/">Argonne National Lab</a> and the
+                            <a class="inline" href="https://www.uchicago.edu/education-and-research/center/computation_institute">Computation Institute</a>
+                            at the <a class="inline" href="https://www.uchicago.edu/">University of Chicago</a>.
+                        </p>
+                        <div class="links">
+                            <a href="https://people.cs.umass.edu/~gvardoyan/#home">Homepage</a> | <a href="https://scholar.google.com/citations?user=iSt_oLcAAAAJ&hl=en">Google Scholar</a>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -127,9 +166,12 @@
                     <p id="bio">
                         Snehasis is a CS PhD student at UMass Amherst working with Filip Rozpędek and Gayane Vardoyan on
                         topics related to Quantum Networks and Distributed Quantum Computing. Snehasis has a master's
-                        degree in physics from the Institute for Quantum Science and Technology at the University of
-                        Calgary, where he specialized in error correction for Quantum Key Distribution using Polar codes,
-                        and a bachelor's degree in ECE from the Indian Institute of Technology Dhanbad.
+                        degree in physics from the
+                        <a class="inline" href="https://iqst.ucalgary.ca/">Institute for Quantum Science and Technology</a>
+                        at the <a class="inline" href="https://www.ucalgary.ca/">University of Calgary</a>,
+                        where he specialized in error correction for Quantum Key Distribution using Polar codes,
+                        and a bachelor's degree in <a class="inline" href="https://electronics.iitism.ac.in/">ECE</a> from the
+                        <a class="inline" href="https://www.iitism.ac.in/">Indian Institute of Technology Dhanbad</a>.
                     </p>
                     <div class="links">
                         <a href="https://snehasisaddy.github.io/">Homepage</a> | <a href="https://scholar.google.co.in/citations?user=PX3JAV4AAAAJ&hl=en">Google Scholar</a> | <a href="https://www.linkedin.com/in/snehasisaddy/">LinkedIn</a> | <a href="https://github.com/snehasisaddy">GitHub</a>
@@ -213,10 +255,14 @@
                         University of Massachusetts Amherst <br>
                         <em>College of Natural Sciences</em>
                     </p>
+                        <!-- <a class="inline" href=""></a> -->
                     <p id="bio">
-                        Ryosuke Shiina is a PhD candidate through the Department of Physics at UMass Amherst. He has been
-                        researching under Filip Rozpedek and has been a graduate student researcher with the Center for Quantum
-                        Networks. He is a quantum network architect, and his main area of research is theory relating to quantum
+                        Ryosuke Shiina is a
+                        <a class="inline" href="https://www.umass.edu/physics/about/directory/ryosuke-shiina">PhD candidate</a>
+                        through the <a class="inline" href="https://www.umass.edu/physics/">Department of Physics</a>
+                        at UMass Amherst. He has been researching under Filip Rozpedek and has been a graduate student researcher
+                        with the <a class="inline" href="https://cqn-erc.arizona.edu/">Center for Quantum Networks</a>.
+                        He is a quantum network architect, and his main area of research is theory relating to quantum
                         network schemes, error correction codes such as GKP-code and Cat code, and graph theory.
                     </p>
                 </div>
