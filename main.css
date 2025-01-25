@@ -201,6 +201,7 @@ nav li>a {
 /* In-line links */
 
 .inline {
+    transition: text-decoration .1s ease-out,color .1s ease-out;
     color: var(--color-black);
     text-decoration: underline var(--color-blue);
     text-decoration-thickness: 2.5px;
