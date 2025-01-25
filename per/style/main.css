@@ -38,22 +38,22 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
     border: 0;
     font-size: 100%;
     font: inherit;
-    vertical-align: baseline
+    vertical-align: baseline;
 }
 
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
-    display: block
+    display: block;
 }
 
 a {
     color: inherit;
-    text-decoration: none
+    text-decoration: none;
 }
 
 .constrain {
     max-width: 1640px;
     margin-left: auto;
-    margin-right: auto
+    margin-right: auto;
 }
 
 .masthead {
@@ -61,12 +61,12 @@ a {
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
-    padding: 0 20px
+    padding: 0 20px;
 }
 
 .masthead .masthead-title {
     text-align: center;
-    font-family: "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Arial,sans-serif
+    font-family: "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Arial,sans-serif;
 }
 
 @media (min-width: 800px) {
@@ -114,9 +114,11 @@ a {
 
 .link {
     transition: background-color .1s ease-out,color .1s ease-out;
+    border-radius: 10%;
+    padding: 3px;
     position: relative;
     overflow: hidden;
-    text-decoration: underline
+    text-decoration: none;
 }
 
 .link:hover {
@@ -135,23 +137,23 @@ a {
     margin-left: auto;
     margin-right: auto;
     padding: 0 20px;
-    margin-bottom: 15px
+    margin-bottom: 15px;
 }
 
 @media (min-width: 800px) {
     .main {
-        margin-bottom:30px
+        margin-bottom:30px;
     }
 }
 
 .about p {
     margin-bottom: 25px;
     font-size: 1.4rem;
-    line-height: 2rem
+    line-height: 2rem;
 }
 
 .about strong {
-    font-weight: 700
+    font-weight: 700;
 }
 
 .about h3 {
@@ -161,43 +163,36 @@ a {
     margin-bottom: 1.4rem;
     line-height: 1;
     margin-top: 45px;
-    margin-bottom: 15px
+    margin-bottom: 15px;
 }
 
 .about a {
-    transition: background-color .1s ease-out,color .1s ease-out;
+    transition: text-decoration .1s ease-out,color .1s ease-out;
     position: relative;
     overflow: hidden;
-    text-decoration: underline
+    text-decoration: underline 3px #85221b;
+    text-underline-offset: 3px;
 }
 
 .about a:hover {
-    color: white;
-    text-decoration: none;
-    background-color: black
+    text-decoration: underline 3px;
 }
 
 .about .description {
-    text-align: center
-}
-
-@media (min-width: 800px) {
-    .about .description {
-        text-align:left
-    }
+    text-align: left;
 }
 
 .about img.logo {
-    float: right
+    float: right;
 }
 
 img.logo {
-    width: 60px;
+    width: 70px;
 }
 
 @media (min-width: 800px) {
     .about img.logo {
-        display:block
+        display:block;
     }
 }
 
@@ -208,29 +203,32 @@ img.logo {
 }
 
 .items {
-    margin-top: 25px
+    margin-top: 25px;
+}
+
+.items em {
+    font-style: italic;
 }
 
 .items p,.items h3,.items .item__primary-actions {
     font-size: 1.4rem;
-    line-height: 2rem
+    line-height: 2rem;
 }
 
 .items p {
-    color: #6C7A89
+    color: #6C7A89;
 }
 
 .items a {
-    transition: background-color .1s ease-out,color .1s ease-out;
+    transition: text-decoration .1s ease-out,color .1s ease-out;
     position: relative;
     overflow: hidden;
-    text-decoration: underline
+    text-decoration: underline 3px #551611;
+    text-underline-offset: 3px;
 }
 
 .items a:hover {
-    color: white;
-    text-decoration: none;
-    background-color: black
+    text-decoration: underline 3px;
 }
 
 .items h2 {
@@ -240,19 +238,24 @@ img.logo {
     font-size: 2.2rem;
     line-height: 1;
     margin-top: 45px;
-    margin-bottom: 15px
+    margin-bottom: 15px;
 }
 
 .item {
-    margin-top: 25px
+    margin-top: 25px;
 }
 
 .item__primary-actions {
     float: right;
-    margin-left: 1rem
+    margin-left: 1rem;
 }
 
 .item__primary-actions>span:not(:first-child)::before,.item__secondary-actions>span:not(:first-child)::before {
     content: "\00b7";
-    margin-right: 0.3rem
+    margin-right: 0.3rem;
+}
+
+::selection {
+    background-color: #85221b;
+    color: #fff; /* Adjust text color for contrast */
 }
