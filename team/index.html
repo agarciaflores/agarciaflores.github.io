@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang=en>
+    <head>
+        <meta name=generator content="Hugo 0.135.0">
+        <meta charset=UTF-8>
+        <meta name=viewport content="width=device-width,initial-scale=1">
+        <title>Team | RV Lab</title>
+        <link rel=stylesheet href=../main.css>
+        <base target="_blank">
+    </head>
+    <body>
+        <nav aria-label="main navigation" class="header">
+            <a class="brand" href="/" target="_self">RV Lab</a>
+            <div class="menu-icon" onclick=menuIconFunction(this)>
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            <div class="menu-collapse">
+                <ul>
+                    <li>
+                        <a href="/research/" target="_self">Research</a>
+                    </li>
+                    <li class="active">
+                        <a href="/team/" target="_self">Team</a>
+                    </li>
+                </ul>
+                <div class="hover-pill"></div>
+            </div>
+            <script>
+                function menuIconFunction(e) {
+                    e.classList.toggle("menu-open"),
+                    e.nextElementSibling.classList.toggle("show-menu")
+                }
+            </script>
+            <script>
+                const header = document.querySelector(".header");
+                window.addEventListener("scroll", () => {
+                    window.scrollY > 0 ? header.classList.add("scrolled") : header.classList.remove("scrolled")
+                }
+                )
+            </script>
+            <script>
+                const navItems = document.querySelectorAll(".header ul>li")
+                  , hoverPill = document.querySelector(".hover-pill")
+                  , activeLink = document.querySelector(".header ul>li.active");
+                function movePillToLink(e) {
+                    const t = e.getBoundingClientRect()
+                      , n = e.parentElement.parentElement.getBoundingClientRect();
+                    hoverPill.style.width = `${t.width}px`,
+                    hoverPill.style.left = `${t.left - n.left}px`,
+                    hoverPill.style.opacity = "1"
+                }
+                activeLink ? movePillToLink(activeLink) : hoverPill.style.opacity = "0",
+                navItems.forEach(e => {
+                    const t = e.querySelector("a");
+                    e.addEventListener("mouseenter", () => {
+                        movePillToLink(t)
+                    }
+                    ),
+                    e.addEventListener("mouseleave", () => {
+                        activeLink ? movePillToLink(activeLink) : hoverPill.style.opacity = "0"
+                    }
+                    )
+                }
+                )
+            </script>
+        </nav>
+        <main>
+
+            <!--        
+            _________   _...._      .--.
+            \        |.'      '-.   |__|
+             \        .'```'.    '. .--.
+              \      |       \     \|  |
+               |     |        |    ||  |
+               |      \      /    . |  |
+               |     |\`'-.-'   .'  |  |
+               |     | '-....-'`    |__|
+              .'     '.
+            '-----------'
+            -->
+
+            <section id="pi-section">
+                <h2>Principal Investigators</h2>
+
+                <div class="pi-member">
+                    <div>
+                        <img src="assets/filip-rozpedek.jpg" alt="Filip Rozpędek">
+                    </div>
+                    <div>
+                        <h3>Filip Rozpędek</h3>
+                        <p>
+                            University of Massachusetts Amherst <br>
+                            <em>Manning College of Information and Computer Sciences</em> <br>
+                            <em>College of Natural Sciences</em>
+                        </p>
+                        <p id="bio">
+                            Professor Rozpędek is an Assistant Professor in the
+                            <a class="inline" href="https://www.cics.umass.edu/">Manning College of Information and
+                            Computer Sciences</a> and an Adjunct Assistant Professor in the
+                            <a class="inline" href="https://www.umass.edu/natural-sciences/">College of Natural Sciences</a>
+                            at the University of Massachusetts Amherst. He obtained his PhD in 2019 from 
+                            <a class="inline" href="https://qutech.nl/">QuTech</a> at
+                            <a class="inline" href="https://www.tudelft.nl/en/">TU Delft</a> where he worked in
+                            <a class="inline" href="https://qutech.nl/lab/wehner-group/">Stephanie Wehner's group</a>
+                            on the building blocks of quantum networks. From 2019 to 2023, he was a postdoc in
+                            <a class="inline" href="https://pme.uchicago.edu/group/jiang-group">Liang Jiang's group</a> 
+                            at the <a class="inline" href="https://pme.uchicago.edu/">Pritzker School of Molecular Engineering</a>
+                            at the <a class="inline" href="https://www.uchicago.edu/">University of Chicago</a> working on
+                            quantum repeaters for quantum communication.
+                        </p>
+                        <div class="links">
+                            <a href="https://sites.google.com/view/filiprozpedek">Homepage</a> |
+                            <a href="https://scholar.google.nl/citations?user=YOaDA-UAAAAJ&hl=en">Google Scholar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pi-member">
+                    <div>
+                        <img src="assets/gayane-vardoyan.jpg" alt="Gayane Vardoyan">
+                    </div>
+                    <div>
+                        <h3>Gayane Vardoyan</h3>
+                        <p>
+                            University of Massachusetts Amherst <br>
+                            <em>Manning College of Information and Computer Sciences</em>
+                        </p>
+                        <p id="bio">
+                            Professor Vardoyan is an Assistant Professor in the
+                            <a class="inline" href="https://www.cics.umass.edu/">Manning College of Information and
+                            Computer Sciences</a> at the University of Massachusetts Amherst. From 2022 to 2024, Professor Vardoyan
+                            was an Assistant Professor at <a class="inline" href="https://qutech.nl/">QuTech</a>'s
+                            <a class="inline" href="https://qutech.nl/research-engineering/quantum-internet/">Quantum Internet Division</a>,
+                            and <a class="inline" href="https://www.tudelft.nl/en/eemcs">EEMCS</a>,
+                            <a class="inline" href="https://www.tudelft.nl/en/">TU Delft</a>, receiving a
+                            permanent contract in 2023. The same year, she became part-time faculty at UMass Amherst, ultimately switching
+                            to full-time in 2024.
+                        </p>
+                        <p id="bio">
+                            Previously, she was a postdoc researcher at TU Delft, where she worked with 
+                            <a class="inline" href="https://qutech.nl/person/stephanie-wehner/">Stephanie Wehner</a>.
+                            She received her PhD from the University of Massachusetts Amherst, where she worked on systems
+                            and networking in <a class="inline" href="https://www-net.cs.umass.edu/personnel/towsley.html">Don Towsley</a>'s
+                            group. She received her Master of Science in 2017 from UMass
+                            Amherst. She interned at
+                            <a class="inline" href="https://www.inria.fr/fr/centre-inria-universite-cote-azur">Inria</a>
+                            in Sophia Antipolis, France in Summer 2017. She received her Bachelor of Science in
+                            <a class="inline" href="https://eecs.berkeley.edu/">Electrical Engineering and Computer Sciences</a> from the
+                            <a class="inline" href="https://www.berkeley.edu/">University of California, Berkeley</a>.
+                            Between her undergraduate and graduate education, she worked at
+                            <a class="inline" href="https://www.anl.gov/">Argonne National Lab</a> and the
+                            <a class="inline" href="https://www.uchicago.edu/education-and-research/center/computation_institute">Computation Institute</a>
+                            at the <a class="inline" href="https://www.uchicago.edu/">University of Chicago</a>.
+                        </p>
+                        <div class="links">
+                            <a href="https://people.cs.umass.edu/~gvardoyan/#home">Homepage</a> |
+                            <a href="https://scholar.google.com/citations?user=iSt_oLcAAAAJ&hl=en">Google Scholar</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--
+                                         .-'''-.                                             .-'''-.            _..._
+                                       '   _    \                         _______          '   _    \       .-'_..._''.
+            _________   _...._       /   /` '.   \                        \  ___ `'.     /   /` '.   \    .' .'      '.\
+            \        |.'      '-.   .   |     \  '                         ' |--.\  \   .   |     \  '   / .'
+             \        .'```'.    '. |   '      |  '                  .|    | |    \  '  |   '      |  ' . '
+              \      |       \     \\    \     / /                 .' |_   | |     |  ' \    \     / /  | |
+               |     |        |    | `.   ` ..' /          _     .'     |  | |     |  |  `.   ` ..' /   | |                     _ 
+               |      \      /    .     '-...-'`         .' |   '--.  .-'  | |     ' .'     '-...-'`    . '                   .' |
+               |     |\`'-.-'   .'                      .   | /    |  |    | |___.' /'                   \ '.          .     .   | /
+               |     | '-....-'`                      .'.'| |//    |  |   /_______.'/                     '. `._____.-'/   .'.'| |//
+              .'     '.                             .'.'.-'  /     |  '.' \_______|/                        `-.______ /  .'.'.-'  /
+            '-----------'                           .'   \_.'      |   /                                             `   .'   \_.'
+                                                                   `'-'
+            -->
+
+            <section id="team-section">
+                <h2>Postdocs</h2>
+                <div class="team-member">
+                    <img src="assets/leonardo-bacciottini.jpg" alt="Leonardo Bacciottini">
+                    <h3>Leonardo Bacciottini</h3>
+                    <p>
+                        University of Massachusetts Amherst <br>
+                        <em>Manning College of Information and Computer Sciences</em>
+                    </p>
+                    <p id="bio">
+                        Leonardo is a postdoc jointly working with Gayane Vardoyan and
+                        <a class="inline" href="https://acquire.cs.umass.edu/members.html#:~:text=Leonardo%20Bacciottini">Don Towsley</a>.
+                        He holds a Ph.D. from the
+                        <a class="inline" href="https://www.unipi.it/index.php/english">University of Pisa</a>, where he also obtained his
+                        M.Sc. degree in
+                        <a class="inline" href="https://www.unipi.it/index.php/programmes-held-in-english/item/15040-master-of-science-in-computer-engineering">Computer Engineering</a>.
+                        His research interests include protocols and architectures for entanglement
+                        distribution networks, simulation, and quantum information theory, with a focus on entanglement purification.
+                    </p>
+                </div>
+
+                <div class="team-member">
+                    <img src="assets/stav-haldar.jpeg" alt="Stav Haldar">
+                    <h3>Stav Haldar</h3>
+                    <p>
+                        University of Massachusetts Amherst <br>
+                        <em>Manning College of Information and Computer Sciences</em>
+                    </p>
+                    <p id="bio">
+                        Stav earned his Ph.D. in the
+                        <a class="inline" href="https://www.lsu.edu/physics/">Department of Physics and Astronomy</a>
+                        at <a class="inline" href="https://www.lsu.edu/">Louisiana State University</a>.
+                        His research interests are theory and optimization of quantum networks,
+                        quantum time synchronization protocols, and quantum optics, especially its
+                        intersection with gravity and phase transitions in quantum many-body systems.
+                    </p>
+                    <div class="links">
+                        <a href="https://scholar.google.com/citations?user=FUF5AzIAAAAJ&hl=en">Google Scholar</a> |
+                        <a href="https://www.linkedin.com/in/stav-haldar-8414b5247/">LinkedIn</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 
+                                                  _______
+            _________   _...._         .           \  ___ `'.
+            \        |.'      '-.    .'|            ' |--.\  \
+             \        .'```'.    '. <  |            | |    \  '
+              \      |       \     \ | |            | |     |  '
+               |     |        |    | | | .'''-.     | |     |  |
+               |      \      /    .  | |/.'''. \    | |     ' .'
+               |     |\`'-.-'   .'   |  /    | |    | |___.' /'
+               |     | '-....-'`     | |     | |   /_______.'/
+              .'     '.              | |     | |   \_______|/
+            '-----------'            | '.    | '.
+                                    '---'   '---'
+            -->
+
+            <section id="team-section">
+                <h2>PhD Students</h2>
+
+                <div class="team-member">
+                    <img src="assets/snehasis-addy.jpg" alt="Snehasis Addy">
+                    <h3>Snehasis Addy</h3>
+                    <p>
+                        University of Massachusetts Amherst <br>
+                        <em>Manning College of Information and Computer Sciences</em>
+                    </p>
+                    <p id="bio">
+                        Snehasis is a CS PhD student at UMass Amherst working with Filip Rozpędek and Gayane Vardoyan on
+                        topics related to Quantum Networks and Distributed Quantum Computing. Snehasis has a master's
+                        degree in physics from the
+                        <a class="inline" href="https://iqst.ucalgary.ca/">Institute for Quantum Science and Technology</a>
+                        at the <a class="inline" href="https://www.ucalgary.ca/">University of Calgary</a>,
+                        where he specialized in error correction for Quantum Key Distribution using Polar codes,
+                        and a bachelor's degree in <a class="inline" href="https://electronics.iitism.ac.in/">ECE</a> from the
+                        <a class="inline" href="https://www.iitism.ac.in/">Indian Institute of Technology Dhanbad</a>.
+                    </p>
+                    <div class="links">
+                        <a href="https://snehasisaddy.github.io/">Homepage</a> |
+                        <a href="https://scholar.google.co.in/citations?user=PX3JAV4AAAAJ&hl=en">Google Scholar</a> |
+                        <a href="https://www.linkedin.com/in/snehasisaddy/">LinkedIn</a> |
+                        <a href="https://github.com/snehasisaddy">GitHub</a>
+                    </div>
+                </div>
+
+                <div class="team-member">
+                    <img src="assets/meghashrita-das.jpg" alt="Meghashrita Das">
+                    <h3>Meghashrita Das</h3>
+                    <p>
+                        University of Massachusetts Amherst <br>
+                        <em>Manning College of Information and Computer Sciences</em>
+                    </p>
+                    <p id="bio">
+                        Meghashrita is a PhD student in
+                        <a class="inline" href="https://www.cics.umass.edu/">CICS</a>
+                        at UMass Amherst. She works with Gayane Vardoyan and Filip Rozpędek to
+                        study the function of loss-tolerant graph states in designing all-photonic
+                        quantum repeaters with error-corrected architectures. Meghashrita holds a
+                        bachelor's degree in
+                        <a class="inline" href="https://www.iitkgp.ac.in/department/AG">agricultural and food engineering</a>
+                        and a master's degree in
+                        <a class="inline" href="https://www.iitkgp.ac.in/financial-engineering">financial engineering</a>
+                        from the
+                        <a class="inline" href="https://www.iitkgp.ac.in/">Indian Institute of Technology Kharagpur</a>.
+                        She also minored in
+                        <a class="inline" href="https://www.iitkgp.ac.in/department/MA">mathematics and computing</a>
+                        and pursued a microspecialization in
+                        <a class="inline" href="https://www.iitkgp.ac.in/department/AI">artificial intelligence and applications</a>.
+                        Her previous research experience includes work on quantum convolutional neural networks,
+                        quantum kernels for image processing, combinatorial problems using VQE and QAOA,
+                        and applications to quantum finance.
+                    </p>
+                    <div class="links">
+                        <a href="https://scholar.google.com/citations?user=UewgLEwAAAAJ&hl=en">Google Scholar</a> |
+                        <a href="https://www.linkedin.com/in/meghashrita-das-b02811190">LinkedIn</a>
+                    </div>
+                </div>
+
+                <div class="team-member">
+                    <img src="assets/umass.jpg" alt="UMass Logo">
+                    <h3>Agustin Garcia Flores</h3>
+                    <p>
+                        University of Massachusetts Amherst <br>
+                        <em>College of Natural Sciences</em>
+                    </p>
+                    <p id="bio">
+                        Agustin is a PhD student at UMass Amherst's
+                        <a class="inline" href="https://www.umass.edu/physics/">Department of Physics</a>.
+                        He is working on connection protocols in a satellite-based quantum network
+                        under the guidance of Filip Rozpędek and Stav Haldar. Agustin graduated from
+                        <a class="inline" href="https://www.asu.edu/">Arizona State University</a>
+                        with bachelor's degrees in
+                        <a class="inline" href="https://math.asu.edu/">mathematics</a>
+                        and
+                        <a class="inline" href="https://physics.asu.edu/">physics</a>.
+                    </p>
+                    <div class="links">
+                        <a href="https://agarciaflores.github.io/per/">Homepage</a> |
+                        <a href="https://github.com/agarciaflores">GitHub</a>
+                    </div>
+                </div>
+
+                <div class="team-member">
+                    <img src="assets/ankit-kumar-jha.jpg" alt="Ankit Kumar Jha">
+                    <h3>Ankit Kumar Jha</h3>
+                    <p>
+                        University of Massachusetts Amherst <br>
+                        <em>Manning College of Information and Computer Sciences</em>
+                    </p>
+                    <p id="bio">
+                        Ankit is a PhD student in the
+                        <a class="inline" href="https://www.cics.umass.edu/">CICS</a>
+                        at UMass Amherst. He is working under Filip Rozpędek on
+                        Concatenated Bosonic Error Correcting Codes to design
+                        efficient quantum repeaters. Ankit holds a bachelor's and master's
+                        degree in
+                        <a class="inline" href="https://www.iitkgp.ac.in/department/PH">physics</a>
+                        from the
+                        <a class="inline" href="https://www.iitkgp.ac.in/">Indian Institute of Technology Kharagpur</a>
+                        along with a minor in
+                        <a class="inline" href="https://www.iitkgp.ac.in/department/MA">mathematics and computing</a>.
+                    </p>
+                    <div class="links">
+                        <a href="https://scholar.google.com/citations?user=Olm22zUAAAAJ&hl=en">Google Scholar</a> |
+                        <a href="https://www.linkedin.com/in/ankit-kumar-jha-7b742a190">LinkedIn</a>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <img src="assets/luise-prielinger.jpg" alt="Luise Prielinger">
+                    <h3>Luise Prielinger</h3>
+                    <p>
+                        Delft University of Technology<br>
+                        <em>Quantum Internet Division</em>
+                    </p>
+                    <p id="bio">
+                        Luise completed her master's degrees in computer science and theoretical physics approximately five
+                        years ago, while she was still in Vienna, Austria. Thereafter, she moved to the Netherlands and began
+                        her doctoral studies under Gayane Vardoyan. Luise's study applies existing numerical optimization
+                        approaches to discover effective solutions to complex quantum networking problems. Since quantum
+                        networks are still in the experimental stage, she uses and contributes to the development of
+                        simulation tools for quantum networks and distributed quantum computing. She then employs this
+                        software to analyze and optimize the complex behavior of quantum networks in specific, simulated
+                        environments that interest her. The optimization problems she's attempting to tackle mainly involve
+                        the protocols that regulate such a given quantum network. The goal is to find protocols that allow
+                        the intricate interplay of various devices in a quantum network to run as effectively as feasible.
+                    </p>
+                    <p id="bio">
+                        Summa summarum, Luise is a physicist who enjoys both algorithms and code. She enjoys playing chess,
+                        discussing psychology, practicing yoga, and drinking
+                        <strong style="text-decoration: underline 3px;">good</strong> coffee.
+                    </p>
+                    <div class="links">
+                        <a href="https://scholar.google.com/citations?user=1iVzpXMAAAAJ&hl=en">Google Scholar</a> |
+                        <a href="https://www.linkedin.com/in/luise-prielinger-958381177/">LinkedIn</a> |
+                        <a href="https://github.com/Luisenden">GitHub</a>
+                    </div>
+                </div>
+
+                <div class="team-member">
+                    <img src="assets/ryosuke-shiina.jpg" alt="Ryosuke Shiina">
+                    <h3>Ryosuke Shiina</h3>
+                    <p>
+                        University of Massachusetts Amherst <br>
+                        <em>College of Natural Sciences</em>
+                    </p>
+                    <p id="bio">
+                        Ryosuke Shiina is a
+                        <a class="inline" href="https://www.umass.edu/physics/about/directory/ryosuke-shiina">PhD candidate</a>
+                        through the <a class="inline" href="https://www.umass.edu/physics/">Department of Physics</a>
+                        at UMass Amherst. He has been researching under Filip Rozpędek and has been a graduate student researcher
+                        with the <a class="inline" href="https://cqn-erc.arizona.edu/">Center for Quantum Networks</a>.
+                        He is a quantum network architect, and his main area of research is theory relating to quantum
+                        network schemes, error correction codes such as GKP-code and Cat code, and graph theory.
+                    </p>
+                </div>
+                
+                <div class="team-member">
+                    <img src="assets/tu-delft.jpg" alt="TU Delft Logo">
+                    <h3>(Eric) Guo Xian Yau</h3>
+                    <p>
+                        Delft University of Technology<br>
+                        <em>QuTech</em>
+                    </p>
+                    <p id="bio">
+                        Eric completed his master's and bachelor's degrees in mathematics, with a focus on combinatorics
+                        (such as graph theory) and optimization (such as combinatorial optimization). His ongoing research
+                        includes performance analysis and quantum network protocol design, but he hopes to shift his focus
+                        to more graph-theoretic applications on quantum networks in the future.
+                    </p>
+                </div>
+            </section>
+
+            <!-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -->
+            <section id="team-section">
+                <h2>Master Students</h2>
+
+                <div class="team-member">
+                    <img src="assets/luc-barrett.jpg" alt="Luc Barrett">
+                    <h3>Luc Barrett</h3>
+                    <p>
+                        University of Massachusetts Amherst <br>
+                        <em>Manning College of Information and Computer Sciences</em>
+                    </p>
+                    <p id="bio">
+                        A recent graduate of UMass Amherst, Luc holds degrees in
+                        <a class="inline" href="https://www.cics.umass.edu/">computer science</a>,
+                        <a class="inline" href="https://www.umass.edu/mathematics-statistics/">applied mathematics</a>,
+                        and
+                        <a class="inline" href="https://www.umass.edu/physics/">physics</a>.
+                        He is now a
+                        <a class="inline" href="https://www.cics.umass.edu/academics/scholarships-and-fellowships/bay-state-scholarship-program">Bay State Fellow</a>
+                        in the UMass MS Computer Science program, where he is working with Gayane Vardoyan and
+                        <a class="inline" href="https://lab.krastanov.org/">Stefan Krastanov</a>
+                        on optimizing quantum communication protocols using reinforcement learning. He is
+                        also interested in applications of quantum sensing to neutrino and dark matter experiments.
+                        As an undergraduate, he was affiliated with the
+                        <a class="inline" href="https://nexo.llnl.gov/">nEXO</a>
+                        and
+                        <a class="inline" href="https://moller.jlab.org/">MOLLER</a>
+                        collaborations.
+                    </p>
+                    <div class="links">
+                        <a href="https://www.lucbarrett.info/">Homepage</a> |
+                        <a href="https://www.linkedin.com/in/luc-barrett/">LinkedIn</a>
+                    </div>
+                </div>                
+            </section>
+        </main>
+    </body>
+</html>
