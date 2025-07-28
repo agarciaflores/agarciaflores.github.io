@@ -6,10 +6,11 @@
         <meta name=viewport content="width=device-width,initial-scale=1">
         <title>RV Lab</title>
         <link rel=stylesheet href=main.css>
+        <base target="_blank">
     </head>
     <body>
         <nav aria-label="main navigation" class="header">
-            <a class="brand" href="/">RV Lab</a>
+            <a href="/" target="_self"><img src="assets/quail.svg" alt="QuaIL Logo" class="brand" ></a>
             <div class="menu-icon" onclick=menuIconFunction(this)>
                 <div class="bar1"></div>
                 <div class="bar2"></div>
@@ -18,10 +19,10 @@
             <div class="menu-collapse">
                 <ul>
                     <li>
-                        <a href="/research/">Research</a>
+                        <a href="/research/" target="_self">Research</a>
                     </li>
                     <li>
-                        <a href="/team/">Team</a>
+                        <a href="/team/" target="_self">Team</a>
                     </li>
                 </ul>
                 <div class="hover-pill"></div>
@@ -72,38 +73,32 @@
                         <img src="assets/2025-05-19.jpg" alt="Group picture in front of W.E.B. Du Bois Library">
                         <div class="caption">May 2025</div>
                     </div>
-                    <div class="slide fade">
+                    <!-- <div class="slide fade">
                         <img src="assets/2025-05-19-prime.jpg" alt="Fun group picture in front of W.E.B. Du Bois Library">
                         <div class="caption">May 2025</div>
+                    </div> -->
+                </div>
+                <div class=content>
+                    <p>
+                        The Quantum Information Lab (QuaIL) at UMass Amherst is an interdisciplinary research group led by Professors Filip Rozpędek and Gayane Vardoyan within the <a class="inline" href="https://www.umass.edu/physics/">Department of Physics</a>  and the <a class="inline" href="https://www.cics.umass.edu/">Manning College of Information &amp; Computer Sciences</a>. Comprising graduate students from UMass Amherst and <a class="inline" href="https://www.tudelft.nl/en/">TU Delft</a>, our team is united by a common goal: to design and analyze the building blocks of a secure, scalable quantum network.
+                    </p>
+                    <div id="news-section">
+                        <div class="tile">
+                            <h3 class="tile-header">News</h3>
+                            <h2 class="tile-title"><a href="https://www.nature.com/articles/s41534-025-01048-3" class="tile-link">Luise's manuscript "Surrogate-guided optimization in quantum networks" publised in npj QI 🎉</a></h2>
+                            <p class="tile-date">05/31/2025</p>
+                        </div>
+                        <div class="tile">
+                            <h3 class="tile-header">News</h3>
+                            <h2 class="tile-title"><a href="https://arxiv.org/abs/2410.08980" class="tile-link">Leonardo's manuscript "Leveraging Internet Principles to Build a Quantum Network" accepted into IEEE Network Magazine 🎉</a></h2>
+                            <p class="tile-date">05/09/2025</p>
+                        </div>
                     </div>
                 </div>
-                <div class=text-content>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Integer nec iaculis ipsum. Nulla placerat id nisi gravida sagittis.
-                        Donec volutpat gravida est ac fermentum.Nam eget tristique elit.
-                        Morbi vel elit ac velit malesuada pretium.
-                        Donec risus dui, tincidunt in auctor ac, efficitur ac felis.
-                        Nam laoreet magna enim, eget ultricies eros fringilla in.
-                        Duis quam urna, porttitor vitae lorem id, efficitur blandit dui.
-                        Morbi condimentum nisl vitae sapien malesuada luctus.
-                        Pellentesque vestibulum enim luctus lobortis aliquet.
-                        Duis feugiat vehicula purus ut elementum.
-                    </p>
-                </div>
             </section>
-            <section id="news-section">
-                <div class="tile">
-                    <h3 class="tile-header">News</h3>
-                    <h2 class="tile-title"><a href="#" class="tile-link">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</a></h2>
-                    <p class="tile-date">07/19/2023</p>
-                </div>
-                <div class="tile">
-                    <h3 class="tile-header">News</h3>
-                    <h2 class="tile-title"><a href="#" class="tile-link">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</a></h2>
-                    <p class="tile-date">06/22/2023</p>
-                </div>
-            </section>
+            <div> 
+                <img class="bird" src="assets/quail_bird.svg" alt="QuaIL Logo (bird)">
+            </div>
         </main>
         <script>
             let slideIndex = 0;
@@ -117,7 +112,7 @@
                 slideIndex++;
                 if (slideIndex > slides.length) { slideIndex = 1 }
                 slides[slideIndex - 1].style.display = "block";  
-                setTimeout(showSlides, 5000); // Change slide every 5 seconds
+                setTimeout(showSlides, 10000); // Change slide every 10 seconds
             }
             </script>
     </body>
