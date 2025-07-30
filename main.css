@@ -283,6 +283,10 @@ nav li>a {
     grid-template-columns: repeat(2, 1fr);
 }
 
+#past-team {
+    grid-template-columns: repeat(3, 1fr);
+}
+
 #pi-section h2, #team-section h2, #past-team h2 {
     grid-column: 1 / -1;
     font-size: 26px;
