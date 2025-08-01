@@ -4,7 +4,7 @@
     --black-highlight: #161E27;
     --color-white: #f5f5f7;
     --color-blue: #4D7EA8;
-    --color-gray: #828489;
+    --color-gray: #dddddf;
     /* https://coolors.co/85221b-070707-fefffe-828489-4d7ea8 */
 
     --color-night: red;
@@ -47,7 +47,7 @@ nav {
     background: hsla(0,0,100%,0.75);
     position: fixed;
     top: 0;
-    padding: 20px 0;
+    padding: 10px 0;
     width: 98%;
     z-index: 1000;
 }
@@ -66,7 +66,7 @@ nav a .brand {
     padding: 0;
     padding-left: calc(50% - 530px);
     margin: 0;
-    height: 30px;
+    height: 38px;
     transition: filter 0.5s ease;
 }
 
@@ -94,7 +94,7 @@ nav li>a {
     letter-spacing: 2px;
     text-transform: uppercase;
     padding-inline:12px;
-    font-size: 14px;
+    font-size: 16px;
     display: inline-block;
 }
 
@@ -188,7 +188,7 @@ nav li>a {
     background-color: rgba(0, 0, 0, 0.6);
     color: white;
     padding: 10px;
-    font-size: 16px;
+    font-size: 18px;
     border-radius: 4px;
 }
 
@@ -242,18 +242,18 @@ nav li>a {
 /* Tile header, title, date, and link */
 .tile-header {
     color: var(--color-blue);  /* Blue color for categories */
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
 .tile-title {
-    font-size: 20px;
+    font-size: 18px;
     margin-bottom: 10px;
 }
 
 .tile-date {
-    font-size: 14px;
+    font-size: 16px;
     color: var(--color-gray);
     margin-bottom: 15px;
 }
@@ -354,20 +354,20 @@ nav li>a {
 }
 
 .team-member p, .pi-member p, .past-member p {
-    font-size: 16px;
+    font-size: 18px;
     color: var(--color-black);
 }
 
 /* Position styling */
 .pi-member p:first-of-type, .team-member p:first-of-type {
-    font-size: 16px;
-    color: var(--color-gray);
+    font-size: 18px;
+    color: var(--color-dark-gray);
     margin: 5px 0;
 }
 
 /* Institution styling */
 .pi-member p:nth-of-type(2) {
-    font-size: 15px;
+    font-size: 18px;
     color: var(--color-dark-gray);
     margin-bottom: 15px;
 }
@@ -378,7 +378,7 @@ nav li>a {
     font-weight: 500;
     text-decoration: underline var(--color-blue);
     text-decoration-thickness: 3px;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .team-member .links a:hover, .pi-member .links a:hover, .past-member .links a:hover {
