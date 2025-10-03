@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang=en>
+    <head>
+        <meta name=generator content="Hugo 0.135.0">
+        <meta charset=UTF-8>
+        <meta name=viewport content="width=device-width,initial-scale=1">
+        <title>Research</title>
+
+        <!-- Standard favicon -->
+        <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+
+        <!-- Light/dark mode (modern) -->
+        <link rel="icon" type="image/svg+xml" href="../assets/favicon-light.svg" media="(prefers-color-scheme: light)">
+        <link rel="icon" type="image/svg+xml" href="../assets/favicon-dark.svg" media="(prefers-color-scheme: dark)">
+
+        <!-- PNG sizes for fallback -->
+        <link rel="icon" type="image/png" href="../assets/favicon-light-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="../assets/favicon-light-16x16.png" sizes="16x16">
+
+        <!-- Apple Touch Icon -->
+        <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+
+        <!-- Microsoft Tiles -->
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="../assets/mstile-150x150.png">
+        
+        <link rel=stylesheet href=../main.css>
+        <base target="_blank">
+    </head>
+    <body>
+        <nav aria-label="main navigation" class="header">
+            <a href="/" target="_self"><img src="../assets/quail-brand-alt.png" alt="QuaIL Brand" class="brand" ></a>
+            <div class="menu-icon" onclick=menuIconFunction(this)>
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            <div class="menu-collapse">
+                <ul>
+                    <li class="active">
+                        <a href="/research/" target="_self">Research</a>
+                    </li>
+                    <li>
+                        <a href="/team/" target="_self">Team</a>
+                    </li>
+                </ul>
+                <div class="hover-pill"></div>
+            </div>
+            <script>
+                function menuIconFunction(e) {
+                    e.classList.toggle("menu-open"),
+                    e.nextElementSibling.classList.toggle("show-menu")
+                }
+            </script>
+            <script>
+                const header = document.querySelector(".header");
+                window.addEventListener("scroll", () => {
+                    window.scrollY > 0 ? header.classList.add("scrolled") : header.classList.remove("scrolled")
+                }
+                )
+            </script>
+            <script>
+                const navItems = document.querySelectorAll(".header ul>li")
+                  , hoverPill = document.querySelector(".hover-pill")
+                  , activeLink = document.querySelector(".header ul>li.active");
+                function movePillToLink(e) {
+                    const t = e.getBoundingClientRect()
+                      , n = e.parentElement.parentElement.getBoundingClientRect();
+                    hoverPill.style.width = `${t.width}px`,
+                    hoverPill.style.left = `${t.left - n.left}px`,
+                    hoverPill.style.opacity = "1"
+                }
+                activeLink ? movePillToLink(activeLink) : hoverPill.style.opacity = "0",
+                navItems.forEach(e => {
+                    const t = e.querySelector("a");
+                    e.addEventListener("mouseenter", () => {
+                        movePillToLink(t)
+                    }
+                    ),
+                    e.addEventListener("mouseleave", () => {
+                        activeLink ? movePillToLink(activeLink) : hoverPill.style.opacity = "0"
+                    }
+                    )
+                }
+                )
+            </script>
+        </nav>
+        <main>
+            <section id="research">
+                <h2>Research Areas</h2>
+
+                <p>
+                    The <strong>Quantum Internet</strong> is rapidly becoming a reality, creating the need for robust protocols that maximize its benefits.
+                    A significant challenge in this field is <strong>long-distance entanglement distribution</strong>, especially with near-term quantum devices.
+                    High-quality entanglement is essential for users to fully utilize quantum networks.
+                    Our group’s research tackles this challenge across three main areas: <strong>Quantum Repeaters</strong>, <strong>Entanglement Distillation</strong>, and <strong>Quantum Key Distribution (QKD)</strong>.
+                </p>
+
+                <div class="research-topic">
+                    <h3>Quantum Repeaters and Quantum Networks</h3>
+                    <p>
+                        Quantum networks open up functions far beyond those of the classical internet, but transmitting quantum information over long distances is notably more complex.
+                        While classical networks rely on fiber optics, the <strong>no-cloning theorem</strong> prevents direct signal amplification in quantum communication, complicating data relay.
+                        To overcome these issues, our group explores various types of <strong>quantum repeaters</strong> designed to enhance signal strength without violating quantum principles.
+                    </p>
+
+                    <h4>Quantum Repeaters Using Bosonic Error Correcting Codes</h4>
+                    <p>
+                        One promising approach leverages <strong>quantum error correction codes</strong> specifically tailored for optical channels.
+                        <strong>Bosonic codes</strong>, like the <strong>Gottesman-Kitaev-Preskill (GKP) code</strong>, encode information in the quadratures of the light field.
+                        The GKP code is especially effective at mitigating losses by structuring information in the optical phase space.
+                        Our research aims to integrate this with <strong>discrete variable codes</strong> for robust, multi-level encoding that improves communication fidelity.
+                    </p>
+
+                    <h4>Entanglement Distillation</h4>
+                    <p>
+                        Efficient <strong>entanglement distribution</strong> is crucial for quantum networking, and our group focuses on optimizing this through <strong>entanglement distillation</strong>.
+                        Distillation involves refining high-quality entanglement from a noisier source by using local operations and classical communication to isolate the best entangled states.
+                        By developing and testing new distillation schemes, we work to push the limits of practical entanglement, enhancing the reliability of quantum communication networks.
+                    </p>
+                </div>
+
+                <div class="research-topic">
+                    <h3>Quantum Key Distribution (QKD)</h3>
+                    <p>
+                        <strong>QKD</strong> is one of the most mature applications of quantum networks, enabling the secure distribution of cryptographic keys.
+                        This security is grounded in <strong>quantum mechanics</strong> through the <strong>uncertainty principle</strong> and the <strong>monogamy of entanglement</strong>.
+                        In our lab, we focus on creating <strong>practical QKD protocols</strong> and refining post-processing techniques to ensure robust, secure communication—even with realistic noise factors in experimental settings.
+                    </p>
+                </div>
+                 
+            </section>
+            <!-- <div> 
+                <img class="bird" src="../assets/quail_bird.svg" alt="QuaIL Logo (bird)">
+            </div> -->
+        </main>
+    </body>
+</html>

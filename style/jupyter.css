@@ -1,0 +1,52 @@
+/* This file contains of all the styling adjustments necessary to 
+bring a jupyter notebook into my blog environment */
+
+/* Whole ----------------------------------------------------------*/
+
+/* Only controls the BACKGROUND COLOR of the whole document */
+.jp-Notebook, .jp-Notebook-cell, .jp-MarkdownCell {
+    background: #072184;
+    font-weight: 600 !important;
+}
+
+/* Code Cells -----------------------------------------------------*/
+
+/* Controls code cells */
+.CodeMirror.cm-s-jupyter, .jp-InputArea-editor, .CodeMirror, pre {
+    background: #181818 !important;
+    color: #dfd2e7 !important;
+    font-weight: 600 !important;
+    font-family: 'Courier New', Courier, monospace;
+    border-color: #37373d !important;
+    overflow: auto;
+}
+
+/* Markdown Cells -------------------------------------------------*/
+
+/* Only controls the COLOR of mardown cells and left column */
+.jp-InputArea, .jp-Cell-inputArea, .jp-Cell-inputWrapper {
+    background: #072184;
+}
+
+/* Controls column left of cells */
+.jp-InputPrompt, .jp-InputArea-prompt {
+    background: #072184;
+    color: #dfd2e7 !important;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 900 !important;
+}
+
+/* Controls markdown cells */
+.jp-RenderedHTMLCommon, .jp-RenderedMarkdown, .jp-MarkdownOutput,
+h1, h2, h3, h4 {
+    background: #072184;
+    color: #dfd2e7;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600 !important;
+}
+
+/* Controls code in markdown */
+code {
+    background: #3c3c3c !important;
+    color: #dfd2e7 !important;
+}

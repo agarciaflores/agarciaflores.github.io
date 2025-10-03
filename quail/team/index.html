@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang=en>
+    <head>
+        <meta name=generator content="Hugo 0.135.0">
+        <meta charset=UTF-8>
+        <meta name=viewport content="width=device-width,initial-scale=1">
+        <title>Team</title>
+
+        <!-- Standard favicon -->
+        <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+
+        <!-- Light/dark mode (modern) -->
+        <link rel="icon" type="image/svg+xml" href="../assets/favicon-light.svg" media="(prefers-color-scheme: light)">
+        <link rel="icon" type="image/svg+xml" href="../assets/favicon-dark.svg" media="(prefers-color-scheme: dark)">
+
+        <!-- PNG sizes for fallback -->
+        <link rel="icon" type="image/png" href="../assets/favicon-light-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="../assets/favicon-light-16x16.png" sizes="16x16">
+
+        <!-- Apple Touch Icon -->
+        <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+
+        <!-- Microsoft Tiles -->
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="../assets/mstile-150x150.png">
+
+        <link rel=stylesheet href=../main.css>
+        <base target="_blank">
+    </head>
+    <body>
+        <nav aria-label="main navigation" class="header">
+            <a href="/" target="_self"><img src="../assets/quail-brand-alt.png" alt="QuaIL Brand" class="brand" ></a>
+            <div class="menu-icon" onclick=menuIconFunction(this)>
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            <div class="menu-collapse">
+                <ul>
+                    <li>
+                        <a href="/research/" target="_self">Research</a>
+                    </li>
+                    <li class="active">
+                        <a href="/team/" target="_self">Team</a>
+                    </li>
+                </ul>
+                <div class="hover-pill"></div>
+            </div>
+            <script>
+                function menuIconFunction(e) {
+                    e.classList.toggle("menu-open"),
+                    e.nextElementSibling.classList.toggle("show-menu")
+                }
+            </script>
+            <script>
+                const header = document.querySelector(".header");
+                window.addEventListener("scroll", () => {
+                    window.scrollY > 0 ? header.classList.add("scrolled") : header.classList.remove("scrolled")
+                }
+                )
+            </script>
+            <script>
+                const navItems = document.querySelectorAll(".header ul>li")
+                  , hoverPill = document.querySelector(".hover-pill")
+                  , activeLink = document.querySelector(".header ul>li.active");
+                function movePillToLink(e) {
+                    const t = e.getBoundingClientRect()
+                      , n = e.parentElement.parentElement.getBoundingClientRect();
+                    hoverPill.style.width = `${t.width}px`,
+                    hoverPill.style.left = `${t.left - n.left}px`,
+                    hoverPill.style.opacity = "1"
+                }
+                activeLink ? movePillToLink(activeLink) : hoverPill.style.opacity = "0",
+                navItems.forEach(e => {
+                    const t = e.querySelector("a");
+                    e.addEventListener("mouseenter", () => {
+                        movePillToLink(t)
+                    }
+                    ),
+                    e.addEventListener("mouseleave", () => {
+                        activeLink ? movePillToLink(activeLink) : hoverPill.style.opacity = "0"
+                    }
+                    )
+                }
+                )
+            </script>
+        </nav>
+        <main>
+
+            <!--        
+            _________   _...._      .--.
+            \        |.'      '-.   |__|
+             \        .'```'.    '. .--.
+              \      |       \     \|  |
+               |     |        |    ||  |
+               |      \      /    . |  |
+               |     |\`'-.-'   .'  |  |
+               |     | '-....-'`    |__|
+              .'     '.
+            '-----------'
+            -->
+
+            <section id="pi-section">
+                <h2>Principal Investigators</h2>
+
+                <div class="pi-member">
+                    <div>
+                        <img src="assets/filip-rozpedek.jpg" alt="Filip Rozpędek">
+                    </div>
+                    <div>
+                        <h3>Filip Rozpędek</h3>
+                        <p>
+                            University of Massachusetts Amherst <br>
+                            <em>Manning College of Information and Computer Sciences</em> <br>
+                            <em>College of Natural Sciences</em>
+                        </p>
+                        <p id="bio">
+                            Professor Rozpędek is an Assistant Professor in the <a class="inline" href="https://www.cics.umass.edu/about/directory/filip-rozpedek">Manning College of Information and Computer Sciences</a> and an Adjunct Assistant Professor in the <a class="inline" href="https://www.umass.edu/physics/about/directory/filip-rozpedek">College of Natural Sciences</a> at the University of Massachusetts Amherst. He obtained his PhD in 2019 from <a class="inline" href="https://qutech.nl/">QuTech</a> at <a class="inline" href="https://www.tudelft.nl/en/">TU Delft</a> where he worked in <a class="inline" href="https://qutech.nl/lab/wehner-group/">Stephanie Wehner's group</a> on the building blocks of quantum networks. From 2019 to 2023, he was a postdoc in <a class="inline" href="https://pme.uchicago.edu/group/jiang-group">Liang Jiang's group</a> at the <a class="inline" href="https://pme.uchicago.edu/">Pritzker School of Molecular Engineering</a> at the <a class="inline" href="https://www.uchicago.edu/">University of Chicago</a> working on quantum repeaters for quantum communication.
+                        </p>
+                        <div class="links">
+                            <a href="https://sites.google.com/view/filiprozpedek">Homepage</a> |
+                            <a href="https://scholar.google.nl/citations?user=YOaDA-UAAAAJ&hl=en">Google Scholar</a> |
+                            frozpedek [at] umass.edu
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pi-member">
+                    <div>
+                        <img src="assets/gayane-vardoyan.jpg" alt="Gayane Vardoyan">
+                    </div>
+                    <div>
+                        <h3>Gayane Vardoyan</h3>
+                        <p>
+                            University of Massachusetts Amherst <br>
+                            <em>Manning College of Information and Computer Sciences</em>
+                        </p>
+                        <p id="bio">
+                            Professor Vardoyan is an Assistant Professor in the <a class="inline" href="https://www.cics.umass.edu/about/directory/gayane-vardoyan">Manning College of Information and Computer Sciences</a> at the University of Massachusetts Amherst. From 2022 to 2024, Professor Vardoyan was an Assistant Professor at <a class="inline" href="https://qutech.nl/">QuTech</a>'s <a class="inline" href="https://qutech.nl/research-engineering/quantum-internet/">Quantum Internet Division</a>, and <a class="inline" href="https://www.tudelft.nl/en/eemcs">EEMCS</a>, <a class="inline" href="https://www.tudelft.nl/en/">TU Delft</a>, receiving a permanent contract in 2023. That same year, she became part-time faculty at UMass Amherst, ultimately switching to full-time in 2024. She received her PhD from UMass Amherst, where she worked on systems and networking in <a class="inline" href="https://acquire.cs.umass.edu/">Don Towsley's group</a>. Then, she was a postdoc at <a class="inline" href="https://www.tudelft.nl/en/">TU Delft</a>, where she worked with <a class="inline" href="https://qutech.nl/person/stephanie-wehner/">Stephanie Wehner</a>.
+                        </p>
+                        <div class="links">
+                            <a href="https://people.cs.umass.edu/~gvardoyan/#home">Homepage</a> |
+                            <a href="https://scholar.google.com/citations?user=iSt_oLcAAAAJ&hl=en">Google Scholar</a> |
+                            gvardoyan [at] umass.edu
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--
+                                         .-'''-.                                             .-'''-.            _..._
+                                       '   _    \                         _______          '   _    \       .-'_..._''.
+            _________   _...._       /   /` '.   \                        \  ___ `'.     /   /` '.   \    .' .'      '.\
+            \        |.'      '-.   .   |     \  '                         ' |--.\  \   .   |     \  '   / .'
+             \        .'```'.    '. |   '      |  '                  .|    | |    \  '  |   '      |  ' . '
+              \      |       \     \\    \     / /                 .' |_   | |     |  ' \    \     / /  | |
+               |     |        |    | `.   ` ..' /          _     .'     |  | |     |  |  `.   ` ..' /   | |                     _ 
+               |      \      /    .     '-...-'`         .' |   '--.  .-'  | |     ' .'     '-...-'`    . '                   .' |
+               |     |\`'-.-'   .'                      .   | /    |  |    | |___.' /'                   \ '.          .     .   | /
+               |     | '-....-'`                      .'.'| |//    |  |   /_______.'/                     '. `._____.-'/   .'.'| |//
+              .'     '.                             .'.'.-'  /     |  '.' \_______|/                        `-.______ /  .'.'.-'  /
+            '-----------'                           .'   \_.'      |   /                                             `   .'   \_.'
+                                                                   `'-'
+            -->
+
+            <section id="team-section">
+                <h2>Postdocs</h2>
+                <div class="team-member">
+                    <img src="assets/leonardo-bacciottini.jpg" alt="Leonardo Bacciottini">
+                    <h3>Leonardo Bacciottini</h3>
+                    <p>
+                        University of Massachusetts Amherst <br>
+                        <em>Manning College of Information and Computer Sciences</em>
+                    </p>
+                    <p id="bio">
+                        Leonardo is a postdoc jointly working with Gayane Vardoyan and <a class="inline" href="https://acquire.cs.umass.edu/members.html#:~:text=Leonardo%20Bacciottini">Don Towsley</a>. He holds a Ph.D. from the <a class="inline" href="https://www.unipi.it/index.php/english">University of Pisa</a>, where he also obtained his M.Sc. degree in Computer Engineering. His research interests include protocols and architectures for entanglement distribution networks, simulation, and quantum information theory, with a focus on entanglement purification.
+                    </p>
+                    <div class="links">
+                        <a href="https://scholar.google.com/citations?user=V52MmUkAAAAJ&hl=en">Google Scholar</a> |
+                        lbacciottini [at] umass.edu
+                    </div>
+                </div>
+
+                <div class="team-member">
+                    <img src="assets/stav-haldar.jpeg" alt="Stav Haldar">
+                    <h3>Stav Haldar</h3>
+                    <p>
+                        University of Massachusetts Amherst <br>
+                        <em>Manning College of Information and Computer Sciences</em>
+                    </p>
+                    <p id="bio">
+                        Stav is a postdoc under Filip Rozpędek. He earned his Ph.D. in the Department of Physics and Astronomy at <a class="inline" href="https://www.lsu.edu/physics/">Louisiana State University</a>. His research interests are theory and optimization of quantum networks, quantum time synchronization protocols, and quantum optics, especially its intersection with gravity and phase transitions in quantum many-body systems.
+                    </p>
+                    <div class="links">
+                        <a href="https://scholar.google.com/citations?user=FUF5AzIAAAAJ&hl=en">Google Scholar</a> |
+                        <a href="https://www.linkedin.com/in/stav-haldar-8414b5247/">LinkedIn</a> |
+                        stavhaldar [at] umass.edu
+                    </div>
+                </div>
+            </section>
+
+            <!-- 
+                                                  _______
+            _________   _...._         .           \  ___ `'.
+            \        |.'      '-.    .'|            ' |--.\  \
+             \        .'```'.    '. <  |            | |    \  '
+              \      |       \     \ | |            | |     |  '
+               |     |        |    | | | .'''-.     | |     |  |
+               |      \      /    .  | |/.'''. \    | |     ' .'
+               |     |\`'-.-'   .'   |  /    | |    | |___.' /'
+               |     | '-....-'`     | |     | |   /_______.'/
+              .'     '.              | |     | |   \_______|/
+            '-----------'            | '.    | '.
+                                    '---'   '---'
+            -->
+
+            <section id="team-section">
+                <h2>PhD Students</h2>
+
+                <div class="team-member">
+                    <img src="assets/meghashrita-das.jpg" alt="Meghashrita Das">
+                    <h3>Meghashrita Das</h3>
+                    <p>
+                        University of Massachusetts Amherst <br>
+                        <em>Manning College of Information and Computer Sciences</em>
+                    </p>
+                    <p id="bio">
+                        Meghashrita is a computer science PhD student UMass Amherst. She works with Gayane Vardoyan and Filip Rozpędek to study the function of loss-tolerant graph states in designing all-photonic quantum repeaters with error-corrected architectures. Meghashrita holds a bachelor's degree in agricultural and food engineering and a master's degree in financial engineering from the <a class="inline" href="https://www.iitkgp.ac.in/">Indian Institute of Technology Kharagpur</a>. She also minored in mathematics and computing and pursued a microspecialization in artificial intelligence and applications.
+                    </p>
+                    <div class="links">
+                        <a href="https://scholar.google.com/citations?user=UewgLEwAAAAJ&hl=en">Google Scholar</a> |
+                        <a href="https://www.linkedin.com/in/meghashrita-das-b02811190">LinkedIn</a> |
+                        meghashritad [at] umass.edu
+                    </div>
+                </div>
+
+                <div class="team-member">
+                    <img src="assets/umass.jpg" alt="UMass Logo">
+                    <h3>Agustin Garcia Flores</h3>
+                    <p>
+                        University of Massachusetts Amherst <br>
+                        <em>College of Natural Sciences</em>
+                    </p>
+                    <p id="bio">
+                        Agustin is a physics PhD student at UMass Amherst. He works with satellite-based quantum networks under the guidance of Filip Rozpędek and Stav Haldar. Agustin graduated from <a class="inline" href="https://www.asu.edu/">Arizona State University</a> with bachelor's degrees in mathematics and physics.
+                    </p>
+                    <div class="links">
+                        <a href="https://agarciaflores.github.io/per/">Homepage</a> |
+                        <a href="https://github.com/agarciaflores">GitHub</a> |
+                        agarciaflore [at] umass.edu
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <img src="assets/luise-prielinger.jpg" alt="Luise Prielinger">
+                    <h3>Luise Prielinger</h3>
+                    <p>
+                        Delft University of Technology<br>
+                        <em>Quantum Internet Division</em>
+                    </p>
+                    <p id="bio">
+                        Luise is a PhD candidate at <a class="inline" href="https://www.tudelft.nl/en/">TU Delft</a>. She works with Gayane Vardoyan on applying existing numerical optimization techniques to discover effective solutions to complex quantum networking problems. Luise completed her master's degrees in computer science and theoretical physics in Vienna, Austria.
+                    </p>
+                    <div class="links">
+                        <a href="https://scholar.google.com/citations?user=1iVzpXMAAAAJ&hl=en">Google Scholar</a> |
+                        <a href="https://www.linkedin.com/in/luise-prielinger-958381177/">LinkedIn</a> |
+                        <a href="https://github.com/Luisenden">GitHub</a> |
+                        l.p.prielinger [at] tudelft.nl
+                    </div>
+                </div>
+
+                <div class="team-member">
+                    <img src="assets/ryosuke-shiina.jpg" alt="Ryosuke Shiina">
+                    <h3>Ryosuke Shiina</h3>
+                    <p>
+                        University of Massachusetts Amherst <br>
+                        <em>College of Natural Sciences</em>
+                    </p>
+                    <p id="bio">
+                        Ryosuke Shiina is a physics PhD candidate at UMass Amherst. He is researching under Filip Rozpędek and has been a graduate student researcher with the <a class="inline" href="https://cqn-erc.arizona.edu/">Center for Quantum Networks</a>. He is a quantum network architect, and his main area of research is theory relating to quantum network schemes, error correction codes such as GKP-code and Cat code, and graph theory.
+                    </p>
+                    <div class="links">
+                        rshiina [at] umass.edu
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <img src="assets/tu-delft.jpg" alt="TU Delft Logo">
+                    <h3>(Eric) Guo Xian Yau</h3>
+                    <p>
+                        Delft University of Technology<br>
+                        <em>QuTech</em>
+                    </p>
+                    <p id="bio">
+                        Eric completed his master's and bachelor's degrees in mathematics. His ongoing research includes performance analysis and quantum network protocol design, but he hopes to shift his focus to more graph-theoretic applications on quantum networks in the future.
+                    </p>
+                    <div class="links">
+                        G.X.Yau [at] tudelft.nl
+                    </div>
+                </div>
+            </section>
+
+            <!-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -->
+            <section id="past-team">
+                <h2>Past Members</h2>
+
+                <div class="past-member">
+                    <h3>Snehasis Addy</h3>
+                    <p id="bio">
+                        Snehasis is a computer science PhD student at UMass Amherst. During the first year of his PhD program, he jointly worked with Filip Rozpędek and Gayane Vardoyan on topics related to Quantum Networks and Distributed Quantum Computing.
+                    </p>
+                    <div class="links">
+                        <a href="https://snehasisaddy.github.io/">Homepage</a> |
+                        <a href="https://scholar.google.co.in/citations?user=PX3JAV4AAAAJ&hl=en">Google Scholar</a> |
+                        <a href="https://www.linkedin.com/in/snehasisaddy/">LinkedIn</a> |
+                        <a href="https://github.com/snehasisaddy">GitHub</a> |
+                        saddy [at] umass.edu
+                    </div>
+                </div>
+                
+                <div class="past-member">
+                    <h3>Ankit Kumar Jha</h3>
+                    <p id="bio">
+                        Ankit was a computer science PhD student at UMass Amherst for a year before he transferred to the <a class="inline" href="https://www.u-bordeaux.fr/en">University of Bordeaux</a> in pursuit of a physics PhD. He worked with Filip Rozpędek on Concatenated Bosonic Error Correcting Codes to design efficient quantum repeaters.
+                    </p>
+                    <div class="links">
+                        <a href="https://scholar.google.com/citations?user=Olm22zUAAAAJ&hl=en">Google Scholar</a> |
+                        <a href="https://www.linkedin.com/in/ankit-kumar-jha-7b742a190">LinkedIn</a> |
+                        ankitkumarjh [at] umass.edu
+                    </div>
+                </div>
+
+                <div class="past-member">
+                    <h3>Luc Barrett</h3>
+                    <p id="bio">
+                        Luc, now an applied physics PhD student at Cornell University, graduated from UMass Amherst with bachelor's degrees in computer science, applied mathematics, and physics. He also earned a master's degree in computer science at UMass Amherst as a <a class="inline" href="https://www.cics.umass.edu/academics/scholarships-and-fellowships/bay-state-scholarship-program">Bay State Fellow</a>. He worked with Gayane Vardoyan and <a class="inline" href="https://lab.krastanov.org/">Stefan Krastanov</a> on optimizing quantum communication protocols using reinforcement learning.
+                    </p>
+                    <div class="links">
+                        <a href="https://www.lucbarrett.info/">Homepage</a> |
+                        <a href="https://www.linkedin.com/in/luc-barrett/">LinkedIn</a> |
+                        lab392 [at] cornell.edu
+                    </div>
+                </div>
+            </section>
+            <!-- <div> 
+                <img class="bird" src="../assets/quail_bird.svg" alt="QuaIL Logo (bird)">
+            </div> -->
+        </main>
+    </body>
+</html>

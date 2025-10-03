@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LHX1KL0DKP"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-LHX1KL0DKP');
+    </script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>2022-10-08 | posts | ppp</title>
+    <link rel="stylesheet" href="../../style/blog.css">
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [ [ '$', '$' ], [ '\\(', '\\)' ]  ], // Defines delimiters for inline equations
+                displayMath: [['$$', '$$'], ['\\[', '\\]']] // Defines delimiters for displayed equations
+            },
+            // Additional configurations can be added here
+        };
+    </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="whole">
+    <header>
+        <h1><a class="title" href="/">ppp</a></h1>
+        <p class="sub-title">by Agustin Garcia Flores</p>
+        <nav>
+            <ul>
+                <li><a class="tabs" href="../../pictures/">pictures</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="blog-post">
+        <h1 class="blog-post-title">
+            Gaussian Integral
+        </h1>
+        <hr class="title-separator">
+        <div class="text">
+            <p>
+                Let $f:\mathbb{R}\to\left(0, 1\right]$ be defined by $f(x) = \text{exp}\left(-ax^2\right)$.
+                $f$ is called the <u>Gaussian function</u> and the integral of $f$ is then called the <u>Gaussian integral</u> (or the <u>Euler-Poisson integral</u>):
+                $$\Large I = \int_{\mathbb{R}}dx\, e^{-ax^2}.$$
+                There are several techniques to solve this integral.
+                I intend to show a couple here.
+                First, with a simple demonstration.
+            </p>
+            <p>
+                <i>Proof.</i> By spherical polar coordinates.<br>
+                We integrate over both $x$ and $y$ so that
+                $$I = \int_{\mathbb{R}}dx\, e^{-ax^2} \Rightarrow I^2 = \int_{\mathbb{R}}dx\, e^{-ax^2}\int_{\mathbb{R}}dy\, e^{-ay^2} = \iint_{\mathbb{R}^2}dx\,dy\, e^{-a\left(x^2+y^2\right)},$$
+                which can be transformed into spherical polar coordinates since $x = r\cos\theta$ and $y = r\sin\theta$.
+                We see that
+                \[
+                \begin{align*}
+                    \partial_rx &= \cos\theta, & \partial_\theta x &= -r\sin\theta; \\
+                    \partial_ry &= \sin\theta, & \partial_\theta y &= r\cos\theta,
+                \end{align*}
+                \]
+                so the Jacobian determinant $J$ for the transformation from $(x,y)$ to $(r,\theta)$ is
+                $$J = \text{det}\begin{pmatrix}\cos\theta & -r\sin\theta \\ \sin\theta & r\cos\theta\end{pmatrix} = r\cos^2\theta+r\sin^2\theta = r.$$
+                Thus, $dx\,dy \to rdr\,d\theta$ and 
+                $$\iint_{\mathbb{R}^2}dx\,dy\, e^{-a\left(x^2+y^2\right)} = \int_0^{2\pi}\int_{\mathbb{R}^+\cup\{0\}}dr\,d\theta\, re^{-ar^2} = 2\pi\int_{\mathbb{R}^+\cup\{0\}}dr\, re^{-ar^2} = I^2.$$
+                Let $\mu = -ar^2$ so that $d\mu = -2ardr$. Then,
+                \[
+                \begin{align*}
+                    I^2 &= -\frac{\pi}{a}\int_{\mathbb{R}^+\cup\{0\}}d\mu\, e^\mu \\
+                    &= \frac{\pi}{a}\int_{-\infty}^0d\mu\, e^\mu \\
+                    &= \frac{\pi}{a} \\
+                    \therefore &\boxed{I = \sqrt{\frac{\pi}{a}}.}
+                \end{align*}
+                \]
+                [qed]
+            </p>
+            <div>
+                We now tackle a more rigorous approach.
+                First, we must go over a couple of important theorems in mathematical analysis:
+                <p class="theorem">
+                    <b class="theorem-title">Fubini's theorem<sup><a class="footnote" href="#fn1">1</a></sup></b>
+                    Let $A$ and $B$ be $\sigma$-finite measure spaces, not necessarily complete, and either
+                    $$\int_Adx\, \left(\int_Bdy\,\left|f(x,y)\right|\right)<\infty$$
+                    or
+                    $$\int_Bdy\, \left(\int_Adx\,\left|f(x,y)\right|\right)<\infty.$$
+                    Then
+                    $$\int_{A\times B}d(x,y)\,\left|f(x,y)\right|<\infty$$
+                    and
+                    $$\int_Adx\, \left(\int_Bdy\,\left|f(x,y)\right|\right) = \int_Bdy\, \left(\int_Adx\,\left|f(x,y)\right|\right) = \int_{A\times B}d(x,y)\,\left|f(x,y)\right|.$$
+                </p>
+                <p class="theorem">
+                    <b class="theorem-title">Squeeze theorem<sup><a class="footnote" href="#fn2">2</a></sup></b>
+                    Let $f$, $g$, and $h$ be functions which satisfy $\text{dom}\, f = \text{dom}\, g = \text{dom}\, h = A$ and $f(x)\leq g(x)\leq h(x)$ $\forall\, x\in A$.
+                    If $\lim_{x\to x_0}f(x) = \lim_{x\to x_0}g(x) = L$ for some $x_0\in A$ then $\lim_{x\to x_0}h(x) = L$.
+                </p>
+            </div>
+            <p>
+                <i>Proof.</i> Let 
+                $$I(a) = \int_a^a dx\, e^{-bx^2}$$
+                and
+                $$I_0 = \int_{-\infty}^\infty dx\, e^{-bx^2}.$$
+                If $I_0$ were absolutely convergent, then its Cauchy principal value, i.e., the limit
+                $$\lim_{a\to\infty}I(a),$$
+                would coincide with $I_0$.
+                Consider that
+                $$\int_\infty^\infty dx\,\left|e^{-bx^2}\right| < \int_{-\infty}^{-1} dx\,\left(-xe^{-bx^2}\right) + \int_{-1}^1 dx\, e^{-bx^2} + \int_1^\infty dx\,\left(xe^{-bx^2}\right) < \infty.$$
+                So, computing $\lim_{a\to\infty}I(a)$ would yield the value of $I_0$.
+                Note that
+                \[
+                \begin{align*}
+                    \left(I(a)\right)^2 &= \left(\int_a^a dx\, e^{-bx^2}\right)\left(\int_a^a dy\, e^{-by^2}\right) \\
+                    &= \int_a^a\int_a^a dx\,dy\, e^{-b\left(x^2+y^2\right)} \\
+                    &= \iint_{[-a, a]\times [a,a]}d(x,y)\, e^{-b\left(x^2+y^2\right)},
+                \end{align*}
+                \]
+                by Fubini's theorem.
+                This is the integral of the square with corners at $\left\{(-a, -a), (-a, a), (a, a), (a, -a)\right\}$.
+                Thus,
+                $$\int_0^{2\pi}\int_0^a dr\, d\theta\, re^{-br^2} < \left(I(a)\right)^2 < \int_0^{2\pi}\int_0^{a\sqrt{2}} dr\, d\theta\, re^{-br^2}$$
+                i.e., the value of the integral of the incircle of the square is smaller, and the value of the integral of the circumcircle of the square is larger.
+                \[
+                \begin{align*}
+                    \int_0^{2\pi}\int_0^a dr\, d\theta\, re^{-br^2} &= 2\pi\int_0^a dr\, re^{-br^2} \\
+                    &= -\frac{\pi}{b}\int_0^{-ba^2} du\, e^u \\
+                    &= -\frac{\pi}{b}\left(e^{-ba^2}-1\right) \\
+                    &= \frac{\pi}{b}\left(1-e^{-ba^2}\right)
+                \end{align*}
+                \]
+                and
+                \[
+                \begin{align*}
+                    \int_0^{2\pi}\int_0^{a\sqrt{2}} dr\, d\theta\, re^{-br^2} &= 2\pi\int_0^{a\sqrt{2}} dr\, re^{-br^2} \\
+                    &= -\frac{\pi}{b}\int_0^{-2ba^2}du\, e^u \\
+                    &= -\frac{\pi}{b}\left(e^{-2ba^2}-1\right) \\
+                    &= \frac{\pi}{b}\left(1-e^{-2ba^2}\right).
+                \end{align*}
+                \]
+                By the squeeze theorem,
+                $$\frac{\pi}{b}\lim_{a\to\infty}\left(1-e^{-ba^2}\right) = \frac{\pi}{b}$$
+                and
+                $$\frac{\pi}{b}\lim_{a\to\infty}\left(1-e^{-2ba^2}\right) = \frac{\pi}{b},$$
+                so
+                $$\lim_{a\to\infty}\left(I(a)\right)^2 = \frac{\pi}{b} \Rightarrow \lim_{a\to\infty}I(a) = \sqrt{\frac{\pi}{b}} \Rightarrow \boxed{I_0 = \sqrt{\frac{\pi}{b}}.}$$
+                [qed]
+            </p>
+            <div>
+                Sources:
+                <ol>
+                    <li id="fn1"><a class="category" href="https://sites.math.washington.edu/~morrow/335_12/fubini.pdf">sites.math.washington.edu</a></li>
+                    <li id="fn2">Abbott, Stephen. “Functional Limits and Continuity.” <i>Understanding Analysis</i>, 2nd ed., Springer, New York, 2015, p. 109. </li>
+                </ol>
+            </div>
+        </div>
+        <hr class="title-separator">
+        <p>
+            Categorized as: <a class="category" href="../../categories/mathematics/">Mathematics</a>
+        </p>
+    </div>
+</body>
+</html>

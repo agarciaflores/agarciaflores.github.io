@@ -1,0 +1,623 @@
+:root {
+    --color-red: #85221b;
+    --color-black: #0d1117;
+    --black-highlight: #161E27;
+    --color-white: #f5f5f7;
+    --color-blue: #4D7EA8;
+    --color-gray: #dddddf;
+    /* https://coolors.co/85221b-070707-fefffe-828489-4d7ea8 */
+
+    --color-night: red;
+    --color-lavender: #EBEFFF;
+    --color-dark-gray: #333333;
+    --color-light-gray: #f5f5f5;
+}
+
+body {
+    line-height: 1.6;
+    font-size: 18px;
+    color: var(--color-black);
+    background-color: var(--color-white);
+    transition: background-color 0.5s ease;
+    transition: color 0.5s ease;
+}
+main {
+    margin: 100px auto;
+    max-width: 1100px;
+    width: clamp(300px, 100%, 90vw);
+}
+section {
+    margin-bottom: 32px;
+}
+h1,h2,h3 {
+    line-height: 1.2
+}
+.bird {
+    display: block;
+    margin: auto;
+    width: calc(5% + 20px);
+    transition: filter 0.5s ease;
+}
+
+/* navbar */
+nav {
+    font-family: 'Spinnaker', sans-serif;
+    border-bottom:1px solid var(--color-white);
+    backdrop-filter: blur(25px);
+    background: hsla(0,0,100%,0.75);
+    position: fixed;
+    top: 0;
+    padding: 10px 0;
+    width: 98%;
+    z-index: 1000;
+}
+
+nav.header.scrolled {
+    transition: all .4s linear;
+    border-bottom: 1px solid var(--color-dark-gray);
+}
+
+nav a {
+    text-decoration: none;
+    color: inherit;
+}
+
+nav a .brand {
+    padding: 0;
+    padding-left: calc(50% - 530px);
+    margin: 0;
+    height: 38px;
+    transition: filter 0.5s ease;
+}
+
+nav .menu-collapse {
+    float: right;
+    position: relative;
+    padding: 0;
+    padding-right: calc(50% - 550px);
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+nav li {
+    line-height: 40px;
+}
+
+nav li>a {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding-inline:12px;
+    font-size: 16px;
+    display: inline-block;
+}
+
+.hover-pill {
+    position: absolute;
+    bottom: 0;
+    height: 40px;
+    background-color: white;
+    border-radius: 20px;
+    z-index: -1;
+    transition: opacity .4s linear,left .4s ease,width .4s ease;
+    opacity: 0;
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    padding: 10px 4px;
+}
+
+.menu-icon .bar1,.menu-icon .bar2,.menu-icon .bar3 {
+    width: 18px;
+    height: 2px;
+    background-color: var(--color-black);
+    margin-block:3px;
+    transition: .4s;
+}
+
+.menu-icon.menu-open .bar1 {
+    transform: translate(0,5px)rotate(-45deg);
+}
+
+.menu-icon.menu-open .bar2 {
+    opacity: 0;
+}
+
+.menu-icon.menu-open .bar3 {
+    transform: translate(0,-5px)rotate(45deg);
+}
+
+/* home */
+#about p {
+    font-family: Georgia, Times, "Times New Roman", serif;    
+}
+#about {
+    display: block;
+    align-items: center;
+    gap: 34px;
+    margin: 0;
+}
+#about img {
+    width: 100%;
+    border-radius: 6px;
+}
+#about .content {
+    padding: 20px 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+#about p {
+    text-align: justify;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* 75% for 4:3 ratio */
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+/* Slide images */
+.slide img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 6px;
+}
+
+/* Caption text */
+.caption {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 4px;
+}
+
+/* Fade animation */
+.fade {
+    animation: fadeEffect 2s ease;
+}
+
+@keyframes fadeEffect {
+    from { opacity: 0.4; }
+    to { opacity: 1; }
+}
+
+/* In-line links */
+
+.inline {
+    transition: text-decoration .1s ease-out,color .1s ease-out;
+    color: var(--color-black);
+    text-decoration: underline var(--color-blue);
+    text-underline-offset: 3px;
+    text-decoration-thickness: 2.5px;
+}
+
+.inline:hover {
+    text-decoration: underline var(--color-red);
+    text-decoration-thickness: 2.5px;
+}
+
+/* Container for the tiles */
+#news-section {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* Two columns */
+    gap: 20px; /* Space between the tiles */
+}
+
+/* Individual tile styling */
+.tile {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-gray);
+    border-radius: 4px;
+    padding: 20px;
+    box-shadow: 0px 4px 6px var(--color-gray);
+    transition: transform 0.3s ease;
+}
+
+/* Tile hover effect */
+.tile:hover {
+    transform: translateY(-2px);
+}
+
+/* Tile header, title, date, and link */
+.tile-header {
+    color: var(--color-blue);  /* Blue color for categories */
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.tile-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.tile-date {
+    font-size: 16px;
+    color: var(--color-gray);
+    margin-bottom: 15px;
+}
+
+.tile-link {
+    color: var(--color-black);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.tile-link:hover {
+    text-decoration: underline var(--color-blue);
+}
+
+/* Members page styling */
+
+#pi-section, #team-section, #past-team {
+    display: grid;
+    gap: 20px;
+}
+
+#pi-section {
+    grid-template-columns: repeat(1, 1fr);
+}
+
+#team-section, #past-team {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#past-team {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#pi-section h2, #team-section h2, #past-team h2 {
+    grid-column: 1 / -1;
+    font-size: 26px;
+    color: var(--color-black); 
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid var(--color-gray);
+    padding: 2.5px 0;
+}
+
+#team-section h2, #past-team h2 {
+    border-top: 1px solid var(--color-gray);
+}
+
+/* Team member card styling */
+.pi-member {
+    display: flex;
+    gap: 20px;
+}
+
+.pi-member, .team-member, .past-member {
+    background-color: var(--color-white);
+    padding: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pi-member, .past-member {
+    text-align: left; 
+}
+
+.team-member {
+    text-align: center; 
+}
+
+.team-member:hover, .pi-member:hover, .past-member:hover {
+    background-color: white;
+    transform: scale(1.05); 
+    box-shadow: 0 8px 16px white; 
+}
+
+/* Image styling */
+.pi-member img {
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    margin: 20px 0 0 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.team-member img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Name styling */
+.team-member h3, .pi-member h3, .past-member h3 {
+    font-size: 22px;
+    color: var(--color-black);
+    margin: 15px 0 5px;
+    font-weight: bold;
+}
+
+.team-member p, .pi-member p, .past-member p {
+    font-size: 18px;
+    color: var(--color-black);
+}
+
+/* Position styling */
+.pi-member p:first-of-type, .team-member p:first-of-type {
+    font-size: 18px;
+    color: var(--color-dark-gray);
+    margin: 5px 0;
+}
+
+/* Institution styling */
+.pi-member p:nth-of-type(2) {
+    font-size: 18px;
+    color: var(--color-dark-gray);
+    margin-bottom: 15px;
+}
+
+/* Links styling */
+.team-member .links a, .pi-member .links a, .past-member .links a {
+    color: var(--color-black);
+    font-weight: 500;
+    text-decoration: underline var(--color-blue);
+    text-decoration-thickness: 3px;
+    font-size: 18px;
+}
+
+.team-member .links a:hover, .pi-member .links a:hover, .past-member .links a:hover {
+    text-decoration: underline var(--color-red);
+    text-decoration-thickness: 3px;
+}
+
+#bio {
+    text-align: justify; /* Justify text for aligned edges */
+}
+
+/* Research page styling */
+#research h2 {
+    font-size: 26px;
+    color: var(--color-black); 
+    text-align: center;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid var(--color-gray);
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#research p {
+    text-align: justify;
+}
+
+/* Research section headers */
+.research-topic h3 {
+    color: var(--color-red);
+    font-size: 22px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid var(--color-red);
+    padding-bottom: 5px;
+}
+
+.research-topic h4 {
+    color: var(--color-blue);
+    font-size: 20px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.research-topic p {
+    text-align: justify;
+    line-height: 1.6;
+    color: var(--color-black);
+    margin-bottom: 10px;
+}
+
+.research-topic b {
+    color: var(--color-dark-gray);
+}
+
+/* Higlight text color */
+
+::selection {
+    background-color: var(--color-red);
+    color: var(--color-white); /* Adjust text color for contrast */
+}
+
+/* Media query for dark themes */
+@media (prefers-color-scheme: dark) {
+    body {
+        color: var(--color-white);
+        background-color: var(--color-black);
+    }
+    .inline {
+        color: var(--color-white);
+    }
+    nav {
+        border-bottom: 1px solid var(--color-black);
+        background: hsla(0,0,100%,0.75);
+    }
+    .bird, nav a .brand {
+        filter: invert(90%);
+    }
+    nav.header.scrolled {
+        border-bottom: 1px solid var(--color-gray);
+    }
+    .hover-pill {
+        background-color: var(--black-highlight);
+    }
+    nav a {
+        color: var(--color-gray);
+    }
+    nav li a:hover {
+        color: var(--color-white);
+    }
+    nav li.active a {
+        color: var(--color-whitek);
+    }
+    .menu-icon .bar1, .menu-icon .bar2, .menu-icon .bar3 {
+        background-color: var(--color-white);
+    }
+    #about a {
+        color: var(--color-white);
+    }
+    .tile {
+        background-color: var(--color-black);
+        border: 1px solid black;
+        box-shadow: 0px 4px 6px black;
+    }
+    .tile-link {
+        color: var(--color-white);
+    }
+    .team-member, .pi-member, .past-member {
+        background-color: var(--color-black);
+    }
+    .team-member:hover, .pi-member:hover, .past-member:hover {
+        background-color: var(--black-highlight);
+        transform: scale(1.025);
+        box-shadow: 0 6px 16px var(--black-highlight); 
+    }
+    #pi-section h2, #team-section h2, #past-team h2 {
+        color: var(--color-white); 
+    }
+    .team-member h3, .pi-member h3, .past-member h3 {
+        color: var(--color-white);
+    }
+    .team-member p, .pi-member p, .past-member p {
+        color: var(--color-white);
+    }
+    .pi-member p:first-of-type, .team-member p:first-of-type {
+        color: var(--color-gray);
+    }
+    .pi-member p:nth-of-type(2) {
+        color: var(--color-light-gray);
+    }
+    .team-member .links a, .pi-member .links a, .past-member .links a {
+        color: var(--color-white);
+    }
+    #research h2 {
+        color: var(--color-white);
+        border-bottom: 1px solid var(--color-gray);
+    }
+    .research-topic p {
+        color: var(--color-white);
+    }
+    .research-topic b {
+        color: var(--color-dark-gray);
+    }
+}
+
+@media (max-width: 799px) {
+    body {
+        margin: 0;
+        max-width: 100%;
+        width: 100%;
+        padding: 10px 20px;
+        box-sizing: border-box; 
+    }
+    main {
+        margin: 0;
+        padding: 0;
+    }
+    .bird {
+        padding-bottom: 40px;
+    }
+    nav {
+        position: relative;
+        padding: 5px;
+        width: 100%;
+    }
+    nav .menu-collapse {
+        height: 0;
+        overflow: hidden;
+        transition: 0.4s;
+        display: block;
+    }
+    nav .menu-collapse {
+        float: none;
+    }
+    nav .menu-collapse ul {
+        margin: 0;
+        padding: 0;
+    }
+    nav .menu-collapse ul li {
+        display: block;
+        float: none;
+    }
+    nav .show-menu {
+        height: 60px;
+    }
+    .menu-icon {
+        display: block;
+        float: right;
+    }
+    .hover-pill {
+        bottom: 20px;
+    }    
+    #about {
+        margin-top: 24px;
+        display: block;
+        margin-bottom: 32px;
+    }
+    #about img {
+        margin-bottom: -10px;
+    }
+    #about .content {
+        grid-template-columns: 1fr;
+    }
+    #news-section {
+        grid-template-columns: 1fr; /* One column  */
+    }
+    #team-section, #pi-section, #past-team {
+        grid-template-columns: 1fr; /* Single column layout */
+    }
+    /* Team member card styling */
+    .pi-member {
+        display: grid;
+        text-align: center;
+    }
+    .team-member, .pi-member, .past-member {
+        border: none;
+        box-shadow: none;
+    }
+    .team-member:hover, .pi-member:hover, .past-member:hover {
+        background-color: var(--color-white);
+        transform: scale(1.025); 
+        box-shadow: none;
+    }
+    /* Image styling for smaller screens */
+    .team-member img, .pi-member img {
+        width: clamp(150px, 80%, 400px);
+        height: auto;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        border-radius: 10%;
+        margin: 0;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+}
+
+/* Media query for dark themes */
+@media (prefers-color-scheme: dark){ 
+    @media (max-width: 799px) {
+    .team-member:hover, .pi-member:hover, .past-member:hover {
+        background-color: var(--color-black);
+    }
+}}
