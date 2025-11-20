@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Dynamic Cutoffs in a Satellite-Based Quantum Network | Agustin Garcia Flores</title>
+        <meta name="author" content="Agustin Garcia Flores">
+        <link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/simple.css" id="theme">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+        <link rel="stylesheet" href="custom.css">
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section>
+                    <section>
+                        <figure>
+                            <img src="figures/rancho0.jpg" alt="A picture of my grandparents' home in Mexico where I spent a lot of my childhood." style="width: 80%; height: auto;">
+                        </figure>
+                    </section>
+                    <section>
+                        <figure>
+                            <img src="figures/rancho1.jpg" alt="A picture of my grandparents' home in Mexico where I spent a lot of my childhood." style="width: 80%; height: auto;">
+                        </figure>
+                    </section>
+                    <section>
+                        <figure>
+                            <img src="figures/rancho2.jpg" alt="A picture of my grandparents' home in Mexico where I spent a lot of my childhood." style="width: 80%; height: auto;">
+                        </figure>
+                    </section>
+                    <section>
+                        <figure>
+                            <img src="figures/rancho3.jpg" alt="A picture of my grandparents' home in Mexico where I spent a lot of my childhood." style="width: 80%; height: auto;">
+                        </figure>
+                    </section>
+                </section>
+
+                <section></section>
+
+                <section>
+                    <figure>
+                        <img src="figures/swap.jpg" alt="A node B shares and entangled bell pair with nodes A and C. Node B performs an entanglement swap to create an entangled bell pair between nodes A and C." style="width: 80%; height: auto;">
+                    </figure>
+                    <a href="https://doi.org/10.1038/s41534-023-00713-9" target="_blank">doi.org/10.1038/s41534-023-00713-9</a>
+                </section>
+
+                <section data-auto-animate>
+                    <figure>
+                        <iframe src="https://www.desmos.com/calculator/7k7tiuvwv2?embed" width="80%" height="500" style="border: none" frameborder=0></iframe>
+                    </figure>
+                </section>
+
+                <section data-auto-animate class="title-slide">
+                    <figure>
+                        <iframe src="https://www.desmos.com/calculator/7k7tiuvwv2?embed" width="60%" height="350" style="border: none" frameborder=0></iframe>
+                    </figure>
+                    <h3><span class="fragment fade-down">Dynamic</span> Cutoffs in a Satellite-Based Quantum Network</h3>
+                    <p>
+                        <small class="red">Agustin Garcia Flores, Stav Haldar, Filip Rozp&eogon;dek</small>
+                        <br>
+                        <small>University of Massachusetts Amherst</small>
+                        <br>
+                        <small>11/21/2025</small>
+                        <br>
+                    </p>
+                </section>
+
+                <section>
+                    <section data-auto-animate>
+                        <p style="white-space: nowrap;">
+                            $m^\ast = m^\ast$
+                            <span class="fragment">$\big(C_i,$</span>
+                            <span class="fragment">$p_i,$</span>
+                            <span class="fragment red">$v_i$</span>
+                            <span class="fragment">$; t\big)$</span>
+                        </p>
+                        <figure>
+                            <iframe src="https://www.desmos.com/calculator/oblgumzhoz?embed" width="80%" height="470" style="border: none" frameborder=0></iframe>
+                        </figure>
+                    </section>
+                    <section data-auto-animate>
+                        <figure>
+                            <iframe src="https://www.desmos.com/calculator/oblgumzhoz?embed" width="65%" height="375" style="border: none" frameborder=0></iframe>
+                        </figure>
+                        <p>
+                            Satellite hardware: single down link, swap <br>
+                            <span class="fragment">Ground Station hardware: single qubit storage, quantum memory decoherence</span>
+                        </p>
+                        <p>
+                            <span class="fragment green">Figure of merit: SKR</span><br>
+                            <span class="fragment">Rate $\cdot$ (First link age $\sim$ Fidelity)</span>
+                        </p>
+                    </section>
+                    <section>
+                        <p>
+                            <strong>Free-space diffraction</strong> and atmospheric losses <br>
+                            $$p = \eta_{\text{fs}} \eta_{\text{atm}}$$
+                            In far-field regime, $\eta_{\text{fs}} \propto d^{-2}$
+                        </p>
+                        <figure>
+                            <iframe src="https://www.desmos.com/calculator/7kqyjxpiys?embed" width="60%" height="200" style="border: none" frameborder=0></iframe>
+                        </figure><br>
+                        <small><a href="https://doi.org/10.1038/s41534-020-00327-5" target="_blank">doi.org/10.1038/s41534-020-00327-5</a></small>
+                    </section>
+                </section>
+
+                <section>
+                    <section></section>
+                    <section>
+                        <figure>
+                            <iframe src="https://www.desmos.com/calculator/oblgumzhoz?embed" width="65%" height="375" style="border: none" frameborder=0></iframe>
+                        </figure>
+                        <span class="fragment">Furthest First</span>
+                    </section>
+                    <section>
+                        <figure>
+                            <img src="figures/mean_skr.jpg" style="width: 60%; height: auto;" class="fragment" alt="A graph showing the mean SKR as a function fixed cutoff time. The graph shows that there is an optimal cutoff time that maximizes the mean SKR.">
+                        </figure>
+                        <p>
+                            <span class="fragment">
+                                Optimal cutoff: 1.881 s <br>
+                                Max SKR: 1.693e-3 bits/s
+                            </span>
+                        </p>
+                    </section>
+                    <section>
+                        <figure>
+                            <iframe src="https://www.desmos.com/calculator/oblgumzhoz?embed" width="65%" height="375" style="border: none" frameborder=0></iframe>
+                        </figure>
+                    </section>
+                    <section>
+                        <figure>
+                            <img src="figures/optimal_cutoff_step_function.jpg" alt="The step function resulting from finding the optimal cutoff time for small regions in the satellite's orbit." style="width: 60%; height: auto;">
+                        </figure>
+                    </section>
+                    <section>
+                        <figure>
+                            <img src="figures/dynamic_vs_fixed_cutoffs.jpg" alt="Comparing the SKR achieved using dynamic cutoffs versus fixed cutoffs over the course of a satellite pass." style="width: 60%; height: auto;">
+                        </figure>
+                        <span class="fragment">This is promising!</span>
+                    </section>
+                </section>
+
+                <section>
+                    <figure>
+                        <iframe src="https://www.desmos.com/calculator/oblgumzhoz?embed" width="65%" height="375" style="border: none" frameborder=0></iframe>
+                    </figure>
+                    <span class="fragment">Thank you!</span>
+                </section>
+
+                <section>
+                    <small class="red">Agustin Garcia Flores</small>
+                    <br>
+                    <small>University of Massachusetts Amherst</small>
+                    <br>
+                    <small>agarciaflore@umass.edu</small>
+                </section>
+            </div>
+        </div>
+        <script src="dist/reveal.js"></script>
+        <script src="plugin/math/math.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+        <script>
+            Reveal.initialize({
+                controls: false,
+                progress: true,
+				slideNumber: "c",
+                history: true,
+                keyboard: {
+                    39: 'next',
+                    37: 'prev'
+                },
+                mathjax3: {
+                    mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js',
+                    tex: {
+                        inlineMath: [['$', '$'], ['\\(', '\\)']]
+                    },
+                    options: {
+                        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+                    },
+                },
+                plugins: [RevealMath.MathJax3]
+            });
+
+			// Initialize syntax highlighting
+			hljs.highlightAll();
+        </script>
+
+    </body>
+</html>
