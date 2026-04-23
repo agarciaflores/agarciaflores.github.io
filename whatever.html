@@ -1,11 +1,120 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>LET'S PLAY FOOTBALL</title>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LET'S PLAY FOOTBALL</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-    </head>
-    <body>
-        <iframe src="https://www.desmos.com/calculator/7chrzqi1zh?embed" width="80%" height="1000" style="border: none; position: absolute;   top: 50%;   left: 50%;   transform: translate(-50%, -50%);" frameborder=0></iframe>
-    </body>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(180deg, #f7f7f7 0%, #e9f5ea 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .header {
+      width: 100%;
+      text-align: center;
+      padding: 20px 10px 10px;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 3rem;
+      letter-spacing: 2px;
+    }
+
+    .header p {
+      margin: 10px 0 0;
+      font-size: 1.1rem;
+    }
+
+    .frame-wrap {
+      width: min(1100px, 92vw);
+      height: 72vh;
+      margin: 20px auto;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      background: white;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+
+    .controls {
+      margin: 10px 0 30px;
+      text-align: center;
+    }
+
+    button {
+      padding: 12px 20px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    audio {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>LET'S PLAY FOOTBALL</h1>
+    <p>Backyard glory awaits.</p>
+  </div>
+
+  <div class="frame-wrap">
+    <iframe
+      src="https://www.desmos.com/calculator/7chrzqi1zh?embed"
+      allowfullscreen>
+    </iframe>
+  </div>
+
+  <div class="controls">
+    <button id="playButton" style="display:none;">Click to start the music</button>
+  </div>
+
+  <audio id="bgMusic" loop>
+    <source src="jb.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    const audio = document.getElementById("bgMusic");
+    const playButton = document.getElementById("playButton");
+
+    async function tryAutoplay() {
+      try {
+        await audio.play();
+      } catch (err) {
+        playButton.style.display = "inline-block";
+      }
+    }
+
+    playButton.addEventListener("click", async () => {
+      try {
+        await audio.play();
+        playButton.style.display = "none";
+      } catch (err) {
+        alert("Your browser is still blocking autoplay.");
+      }
+    });
+
+    window.addEventListener("load", tryAutoplay);
+  </script>
+</body>
 </html>
