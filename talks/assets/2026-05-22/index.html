@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Satellite-Based Quantum Networks: An Overview | Agustin Garcia Flores</title>
+        <title>Satellite-Based Quantum Networks: Where We Stand | Agustin Garcia Flores</title>
         <meta name="author" content="Agustin Garcia Flores">
         <link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
@@ -14,183 +14,252 @@
         <div class="reveal">
             <div class="slides">
                 <section>
-                    <h3>Satellite-Based Quantum Networks: An Overview</h3>
+                    <h3>Satellite-Based Quantum Networks: Where We Stand</h3>
                     <p style="font-size: smaller;" class="red">Agustin Garcia Flores, Stav Haldar, Filip Rozp&eogon;dek</p>
                     <p style="font-size: smaller;">University of Massachusetts Amherst</p>
-                    <p style="font-size: smaller;">April 30, 2026</p>
+                    <p style="font-size: smaller;">May 22, 2026</p>
                 </section>
 
                 <section>
                     Outline
                     <div style="font-size: smaller; text-align: left;">
-                        Background and Motivation
+                        Experiments
                         <br>
                         <ul>
-                            <li>What is a quantum network?</li>
-                            <li>Teleportation and Entanglement</li>
-                            <li>Challenges and Opportunities</li>
+                            <li>SOCRATES</li>
+                            <li>Micius</li>
+                            <li>Jinan-1</li>
+                            <li>Future Launches</li>
                         </ul>
                         <br>
-                        Present Work: Control Policies in Satellite-Based Quantum Networks
+                        Theory
                         <br>
                         <ul>
-                            <li>Physical model</li>
-                            <li>Scheduling Protocols & Static Cutoffs</li>
-                            <li>Are dynamic cutoffs really beneficial?</li>
+                            <li>Spooky action at a global distance</li>
+                            <li>Entanglement over global distances via quantum repeaters with satellite links</li>
+                            <li>Quantum repeaters in space</li>
+                            <li>Satellite-assisted Entanglement Distribution with High-Dimensional Photonic Encoding</li>
                         </ul>
                     </div>
                 </section>
 
                 <section>
                     <section>
-                        <span class="fragment" style="font-weight: 700;">Background and Motivation</span>
-                    </section>
-                    <section>
-                        <span style="font-weight: 600;">What is a quantum network?</span>
-                    </section>
-                    <section>
-                        <figure>
-                            <img src="figures/network.jpg" alt="A diagram of a network">
-                        </figure>
-                    </section>
-                    <section>
-                        <figure>
-                            <img src="figures/bloch.svg" alt="A diagram of a qubit represented on the Bloch sphere" style="width: 50%; height: auto;">
-                        </figure>
-                        <p>
-                            $\left|\psi\right\rangle = \alpha \left|0\right\rangle + \beta \left|1\right\rangle$ <br>
-                            $\alpha, \beta \in \mathbb{C}$, $|\alpha|^2 + |\beta|^2 = 1$
-                        </p>
-                    </section>
-                    <section>
-                        <span style="font-weight: 600;">Advantages of Quantum Networks</span>
-                    </section>
-                    <section>
-                        <p><span class="fragment">Distributed quantum computing $\to$</span> improved performance</p>
-                        <p class="fragment"><span class="fragment">Enhanced sensors $\to$</span> provide additional capabilities</p>
-                        <p class="fragment"><span class="fragment">Quantum communication $\to$</span> secure information transfer</p>
-                    </section>
-                    <section>
-                        <span style="font-weight: 600;">Quantum Communication</span>
-                    </section>
-                    <section>
-                        <div class="fragment">
-                            <figure>
-                                <img src="figures/entanglement.svg" alt="The quantum circuit for creating an entangled bell pair between two qubits" style="width: 60%; height: auto;">
-                            </figure>
-                            <p>
-                                $x, y \in \mathbb{Z}_2$, $$\left|\beta_{xy}\right\rangle \equiv \frac{1}{\sqrt{2}} \left( \left|0, y\right\rangle + \left(-1\right)^x \left|1, \overline{y}\right\rangle \right)$$
-                            </p>
-                            <p style="font-size:x-large;">Nielsen, M. A., &#38; Chuang, I. L. (2010). Quantum Computation and Quantum Information: 10th Anniversary Edition. Cambridge: Cambridge University Press.</p>
-                        </div>
-                    </section>
-                    <section>
-                        <figure>
-                            <img src="figures/teleportation.svg" alt="The quantum circuit for quantum teleportation" style="width: 80%; height: auto;">
-                        </figure>
-                        <a href="https://doi.org/10.1103/PhysRevLett.70.1895" target="_blank" style="font-size:x-large;">doi.org/10.1103/PhysRevLett.70.1895</a>
+                        <span class="fragment fade-out" data-fragment-index="0" style="font-weight: 700;">Experiments</span>
                         <br>
-                        <p style="font-size:x-large;">Nielsen, M. A., &#38; Chuang, I. L. (2010). Quantum Computation and Quantum Information: 10th Anniversary Edition. Cambridge: Cambridge University Press.</p>
+                        <span class="fragment" data-fragment-index="0" style="font-weight: 500;">Space Optical Communications Research Advanced Technology Satellite (SOCRATES)</span>
+                        <a class="fragment" data-fragment-index="0" href="https://doi.org/10.1038/nphoton.2017.107" target="_blank" style="font-size:x-large;">doi.org/10.1038/nphoton.2017.107</a>
                     </section>
                     <section>
-                        <div class="fragment">
-                            <figure>
-                                <img src="figures/swap.jpg" alt="A figure showing entanglement swapping between nodes." style="width: 80%; height: auto;">
-                            </figure>
-                            <a href="https://doi.org/10.1038/s41534-023-00713-9" target="_blank" style="font-size:x-large;">doi.org/10.1038/s41534-023-00713-9</a>
-                        </div>
+                        <figure>
+                            <img src="figures/socrates.jpg" alt="A picture of SOCRATES and the optical ground station" style="width: 80%; height: auto;">
+                        </figure>
+                        <!-- <figure class="fragment" data-fragment-index="0" style="display: flex; justify-content: center; align-items: center;">
+                            <img src="figures/sota.jpeg" alt="A picture of SOTA, the transporter on board SOCRATES" style="width: 80%; height: auto;">
+                        </figure> -->
                     </section>
                     <section>
-                        <span style="font-weight: 600;">Challenges and Opportunities</span>
+                        A microsatellite can:
+                        <ul>
+                            <li>transmit weak, polarization-encoded optical pulses to a ground station, and the receiver can recover timing, </li>
+                            <li>compensate polarization-frame rotation, and</li>
+                            <li>discriminate the states with a QBER below $5\%$.</li>
+                        </ul>
                     </section>
                     <section>
-                        <p>
-                            Optical fibers: lose 99% of signal over 100 km
-                            <br>
-                            <a href="https://doi.org/10.1038/ncomms15043" target="_blank" style="font-size:x-large;">doi.org/10.1038/ncomms15043</a>
-                        </p>
-                        <div class="fragment">
-                            <figure>
-                                <img src="figures/repeaters.png" alt="Quantum repeaters are used to extend the range of quantum communication by creating entangled pairs between intermediate nodes and performing entanglement swapping to create an entangled pair between the sender and receiver." style="width: 85%; height: auto;">
-                            </figure>
-                            <a href="https://doi.org/10.1103/PhysRevLett.81.5932" target="_blank" style="font-size:x-large;">doi.org/10.1103/PhysRevLett.81.5932</a>
-                        </div>
-                        <p class="fragment">
-                            Satellites: experience less loss over long distances
-                            <a href="https://doi.org/10.1038/nature23655" target="_blank" style="font-size:x-large;">doi.org/10.1038/nature23655</a>
-                        </p>
+                        <span style="font-weight: 500;">Micius</span>
+                        <br>
+                        <a href="https://doi.org/10.1103/RevModPhys.94.035001" target="_blank" style="font-size:x-large;">doi.org/10.1103/RevModPhys.94.035001</a>
+                        <ul class="fragment">
+                            <li>Demonstrated practical satellite-to-ground QKD over $645$&ndash;$1200$ km distances</li>
+                            <li>Double-downlink entanglement distribution ($d = 1200$ km, $5.9 \times 10^{19}$ pairs / s)</li>
+                            <li>(UL) Teleportation, mean fidelity of $0.80$</li>
+                            <li>Satellite-relayed QKD between Xinglong, China and Graz, Austria (as a trusted node)</li>
+                        </ul>
                     </section>
                     <section>
-                        <p>
-                            <span style="font-weight: 600;">Current stage</span>
-                            <br>
-                            UK Quantum Network: over 400 km
-                            <br>
-                            China's Beijing-Shanghai network: over 4600 km
-                            <a href="https://doi.org/10.1038/s41586-020-03093-8" target="_blank" style="font-size:x-large;">doi.org/10.1038/s41586-020-03093-8</a>
-                        </p>
+                        <span style="font-weight: 500;"></span>Jinan-1 Microsatellite</span>
+                        <br>
+                        <a href="https://doi.org/10.1038/s41586-025-08739-z" target="_blank" style="font-size:x-large;">doi.org/10.1038/s41586-025-08739-z</a>
+                        <ul>
+                            <li>Miniaturize and operationalize the DL QKD part of Micius</li>
+                            <li>Demonstrate real-time decoy-state BB84 QKD with multiple ground stations (up to $5.9 \times 10^5$ secure bits / pass)</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <figure>
+                            <img src="figures/jinan-1.png" alt="A table comparing the Jinan-1 satellite with the Micius satellite" style="width: 60%; height: auto;">
+                        </figure>
+                    </section>
+                    <section>
+                        Future Launches
+                        <ul>
+                            <li>Canada's Quantum Encryption and Science Satellite (QEYSSat) in 2026 <br> <a href="https://www.asc-csa.gc.ca/eng/satellites/qeyssat.asp" target="_blank" style="font-size:x-large;">asc-csa.gc.ca/eng/satellites/qeyssat.asp</a></li>
+                            <ul>
+                                <li>DL and UL prepare and measure BB84, UL entanglement BBM92</li>
+                            </ul>
+                            <li>ESA/EU's Eagle-1 in 2026/2027 <br> <a href="https://www.esa.int/Applications/Connectivity_and_Secure_Communications/Eagle-1" target="_blank" style="font-size:x-large;">esa.int/Applications/Connectivity_and_Secure_Communications/Eagle-1</a></li>
+                            <ul>
+                                <li>DL prepare and measure BB84</li>
+                            </ul>
+                        </ul>
                     </section>
                 </section>
 
                 <section>
                     <section>
-                        <span style="font-weight: 700;">Present Work: Control Policies in Satellite-Based Quantum Networks</span>
+                        <span class="fragment fade-out" data-fragment-index="0" style="font-weight: 700;">Theory</span>
+                        <br>
+                        <span class="fragment" data-fragment-index="0" style="font-weight: 500;">Spooky action at a global distance: analysis of space-based entanglement distribution for the quantum internet</span>
+                        <br> 
+                        <a class="fragment" data-fragment-index="0" href="https://doi.org/10.1038/s41534-020-00327-5" target="_blank" style="font-size:x-large;">doi.org/10.1038/s41534-020-00327-5</a>
                     </section>
                     <section>
-                        <span style="font-weight: 600;">Physical model</span>
+                        <ol>
+                            <li>How to model the satellite-to-ground optical link?</li>
+                            <li>Given a particular configuration of ground stations, what is the optimal number of satellites needed in order to achieve a desired average entanglement distribution rate to the ground stations?</li>
+                            <li>To what extent do satellites offer a rate advantage over ordinary ground-based quantum repeater schemes?</li>
+                        </ol>
+                        <a href="https://sumeetkhatri.com/wp-content/uploads/2021/06/talk_spooky_24june2021.pdf" target="_blank" style="font-size:x-large;">talk_spooky_24june2021.pdf</a>
+                    </section>
+                    <section>
+                        <ul>
+                            <li>Larger altitudes improve coverage but increase signal loss, while lower altitudes improve link rate but require more satellites</li>
+                            <li>Satellite constellations can provide useful entanglement-distribution rates in some regimes and may outperform near-term terrestrial repeater networks</li>
+                            <li>Limited by loss, altitude tradeoffs, weather, and background light</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <span style="font-weight: 500;">Entanglement over global distances via quantum repeaters with satellite links</span>
+                        <br> 
+                        <a href="https://doi.org/10.1103/PhysRevA.91.052325" target="_blank" style="font-size:x-large;">doi.org/10.1103/PhysRevA.91.052325</a>
+                        <ul>
+                            <li>Use LEO satellite downlinks to create relatively long but manageable elementary entangled links, then use ground-based memories and entanglement swapping to connect several such links into a global-scale entangled pair</li>
+                        </ul>
                     </section>
                     <section>
                         <figure>
-                            <iframe src="https://www.desmos.com/calculator/oblgumzhoz?embed" width="80%" height="470" style="border: none" frameborder=0></iframe>
+                            <img src="figures/boone.png" alt="Showing the configuration of the Boone satellite repeater system" style="width: 80%; height: auto;">
                         </figure>
                     </section>
                     <section>
-                        <p>
-                            $\eta^{(i)}_{\text{tot}}(t) = \eta^{(i)}_{\text{fs}}(t) \cdot \eta^{(i)}_{\text{atm}}(t)$
-                            <br>
-                            <a href="https://doi.org/10.1038/s41534-020-00327-5" target="_blank" style="font-size: x-large;">doi.org/10.1038/s41534-020-00327-5</a>
-                            <br><br>
-                            <span class="fragment">$$C^{(i)}(t) = \frac1c \left[L_i(t) + L_i\left(t + \frac{L_i(t)}{c}\right)\right]$$</span>
-                            <span class="fragment" style="font-size: smaller;">$$L_i^2(t) = r^2 + R_E^2 + 2 r R_E \cos\left[\left(\theta_0 - \phi_{0, i}\right) + \left(\omega_S - \omega_E\right) t\right]$$</span>
+                        <figure>
+                            <img src="figures/boone-fig.png" alt="Figure showing the entanglement distribution rates in the Boone satellite repeater system" style="width: 60%; height: auto;">
+                        </figure>
+                        <p class="fragment">
+                            shows that this architecture could distribute entanglement over global distances with only a moderate number of satellite links
                         </p>
                     </section>
                     <section>
-                        <figure>
-                            <iframe src="https://www.desmos.com/calculator/oblgumzhoz?embed" width="80%" height="470" style="border: none" frameborder=0></iframe>
-                        </figure>
-                        <span class="fragment">$$\operatorname{SKR}(v) = \frac{\left|v\right|}{t_{\text{succ}\left(v; \tau(v)\right)}} \frac{\operatorname{SKF}(v)}{T}$$</span>
-                    </section>
-                    <section>
-                        <span style="font-weight: 600;">Scheduling Protocols & Static Cutoffs</span>
-                    </section>
-                    <section>
-                        <figure>
-                            <img src="figures/scheduling-protocols.svg" alt="Comparing different scheduling protocols for satellite-based quantum network. The figure shows the SKR achieved using different scheduling protocols as a function of time during a satellite pass." style="width: 60%; height: auto;">
-                        </figure>
+                        <span style="font-weight: 500;">Quantum repeaters in space</span>
+                        <br> 
+                        <a href="https://iopscience.iop.org/article/10.1088/1367-2630/abfa63/pdf" target="_blank" style="font-size:x-large;">iopscience.iop.org/article/10.1088/1367-2630/abfa63/pdf</a>
+                        <ul>
+                            <li>Boone et al. put the memories on the ground to avoid complex satellite hardware, Liorni et al. put the repeaters in space to avoid the atmosphere and ground-station constraints</li>
+                        </ul>
                     </section>
                     <section>
                         <figure>
-                            <img src="figures/multi-skr-comparison.svg" alt="Comparing the SKR achieved using different coherence times for the quantum memory." style="width: 70%; height: auto;">
-                        </figure>
-                    </section>
-                    <section>
-                        <span class="fragment" style="font-weight: 600;">Are dynamic cutoffs really beneficial?</span>
-                    </section>
-                    <section>
-                        <figure>
-                            <img src="figures/dynamic-comparison.svg" alt="Comparing the dynamic cutoff strategy to the optimal fixed cutoff strategy. The figure shows the SKR achieved using both strategies as a function of time during a satellite pass." style="width: 40%; height: auto;">
+                            <img src="figures/liorni.png" alt="Showing the configuration of the Liorni satellite repeater system" style="width: 80%; height: auto;">
                         </figure>
                     </section>
                     <section>
                         <figure>
-                            <img src="figures/rel-diff-diff-configs.svg" alt="Showing the relative difference in SKR between the dynamic cutoff strategy and the optimal fixed cutoff strategy for different configurations of satellite hardware and ground station hardware." style="width: 70%; height: auto;">
+                            <img src="figures/liorni-fig.png" alt="Figure showing the entanglement distribution rates in the Liorni satellite repeater system" style="width: 50%; height: auto;">
+                        </figure>
+                        <p class="fragment">
+                            higher predicted BB84 secret key rates at the cost of technological complexity
+                        </p>
+                    </section>
+                    <section>
+                        <span style="font-weight: 500;">Satellite-assisted Entanglement Distribution with High-Dimensional Photonic Encoding</span>
+                        <br> 
+                        <a href="https://doi.org/10.48550/arXiv.2505.16751" target="_blank" style="font-size:x-large;">doi.org/10.48550/arXiv.2505.16751</a>
+                        <ul>
+                            <li>Instead of generating Bell pairs one at a time as ordinary photonic qubits, use high-dimensional time-bin photonic qudits so that one successful satellite transmission can create multiple Bell pairs simultaneously between ground-station memories</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <figure>
+                            <img src="figures/dominguez_tubio.png" alt="Showing the configuration of the Dominguez-Tubio satellite repeater system" style="width: 80%; height: auto;">
                         </figure>
                     </section>
                     <section>
-                        <figure class="fragment">
-                            <img src="figures/diff_configs.svg" alt="Showing the optimal cutoff time and the SKR for different configurations of satellite hardware and ground station hardware." style="width: 90%; height: auto;">
+                        <figure>
+                            <img src="figures/dominguez_tubio-fig.png" alt="Figure showing the entanglement distribution rates in the Dominguez-Tubio satellite repeater system" style="width: 80%; height: auto;">
+                        </figure>
+                        <p class="fragment">
+                            leads to orders-of-magnitude rate improvements over qubit-based operation for Micius-like satellite links
+                        </p>
+                    </section>
+                    <section>
+                        <span style="font-weight: 500;">Satellite-assisted quantum communication with single photon sources and atomic memories</span>
+                        <br> 
+                        <a href="https://doi.org/10.1103/z1vn-11m5" target="_blank" style="font-size:x-large;">doi.org/10.1103/z1vn-11m5</a>
+                    </section>
+                    <section>
+                        <ul>
+                            <li>Proposes a satellite-based quantum repeater architecture using trapped neutral atoms as both single-photon sources and quantum memories</li>
+                            <li>Entanglement is generated through atom-photon emission and photonic Bell measurements</li>
+                            <li>Entanglement swapping is performed nearly deterministically using Rydberg-mediated atomic gates</li>
+                            <li>Avoids the severe rate penalty of probabilistic optical Bell measurements</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <span style="font-weight: 500;">Quantum Key Distribution in the Iberian Peninsula</span>
+                        <br> 
+                        <a href="https://doi.org/10.48550/arXiv.2510.12951" target="_blank" style="font-size:x-large;">doi.org/10.48550/arXiv.2510.12951</a>
+                        <ul>
+                            <li>Beam-waist optimization is used to mitigate pointing jitter and improve photon capture</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <figure>
+                            <img src="figures/dominguez_tubio_iberian.png" alt="Showing the configuration of the satellite-based quantum communication system in the Iberian Peninsula" style="width: 80%; height: auto;">
                         </figure>
                     </section>
+                    <section>
+                        <figure>
+                            <img src="figures/dominguez_tubio_iberian-tab.png" alt="Comparing the keys/s for non-optimized and optimized configurations in the Iberian Peninsula" style="width: 80%; height: auto;">
+                        </figure>
+                        <p class="fragment">
+                            A single Micius-like satellite could support realistic low-rate key-refresh applications between Madrid and major Iberian cities under optimization
+                        </p>
+                    </section>
+                </section>
+
+                <section>
+                    Summary
+                    <table border="1" style="font-size: smaller; margin: auto;">
+                        <tr>
+                            <th>Paper</th>
+                            <th>Contribution</th>
+                        </tr>
+                        <tr>
+                            <td>Khatri et al.</td>
+                            <td>Global constellation-level analysis for entanglement distribution</td>
+                        </tr>
+                        <tr>
+                            <td>Boone et al.</td>
+                            <td>Satellite elementary links + ground-based repeaters</td>
+                        </tr>
+                        <tr>
+                            <td>Liorni et al.</td>
+                            <td>Orbitting repeaters and inter-satellite links</td>
+                        </tr>
+                        <tr>
+                            <td>Dominguez Tubio et al.</td>
+                            <td>Use qudit encoding to generate multiple Bell pairs at once</td>
+                        </tr>
+                        <tr>
+                            <td>Dominguez Tubio et al.</td>
+                            <td>Hardware-specific repeater architecture</td>
+                        </tr>
+                        <tr>
+                            <td>Dominguez Tubio et al.</td>
+                            <td>Near-term practical QKD application with one Micius-like satellite</td>
+                        </tr>
+                    </table>
                 </section>
 
                 <section>
@@ -199,31 +268,6 @@
                     <small>University of Massachusetts Amherst</small>
                     <br>
                     <small>agarciaflore@umass.edu</small>
-                </section>
-
-                <section>
-                    <section>
-                        <span style="font-weight: 700;">More fun stuff</span>
-                    </section>
-                    <section>
-                        For some cutoff strategy $\tau(v)$, $$k(v) = \left\lfloor \frac{\tau(v)}{\overline{C}_B(v)} \right\rfloor$$
-                        <br>
-                        We take $\tau_{\text{coh}} = 10$ s
-                    </section>
-                    <section>
-                        We define the memory coherence factor as:
-                        <span style="font-size: smaller;">$$\Gamma_{\text{mem}}(v) = \frac{\overline{p}_B(v)}{1 - \left(1 - \overline{p}_B(v)\right)^{k(v)}} \sum_{n=1}^{k(v)} \left(1 - \overline{p}_B(v)\right)^{n-1} \exp\left(- \frac{n \overline{C}_B(v)}{\tau_{\text{coh}}}\right),$$</span>
-                        so that due to dephasing, the state of the first link is
-                        $$\rho = \frac{1 + \Gamma_{\text{mem}}(v)}{2} \left|\beta_{00}\right\rangle\!\! \left\langle \beta_{00} \right| + \frac{1 - \Gamma_{\text{mem}}(v)}{2} \left|\beta_{01}\right\rangle\!\! \left\langle \beta_{01} \right|$$
-                        and the QBER is given by
-                        $$\operatorname{QBER}(v) = \frac{1 - \Gamma_{\text{mem}}(v)}{2}$$
-                    </section>
-                    <section>
-                        Using the binary entropy, $$h(x) = -x \log_2(x) - (1-x) \log_2(1-x)$$ the secret key fraction is given by
-                        $$\operatorname{SKF}(v) = \max\left(0, 1 - h\left(\operatorname{QBER}(v)\right)\right).$$
-                        The expected time per successful event is given by
-                        <span style="font-size: smaller;">$$t_{\text{succ}}(v; \tau(v)) = \frac{\overline{C}_A(v)}{\overline{p}_A(v) \left(1 - \left(1 - \overline{p}_B(v)\right)^{k(v)}\right)} + \frac{\overline{C}_B(v)}{\overline{p}_B(v)}.$$</span>                    
-                    </section>
                 </section>
             </div>
         </div>
