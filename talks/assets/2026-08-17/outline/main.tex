@@ -1,0 +1,93 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\title{Presentation Title}
+% \author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+    We study control policies for satellite-based entanglement distribution in a minimal quantum repeater architecture, consisting of two ground stations and a single satellite equipped with two quantum memories coupled to a single optical interface. The latter property entails that only one elementary down-link can be attempted at a time. In this sequential setting, the first successful link must be stored while the second is generated, creating a tradeoff between waiting for protocol completion and preserving the stored quantum state. Unlike in terrestrial repeater settings, this tradeoff is time dependent during a satellite pass because link success probabilities and communication times vary with orbital geometry. We first compare scheduling rules and find that establishing the first link with the ground station that is further away from the satellite is a favored strategy. We then study policies governing the maximum time a link can be stored, referred to as a cutoff time. To this end, we formulate a time-bin-resolved analytic expression for the secret-key rate that incorporates link probabilities, communication times, memory decoherence, and cutoff-dependent completion probabilities. Using this model, we compare the best orbit-wide static cutoff with dynamic regional cutoff policies. The optimal cutoff varies across the pass, demonstrating that the memory-management problem is intrinsically time dependent. We find that the improvement in total orbit-averaged secret-key rate can be modest, because most key is generated near the center of the pass, where the static cutoff is already close to optimal. Nevertheless, the dynamic cutoffs provide clear advantage at the regional level, especially near the edges of the visibility window. This advantage can be particularly relevant in scenarios where different parts of the orbit service different applications or different users/subscribers at the ground.
+\end{abstract}
+
+\section{Motivation}
+
+Spend more time on discussing experiemental capabilities
+
+\begin{itemize}
+    \item Talk about how satellites came up in quantum networks
+    \begin{itemize}
+        \item Optical fibers are lossy
+        \item Repeaters are needed for long distances, but are hard to implement and expensive
+        \item Satellites can help distribute entanglement over long distances
+    \end{itemize}
+    \item Satellite networks that already/will exist\footnote{Spend more time on discussing experiemental capabilities}
+    \begin{itemize}
+        \item SOCRATES
+        \item Micius
+        \item Jinan-1
+        \item Future launches
+    \end{itemize}
+    \item Talk about cutoffs and how they're used in current repeater protocols, and how they can be used in satellite networks
+\end{itemize}
+
+\section{Main Content}
+
+\subsection{Past work}
+
+Make sure the physical setup is very clear before presenting any results
+
+This is a setup for QKD, we are not trying to generate entanglement between the two ground stations, but rather we are trying to generate a secret key between them. But, explain how, mathematically, purification and bell state measurements are equivalent to entanglement swapping with immediate measurement.
+
+Spend time on setup, explaining what devices and resources are needed
+
+\begin{itemize}
+    \item Explain physical model\footnote{Discuss what technology we envision to be on the satellite}\footnote{Discuss physical model of the communication scheme before any results}
+    \begin{itemize}
+        \item Single downlink from satellite to two ground stations
+        \item Cutoffs are used to determine when to stop trying to distribute entanglement
+        \item Explain losses in satellite-to-ground links\footnote{How it varies du to nature of orbits, different for different schemes}
+        \item Our figure of merit is SKR
+    \end{itemize}
+    \item Scheduling policies and cutoffs
+    \begin{itemize}
+        \item Furthest first is consistently the best
+        \item There exists a cutoff that maximizes SKR for each policy
+        \item Dynamic cutoffs can outperform static cutoffs in certain regions of the orbit, but overall they are equivalent
+        \item Our results are consistent with previous work (Khatri)
+    \end{itemize}
+\end{itemize}
+
+\subsection{Current work}
+
+An extension of our previous work
+
+For this section present an intuition behind why we think the uplink will do best
+
+Just provide intuition behind everything
+
+\begin{itemize}
+    \item We are comparing our model with other schemes\footnote{Explain visually all of the different schemes, find a way to explain all their differences}
+    \begin{itemize}
+        \item Single downlink with cutoffs (ours), single uplink with cutoffs, double downlink, and double uplink
+    \end{itemize}
+    \item We are expanding our model to include more realistic losses and noise
+    \begin{itemize}
+        \item Turbulence in the atmosphere, pointing errors, dark counts, and imperfect detectors
+        \item Decoy states are also used to improve security
+    \end{itemize}
+\end{itemize}
+
+% \section{Conclusion}
+
+% \begin{itemize}
+%     \item Concluding point one
+%     \item Concluding point two
+% \end{itemize}
+
+\end{document}
